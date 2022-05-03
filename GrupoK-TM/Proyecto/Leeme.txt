@@ -1,0 +1,20 @@
+    ENSEÑAR A PROGRAMAR A NIÑOS
+
+*------------INTEGRANTES------------*
+*	    Jofré Lautaro	    *
+*	    Zuñiga Maximiliano	    *
+*	    Zuñiga Candela	    *
+*-----------------------------------*
+
+Se ha pensado en la elaboración de un proyecto que enseñe lo básico de la programación 
+a aquellos que les interesa la tecnología y deseen aprender las bases de programar. Se
+ha pensado un proyecto dividido en módulos, donde se comience con lo más simple como
+la declaración de variables y que tipos existen de las mismas, hasta llegar a procesos
+más complejos como los subprogramas y la recursividad.
+
+Se propone desarrollar el proyecto con el lenguaje de programación "Python", pues es 
+simple y eficaz, a la hora de escribir código se ahorran líneas en comparación a otros
+lenguajes gracias a su sintaxis y métodos, además, de que utilizaremos 
+Visual Studio Code para el desarrollo del proyecto, pues es un entorno de desarrollo
+bastante completo y ofrece infinidad de herramientas para que el desarrollo del 
+proyecto sea más sencillo y rápido.
