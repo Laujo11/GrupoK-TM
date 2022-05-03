@@ -1,8 +1,8 @@
     ENSEÑAR A PROGRAMAR A NIÑOS
 
 *------------INTEGRANTES------------*
-	    Jofré Lautaro	            
-	    Zuñiga Maximiliano	        
+	Jofré Lautaro	            
+	Zuñiga Maximiliano	        
         Zuñiga Candela	            
 *-----------------------------------*
 
