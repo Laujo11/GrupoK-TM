@@ -1,9 +1,9 @@
     ENSEÑAR A PROGRAMAR A NIÑOS
 
 *------------INTEGRANTES------------*
-*	    Jofré Lautaro	            *
-*	    Zuñiga Maximiliano	        *
-*	    Zuñiga Candela	            *
+	    Jofré Lautaro	            
+	    Zuñiga Maximiliano	        
+        Zuñiga Candela	            
 *-----------------------------------*
 
 Se ha pensado en la elaboración de un proyecto que enseñe lo básico de la programación 
