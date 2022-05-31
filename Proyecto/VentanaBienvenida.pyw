@@ -2,7 +2,8 @@ import tkinter
 
 ventanaPrincipal = tkinter.Tk()
 ventanaPrincipal.title("While(true): Aprender!")
-ventanaPrincipal.geometry("400x600")
+ventanaPrincipal.geometry("400x600+500+50")
+ventanaPrincipal.resizable(width=False, height=False)
 ventanaPrincipal.config(bg= "LightGreen")
 photo = tkinter.PhotoImage(file = "C:/Users/maxim/Downloads/GrupoK-TM/Proyecto/icono.png")
 ventanaPrincipal.iconphoto(False, photo)
