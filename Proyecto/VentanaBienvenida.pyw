@@ -7,15 +7,21 @@ ventanaPrincipal.config(bg= "LightGreen")
 photo = tkinter.PhotoImage(file = "C:/Users/maxim/Downloads/GrupoK-TM/Proyecto/icono.png")
 ventanaPrincipal.iconphoto(False, photo)
 
-etiqueta_bienvenida = tkinter.Label(ventanaPrincipal,text="Bienvenido", bg= "lightgreen")
-etiqueta_bienvenida.place(x=10, y=10, width= 100, height=30)
+etiqueta_bienvenida = tkinter.Label(
+    ventanaPrincipal,text="Bienvenido", bg= "LightGreen")
 etiqueta_bienvenida.pack()
+etiqueta_bienvenida.place(x=150, y=10, width=100, height=30)
 
-boton_continuar_principal = tkinter.Button(ventanaPrincipal, text= "Continuar")
-boton_continuar_principal.place(x= 5, y= 565, width= 30, height= 30)
-boton_continuar_principal.pack()
-boton_salir_principal = tkinter.Button(ventanaPrincipal, text="Salir")
-boton_salir_principal.place(x= 380, y= 580, width= 20, height= 20)
+
+boton_menu_principal = tkinter.Button(
+    ventanaPrincipal, text="Menú", command=abrirMenu)
+boton_menu_principal.pack()
+boton_menu_principal.place(x=150, y=60, width=100, height=30)
+
+boton_salir_principal = tkinter.Button(
+    ventanaPrincipal, text="Salir")
 boton_salir_principal.pack()
+boton_salir_principal.place(x=150, y=110, width=100, height=30)
+
 
 ventanaPrincipal.mainloop()
