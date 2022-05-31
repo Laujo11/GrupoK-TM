@@ -10,7 +10,7 @@ Se ha pensado en la elaboración de un proyecto que enseñe lo básico de la pro
 a aquellos que les interesa la tecnología y deseen aprender las bases de programar. Se
 ha pensado un proyecto dividido en módulos, donde se comience con lo más simple, como
 la declaración de variables y que tipos existen de las mismas, hasta llegar a procesos
-más complejos como los subprogramas y la recursividad.
+más complejos como los arreglos y subprogramas.
 
 Se propone desarrollar el proyecto con el lenguaje de programación "Python", pues es 
 simple y eficaz, a la hora de escribir código se ahorran líneas en comparación a otros
