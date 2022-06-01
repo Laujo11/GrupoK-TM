@@ -1,3 +1,6 @@
+#imports
+import tkinter
+
 def abrirMenu():
     ventanaPrincipal.withdraw()
     
