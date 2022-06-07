@@ -1,6 +1,0 @@
-{
-    "python.analysis.completeFunctionParens": true,
-    "python.analysis.extraPaths": [
-        "GrupoK-TM/proyecto"
-    ]
-}

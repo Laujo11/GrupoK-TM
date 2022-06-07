@@ -2,11 +2,32 @@
 import tkinter as grupoK
 
 #funciones
-def funcion_aprender_variables():
+def funcionEnteros():
     ventana = grupoK.Tk()
 
-def funcion_aprender_condicionales():
+def funcionFlotantes():
     ventana = grupoK.Tk()
+
+def funcionCadena():
+    ventana = grupoK.Tk()
+
+def funcionBoolean():
+    ventana = grupoK.Tk()
+
+def funcionCondicionalSimple():
+    ventana = grupoK.Tk()
+
+def funcionCondicionalAlternativo():
+    ventana = grupoK.Tk()
+
+def funcionCondicionalAnidado():
+    ventana = grupoK.Tk()
+
+def funcion_aprender_variables():
+    ventanaVariable.mainloop()
+
+def funcion_aprender_condicionales():
+    ventanaCondicionales.mainloop()
 
 def funcion_aprender_bucles():
     ventana = grupoK.Tk()
@@ -118,6 +139,68 @@ boton_volver = grupoK.Button(
     ventanaMenu, text="Volver", command=funcion_volver)
 boton_volver.pack()
 boton_volver.place(x=250, y=300, width=100, height=30)
+
+#Ventana donde estan los tipos de variables.
+
+ventanaVariable = grupoK.Tk()
+ventanaVariable.title("Variables")
+ventanaVariable.geometry("600x600+400+50")
+ventanaVariable.resizable(width=False, height=False)
+ventanaVariable.config(bg= "coral")
+
+elegir = grupoK.Label(
+    ventanaVariable, text="Elija el tipo de variable que quiere aprender")
+elegir.pack()
+
+botonEntero = grupoK.Button(
+    ventanaVariable, text="Enteros", command=funcionEnteros)
+botonEntero.pack()
+botonEntero.place(x=250, y=50, width=100, height=30)
+
+botonFlotantes = grupoK.Button(
+    ventanaVariable, text="Flotantes", command=funcionFlotantes)
+botonFlotantes.pack()
+botonFlotantes.place(x=250, y=100, width=100, height=30)
+
+botonCadena = grupoK.Button(
+    ventanaVariable, text="Cadena", command=funcionCadena)
+botonCadena.pack()
+botonCadena.place(x=250, y=150, width=100, height=30)
+
+botonBoolean = grupoK.Button(
+    ventanaVariable, text="Boolean", command=funcionBoolean)
+botonBoolean.pack()
+botonBoolean.place(x=250, y=200, width=100, height=30)
+
+#Ventana donde estan los tipos de condicionales
+
+ventanaCondicionales = grupoK.Tk()
+
+ventanaCondicionales.title("Condicionales")
+ventanaCondicionales.geometry("600x600+400+50")
+ventanaCondicionales.resizable(width=False, height=False)
+ventanaCondicionales.config(bg= "aquamarine")
+
+elegirCondic = grupoK.Label(
+    ventanaCondicionales, text="Elija el tipo de condicional que quiere aprender")
+elegirCondic.pack()
+
+botonCondicSimpl = grupoK.Button(
+    ventanaCondicionales, text="Condicional Simple", command=funcionCondicionalSimple)
+botonCondicSimpl.pack()
+botonCondicSimpl.place(x=190, y=50, width=200, height=30)
+
+botonCondicAltern = grupoK.Button(
+    ventanaCondicionales, text="Condicional Alternativo", command=funcionCondicionalAlternativo)
+botonCondicAltern.pack()
+botonCondicAltern.place(x=190, y=100, width=200, height=30)
+
+#El condicional Anidado, tambien se lo llama condicional encadenado
+
+botonCondicAnidado = grupoK.Button(
+    ventanaCondicionales, text="Condicional Anidado", command=funcionCondicionalAnidado)
+botonCondicAnidado.pack()
+botonCondicAnidado.place(x=190, y=150, width=200, height=30)
 
 #INICIO
 ventanaPrincipal.mainloop()
