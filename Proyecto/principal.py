@@ -24,10 +24,12 @@ def funcionCondicionalAnidado():
     ventana = grupoK.Tk()
 
 def funcion_aprender_variables():
-    ventanaVariable.mainloop()
+    ventanaVariable.deiconify()
+    ventanaMenu.withdraw()
 
 def funcion_aprender_condicionales():
-    ventanaCondicionales.mainloop()
+    ventanaCondicionales.deiconify()
+    ventanaMenu.withdraw()
 
 def funcion_aprender_bucles():
     ventana = grupoK.Tk()
@@ -39,11 +41,11 @@ def funcion_aprender_metodos():
     ventana = grupoK.Tk()
 
 def funcion_volver():
-    ventanaMenu.withdraw
-    ventanaPrincipal.mainloop()
+    ventanaMenu.withdraw()
+    ventanaPrincipal.deiconify()
 def abrirMenu():  
-    ventanaPrincipal.withdraw
-    ventanaMenu.mainloop()
+    ventanaPrincipal.withdraw()
+    ventanaMenu.deiconify()
 
 #VENTANAS
 #ventana principal
@@ -203,4 +205,7 @@ botonCondicAnidado.pack()
 botonCondicAnidado.place(x=190, y=150, width=200, height=30)
 
 #INICIO
+ventanaMenu.withdraw()
+ventanaVariable.withdraw()
+ventanaCondicionales.withdraw()
 ventanaPrincipal.mainloop()
