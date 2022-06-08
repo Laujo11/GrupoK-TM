@@ -1,7 +1,9 @@
-#imports
+#----------IMPORTS----------
+from os import close
 import tkinter as grupoK
+from tkinter.font import BOLD
 
-#funciones
+#----------FUNCIONES----------
 def funcionEnteros():
     ventana = grupoK.Tk()
 
@@ -40,169 +42,201 @@ def funcion_aprender_arreglos():
 def funcion_aprender_metodos():
     ventana = grupoK.Tk()
 
-def funcion_volver():
+def funcion_volver_condicionales():
+    ventanaMenu.deiconify()
+    ventanaCondicionales.withdraw()
+def funcion_volver_variables():
+    ventanaVariable.withdraw()
+    ventanaMenu.deiconify()
+def funcion_volver_menu():
     ventanaMenu.withdraw()
     ventanaPrincipal.deiconify()
 def abrirMenu():  
     ventanaPrincipal.withdraw()
     ventanaMenu.deiconify()
 
-#VENTANAS
+#----------VENTANAS----------
 #ventana principal
 ventanaPrincipal = grupoK.Tk()
 tituloVentanaPrincipal = "While(true): Aprender!"
 ventanaPrincipal.title(tituloVentanaPrincipal)
-ventanaPrincipal.geometry("400x400+500+50")
+ventanaPrincipal.geometry("400x200+500+50")
 ventanaPrincipal.resizable(width=False, height=False)
-ventanaPrincipal.config(bg= "LightGreen")
+ventanaPrincipal.config(bg= "greenyellow")
 photo1 = grupoK.PhotoImage(file = "Proyecto/icono.png")
 ventanaPrincipal.iconphoto(False, photo1)
 
 #ventana menu
 ventanaMenu = grupoK.Tk()
 ventanaMenu.title("Menú de elección")
-ventanaMenu.geometry("600x600+400+50")
+ventanaMenu.geometry("400x400+400+50")
 ventanaMenu.resizable(width=False, height=False)
-ventanaMenu.config(bg="SkyBlue")
+ventanaMenu.config(bg="royalblue")
 #photo2 = grupoK.PhotoImage(file = "Proyecto/icono.png")
-#ventanaMenu.iconphoto(False, photo2)
+#ventanaMenu.iconphoto(False, photo1)
 
-#ETIQUETAS
+#ventana variables
+ventanaVariable = grupoK.Tk()
+ventanaVariable.title("Variables")
+ventanaVariable.geometry("400x300+400+50")
+ventanaVariable.resizable(width=False, height=False)
+ventanaVariable.config(bg= "coral")
+
+#ventana condicionales
+ventanaCondicionales = grupoK.Tk()
+ventanaCondicionales.title("Condicionales")
+ventanaCondicionales.geometry("400x250+400+50")
+ventanaCondicionales.resizable(width=False, height=False)
+ventanaCondicionales.config(bg= "aquamarine")
+
+#----------ETIQUETAS----------
 #etiquetas ventana principal
-etiqueta_bienvenida = grupoK.Label(
-    ventanaPrincipal,
+etiqueta_bienvenida = grupoK.Label(ventanaPrincipal,
     text="Bienvenido", 
-    bg= "LightGreen",
-    font="calibri")
+    bg= "greenyellow",
+    font=("calibri",20,"bold"))
 etiqueta_bienvenida.pack()
-etiqueta_bienvenida.place(x=150, y=10,  width=100, height=30)
+etiqueta_bienvenida.place(x=125, y=10,  width=150, height=30)
 
 #etiquetas ventana menu
 cartel_opcion = grupoK.Label(ventanaMenu, 
-    text="Elija el apartado al cual quiere ingresar")
+    text="Elija el apartado al cual quiere ingresar",
+    bg="royalblue")
 cartel_opcion.pack()
 
-#ENTRADAS
+#etiquetas ventana variables
+elegir = grupoK.Label(ventanaVariable, 
+    text="Elija el tipo de variable que quiere aprender",
+    font="calibri",
+    bg="coral")
+elegir.pack()
+
+#etiquetas ventana condicionales
+elegirCondic = grupoK.Label(ventanaCondicionales, 
+    text="Elija el tipo de condicional que quiere aprender",
+    font="calibri",
+    bg="aquamarine")
+elegirCondic.pack()
+
+#----------ENTRADAS----------
 #entrada ventana principal
 campoDeTextoPrincipal = grupoK.Entry(ventanaPrincipal,
     text="Ingresa tu nombre",
     font="calibri",
     background= "white")
 campoDeTextoPrincipal.pack()
-campoDeTextoPrincipal.place(x=100,y=100, width= 200, height= 30)
+campoDeTextoPrincipal.place(x=100,y=80, width= 200, height= 30)
 
-#BOTONES
+#----------BOTONES----------
 #botones ventana principal
-boton_menu_principal = grupoK.Button(
-    ventanaPrincipal, 
-    text="Menú",
-    font="calibri",
+boton_menu_principal = grupoK.Button(ventanaPrincipal, 
+    text="Ingresar",
+    font=("calibri",13,"bold"),
     cursor="hand2",
     command= abrirMenu)
 boton_menu_principal.pack()
-boton_menu_principal.place(x=180, y=350, width=100, height=30)
+boton_menu_principal.place(x=180, y=150, width=100, height=30)
 
-boton_salir_principal = grupoK.Button(
-    ventanaPrincipal, 
+boton_salir_principal = grupoK.Button(ventanaPrincipal, 
     text="Salir",
-    font="calibri",
+    font=("calibri",13,"bold"),
     cursor="hand2",
     command= exit)
 boton_salir_principal.pack()
-boton_salir_principal.place(x=290, y=350, width=100, height=30)
+boton_salir_principal.place(x=290, y=150, width=100, height=30)
 
 #botones ventana menu
-boton_variables = grupoK.Button(
-    ventanaMenu, text="Variables", command=funcion_aprender_variables)
+boton_variables = grupoK.Button(ventanaMenu, 
+    text="Variables", 
+    command=funcion_aprender_variables)
 boton_variables.pack()
-boton_variables.place(x=250, y=50, width=100, height=30)
+boton_variables.place(x=150, y=50, width=100, height=30)
     
-boton_condicionales = grupoK.Button(
-    ventanaMenu, text="Condicionales", command=funcion_aprender_condicionales)
+boton_condicionales = grupoK.Button(ventanaMenu, 
+    text="Condicionales", 
+    command=funcion_aprender_condicionales)
 boton_condicionales.pack()
-boton_condicionales.place(x=250, y=100, width=100, height=30)
+boton_condicionales.place(x=150, y=100, width=100, height=30)
     
-boton_bucles = grupoK.Button(
-    ventanaMenu, text="Bucles", command=funcion_aprender_bucles)
+boton_bucles = grupoK.Button(ventanaMenu, 
+    text="Bucles", 
+    command=funcion_aprender_bucles)
 boton_bucles.pack()
-boton_bucles.place(x=250, y=150, width=100, height=30)
+boton_bucles.place(x=150, y=150, width=100, height=30)
     
-boton_arreglos = grupoK.Button(
-    ventanaMenu, text="Arreglos", command=funcion_aprender_arreglos)
+boton_arreglos = grupoK.Button(ventanaMenu, 
+    text="Arreglos", 
+    command=funcion_aprender_arreglos)
 boton_arreglos.pack()
-boton_arreglos.place(x=250, y=200, width=100, height=30)
+boton_arreglos.place(x=150, y=200, width=100, height=30)
     
-boton_metodos = grupoK.Button(
-    ventanaMenu, text="Métodos", command=funcion_aprender_metodos)
+boton_metodos = grupoK.Button(ventanaMenu, 
+    text="Métodos", 
+    command=funcion_aprender_metodos)
 boton_metodos.pack()
-boton_metodos.place(x=250, y=250, width=100, height=30)
+boton_metodos.place(x=150, y=250, width=100, height=30)
     
-boton_volver = grupoK.Button(
-    ventanaMenu, text="Volver", command=funcion_volver)
-boton_volver.pack()
-boton_volver.place(x=250, y=300, width=100, height=30)
+boton_volver_menu = grupoK.Button(ventanaMenu, 
+    text="Volver", 
+    command=funcion_volver_menu)
+boton_volver_menu.pack()
+boton_volver_menu.place(x=150, y=300, width=100, height=30)
 
-#Ventana donde estan los tipos de variables.
-
-ventanaVariable = grupoK.Tk()
-ventanaVariable.title("Variables")
-ventanaVariable.geometry("600x600+400+50")
-ventanaVariable.resizable(width=False, height=False)
-ventanaVariable.config(bg= "coral")
-
-elegir = grupoK.Label(
-    ventanaVariable, text="Elija el tipo de variable que quiere aprender")
-elegir.pack()
-
-botonEntero = grupoK.Button(
-    ventanaVariable, text="Enteros", command=funcionEnteros)
+#botones ventana variables
+botonEntero = grupoK.Button(ventanaVariable, 
+    text="Enteros", 
+    command=funcionEnteros)
 botonEntero.pack()
-botonEntero.place(x=250, y=50, width=100, height=30)
+botonEntero.place(x=150, y=50, width=100, height=30)
 
-botonFlotantes = grupoK.Button(
-    ventanaVariable, text="Flotantes", command=funcionFlotantes)
+botonFlotantes = grupoK.Button(ventanaVariable, 
+    text="Flotantes", 
+    command=funcionFlotantes)
 botonFlotantes.pack()
-botonFlotantes.place(x=250, y=100, width=100, height=30)
+botonFlotantes.place(x=150, y=100, width=100, height=30)
 
-botonCadena = grupoK.Button(
-    ventanaVariable, text="Cadena", command=funcionCadena)
+botonCadena = grupoK.Button(ventanaVariable, 
+    text="Cadena", 
+    command=funcionCadena)
 botonCadena.pack()
-botonCadena.place(x=250, y=150, width=100, height=30)
+botonCadena.place(x=150, y=150, width=100, height=30)
 
-botonBoolean = grupoK.Button(
-    ventanaVariable, text="Boolean", command=funcionBoolean)
+botonBoolean = grupoK.Button(ventanaVariable, 
+    text="Boolean", 
+    command=funcionBoolean)
 botonBoolean.pack()
-botonBoolean.place(x=250, y=200, width=100, height=30)
+botonBoolean.place(x=150, y=200, width=100, height=30)
 
-#Ventana donde estan los tipos de condicionales
+boton_volver_variables = grupoK.Button(ventanaVariable, 
+    text="Volver", 
+    command=funcion_volver_variables)
+boton_volver_variables.pack()
+boton_volver_variables.place(x=150, y=250, width=100, height=30)
 
-ventanaCondicionales = grupoK.Tk()
-
-ventanaCondicionales.title("Condicionales")
-ventanaCondicionales.geometry("600x600+400+50")
-ventanaCondicionales.resizable(width=False, height=False)
-ventanaCondicionales.config(bg= "aquamarine")
-
-elegirCondic = grupoK.Label(
-    ventanaCondicionales, text="Elija el tipo de condicional que quiere aprender")
-elegirCondic.pack()
-
-botonCondicSimpl = grupoK.Button(
-    ventanaCondicionales, text="Condicional Simple", command=funcionCondicionalSimple)
+#botones de ventana condicionales
+botonCondicSimpl = grupoK.Button(ventanaCondicionales, 
+    text="Condicional Simple", 
+    command=funcionCondicionalSimple)
 botonCondicSimpl.pack()
-botonCondicSimpl.place(x=190, y=50, width=200, height=30)
+botonCondicSimpl.place(x=100, y=50, width=200, height=30)
 
-botonCondicAltern = grupoK.Button(
-    ventanaCondicionales, text="Condicional Alternativo", command=funcionCondicionalAlternativo)
+botonCondicAltern = grupoK.Button(ventanaCondicionales, 
+    text="Condicional Alternativo", 
+    command=funcionCondicionalAlternativo)
 botonCondicAltern.pack()
-botonCondicAltern.place(x=190, y=100, width=200, height=30)
+botonCondicAltern.place(x=100, y=100, width=200, height=30)
 
-#El condicional Anidado, tambien se lo llama condicional encadenado
-
-botonCondicAnidado = grupoK.Button(
-    ventanaCondicionales, text="Condicional Anidado", command=funcionCondicionalAnidado)
+botonCondicAnidado = grupoK.Button(ventanaCondicionales, 
+    text="Condicional Anidado", 
+    command=funcionCondicionalAnidado)
 botonCondicAnidado.pack()
-botonCondicAnidado.place(x=190, y=150, width=200, height=30)
+botonCondicAnidado.place(x=100, y=150, width=200, height=30)
+
+boton_volver_condicionales = grupoK.Button(ventanaCondicionales, 
+    text="Volver", 
+    command=funcion_volver_condicionales)
+boton_volver_condicionales.pack()
+boton_volver_condicionales.place(x=150, y=200, width=100, height=30)
 
 #INICIO
 ventanaMenu.withdraw()
