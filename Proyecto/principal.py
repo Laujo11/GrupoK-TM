@@ -1,4 +1,5 @@
 # ----------IMPORTS----------
+from this import s
 import tkinter as grupoK
 from tkinter import messagebox as cajaMensaje
 from tkinter.font import BOLD
@@ -48,9 +49,11 @@ def funcion_aprender_bucles():
     ventanaBucles.deiconify()
     ventanaMenu.withdraw()
 
+
 def funcion_aprender_arreglos():
     ventanaArreglos.deiconify()
     ventanaMenu.withdraw()
+
 
 def funcion_aprender_metodos():
     ventanaMetodos.deiconify()
@@ -76,6 +79,7 @@ def abrirMenu():
     ventanaPrincipal.withdraw()
     ventanaMenu.deiconify()
 
+
 def salirProgramaDesdePrincipal():
     if cajaMensaje.askokcancel("No te vayas :(", "¿Seguro desea salir?"):
         ventanaPrincipal.destroy()
@@ -85,6 +89,24 @@ def salirProgramaDesdePrincipal():
         ventanaBucles.destroy()
         ventanaArreglos.destroy()
         ventanaMetodos.destroy()
+        ventanaProcedimientos.destroy()
+        ventanaFunciones.destroy()
+
+
+def funcion_procedimientos():
+    ventanaMetodos.withdraw()
+    ventanaProcedimientos.deiconify()
+
+
+def funcion_funciones():
+    ventanaMetodos.withdraw()
+    ventanaFunciones.deiconify()
+
+
+def funcion_volver_metodos():
+    ventanaMetodos.withdraw()
+    ventanaMenu.deiconify()
+
 
 # ----------VENTANAS----------
 # ventana principal
@@ -148,6 +170,22 @@ ventanaMetodos.resizable(width=False, height=False)
 ventanaMetodos.config(bg="orchid1")
 ventanaMetodos.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 
+# ventana procedimientos
+ventanaProcedimientos = grupoK.Tk()
+ventanaProcedimientos.title("Procedimientos")
+ventanaProcedimientos.geometry("400x250+400+50")
+ventanaProcedimientos.resizable(width=False, height=False)
+ventanaProcedimientos.config(bg="orange")
+ventanaProcedimientos.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
+
+# ventana funciones
+ventanaFunciones = grupoK.Tk()
+ventanaFunciones.title("Funciones")
+ventanaFunciones.geometry("400x250+400+50")
+ventanaFunciones.resizable(width=False, height=False)
+ventanaFunciones.config(bg="red")
+ventanaFunciones.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
+
 # ----------ETIQUETAS----------
 # etiquetas ventana principal
 etiqueta_bienvenida = grupoK.Label(ventanaPrincipal,
@@ -184,6 +222,13 @@ elegirCondic = grupoK.Label(ventanaCondicionales,
                             font="calibri",
                             bg="aquamarine")
 elegirCondic.pack()
+
+# etiquetas de ventana métodos
+etiquetaMetodos = grupoK.Label(ventanaMetodos,
+                               text="Elegí una opción",
+                               font="calibri",
+                               background="pink")
+etiquetaMetodos.pack()
 
 # ----------ENTRADAS----------
 # entrada ventana principal
@@ -305,6 +350,25 @@ boton_volver_condicionales = grupoK.Button(ventanaCondicionales,
 boton_volver_condicionales.pack()
 boton_volver_condicionales.place(x=150, y=200, width=100, height=30)
 
+# botones de ventana métodos
+botonProcedimientos = grupoK.Button(ventanaMetodos,
+                                    text="Procedimientos",
+                                    command=funcion_procedimientos)
+botonProcedimientos.pack()
+botonProcedimientos.place(x=150, y=50, width=100, height=30)
+
+botonFunciones = grupoK.Button(ventanaMetodos,
+                               text="Funciones",
+                               command=funcion_funciones)
+botonFunciones.pack()
+botonFunciones.place(x=150, y=100, width=100, height=30)
+
+boton_volver_metodos = grupoK.Button(ventanaMetodos,
+                                     text="Volver",
+                                     command=funcion_volver_metodos)
+boton_volver_metodos.pack()
+boton_volver_metodos.place(x=150, y=150, width=100, height=30)
+
 # INICIO
 ventanaMenu.withdraw()
 ventanaVariable.withdraw()
@@ -312,4 +376,6 @@ ventanaCondicionales.withdraw()
 ventanaBucles.withdraw()
 ventanaArreglos.withdraw()
 ventanaMetodos.withdraw()
+ventanaProcedimientos.withdraw()
+ventanaFunciones.withdraw()
 ventanaPrincipal.mainloop()
