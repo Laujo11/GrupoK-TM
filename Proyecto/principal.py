@@ -1,6 +1,6 @@
 # ----------IMPORTS----------
-from os import close
 import tkinter as grupoK
+from tkinter import messagebox as cajaMensaje
 from tkinter.font import BOLD
 
 # ----------FUNCIONES----------
@@ -45,15 +45,16 @@ def funcion_aprender_condicionales():
 
 
 def funcion_aprender_bucles():
-    ventana = grupoK.Tk()
-
+    ventanaBucles.deiconify()
+    ventanaMenu.withdraw()
 
 def funcion_aprender_arreglos():
-    ventana = grupoK.Tk()
-
+    ventanaArreglos.deiconify()
+    ventanaMenu.withdraw()
 
 def funcion_aprender_metodos():
-    ventana = grupoK.Tk()
+    ventanaMetodos.deiconify()
+    ventanaMenu.withdraw()
 
 
 def funcion_volver_condicionales():
@@ -75,6 +76,15 @@ def abrirMenu():
     ventanaPrincipal.withdraw()
     ventanaMenu.deiconify()
 
+def salirProgramaDesdePrincipal():
+    if cajaMensaje.askokcancel("No te vayas :(", "¿Seguro desea salir?"):
+        ventanaPrincipal.destroy()
+        ventanaMenu.destroy()
+        ventanaVariable.destroy()
+        ventanaCondicionales.destroy()
+        ventanaBucles.destroy()
+        ventanaArreglos.destroy()
+        ventanaMetodos.destroy()
 
 # ----------VENTANAS----------
 # ventana principal
@@ -86,6 +96,7 @@ ventanaPrincipal.resizable(width=False, height=False)
 ventanaPrincipal.config(bg="greenyellow")
 photo1 = grupoK.PhotoImage(file="Proyecto/icono.png")
 ventanaPrincipal.iconphoto(False, photo1)
+ventanaPrincipal.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 
 # ventana menu
 ventanaMenu = grupoK.Tk()
@@ -95,6 +106,7 @@ ventanaMenu.resizable(width=False, height=False)
 ventanaMenu.config(bg="royalblue")
 #photo2 = grupoK.PhotoImage(file = "Proyecto/icono.png")
 #ventanaMenu.iconphoto(False, photo1)
+ventanaMenu.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 
 # ventana variables
 ventanaVariable = grupoK.Tk()
@@ -102,6 +114,7 @@ ventanaVariable.title("Variables")
 ventanaVariable.geometry("400x300+400+50")
 ventanaVariable.resizable(width=False, height=False)
 ventanaVariable.config(bg="coral")
+ventanaVariable.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 
 # ventana condicionales
 ventanaCondicionales = grupoK.Tk()
@@ -109,6 +122,31 @@ ventanaCondicionales.title("Condicionales")
 ventanaCondicionales.geometry("400x250+400+50")
 ventanaCondicionales.resizable(width=False, height=False)
 ventanaCondicionales.config(bg="aquamarine")
+ventanaCondicionales.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
+
+# ventana bucles
+ventanaBucles = grupoK.Tk()
+ventanaBucles.title("Bucles")
+ventanaBucles.geometry("400x250+400+50")
+ventanaBucles.resizable(width=False, height=False)
+ventanaBucles.config(bg="aquamarine")
+ventanaBucles.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
+
+# ventana arreglos
+ventanaArreglos = grupoK.Tk()
+ventanaArreglos.title("Arreglos")
+ventanaArreglos.geometry("400x250+400+50")
+ventanaArreglos.resizable(width=False, height=False)
+ventanaArreglos.config(bg="aquamarine")
+ventanaArreglos.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
+
+# ventana metodos
+ventanaMetodos = grupoK.Tk()
+ventanaMetodos.title("Métodos")
+ventanaMetodos.geometry("400x250+400+50")
+ventanaMetodos.resizable(width=False, height=False)
+ventanaMetodos.config(bg="aquamarine")
+ventanaMetodos.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 
 # ----------ETIQUETAS----------
 # etiquetas ventana principal
@@ -271,4 +309,7 @@ boton_volver_condicionales.place(x=150, y=200, width=100, height=30)
 ventanaMenu.withdraw()
 ventanaVariable.withdraw()
 ventanaCondicionales.withdraw()
+ventanaBucles.withdraw()
+ventanaArreglos.withdraw()
+ventanaMetodos.withdraw()
 ventanaPrincipal.mainloop()
