@@ -129,7 +129,7 @@ ventanaBucles = grupoK.Tk()
 ventanaBucles.title("Bucles")
 ventanaBucles.geometry("400x250+400+50")
 ventanaBucles.resizable(width=False, height=False)
-ventanaBucles.config(bg="aquamarine")
+ventanaBucles.config(bg="gold")
 ventanaBucles.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 
 # ventana arreglos
@@ -137,7 +137,7 @@ ventanaArreglos = grupoK.Tk()
 ventanaArreglos.title("Arreglos")
 ventanaArreglos.geometry("400x250+400+50")
 ventanaArreglos.resizable(width=False, height=False)
-ventanaArreglos.config(bg="aquamarine")
+ventanaArreglos.config(bg="darkorange1")
 ventanaArreglos.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 
 # ventana metodos
@@ -145,7 +145,7 @@ ventanaMetodos = grupoK.Tk()
 ventanaMetodos.title("Métodos")
 ventanaMetodos.geometry("400x250+400+50")
 ventanaMetodos.resizable(width=False, height=False)
-ventanaMetodos.config(bg="aquamarine")
+ventanaMetodos.config(bg="orchid1")
 ventanaMetodos.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 
 # ----------ETIQUETAS----------
