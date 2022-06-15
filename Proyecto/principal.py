@@ -34,6 +34,9 @@ def funcionCondicionalAlternativo():
 def funcionCondicionalAnidado():
     ventana = grupoK.Tk()
 
+def funcionCondicionalSwitch():
+    ventana = grupoK.Tk()
+    
 
 def funcion_aprender_variables():
     ventanaVariable.deiconify()
@@ -87,7 +90,12 @@ def salirProgramaDesdePrincipal():
         ventanaVariable.destroy()
         ventanaCondicionales.destroy()
         ventanaBucles.destroy()
+        ventanaFor.destroy()
+        ventanaWhile.destroy()
+        ventanaDoWhile.destroy()
         ventanaArreglos.destroy()
+        ventanaVector.destroy()
+        ventanaMatriz.destroy()
         ventanaMetodos.destroy()
         ventanaProcedimientos.destroy()
         ventanaFunciones.destroy()
@@ -106,6 +114,62 @@ def funcion_funciones():
 def funcion_volver_metodos():
     ventanaMetodos.withdraw()
     ventanaMenu.deiconify()
+
+def funcion_volver_funciones():
+    ventanaFunciones.withdraw()
+    ventanaMetodos.deiconify()
+
+def funcion_volver_procedimientos():
+    ventanaProcedimientos.withdraw()
+    ventanaMetodos.deiconify()
+
+def funcionFor():
+    ventanaBucles.withdraw()
+    ventanaFor.deiconify()   
+
+def funcionWhile():
+    ventanaBucles.withdraw()
+    ventanaWhile.deiconify() 
+
+def funcionDoWhile():
+    ventanaBucles.withdraw()
+    ventanaDoWhile.deiconify() 
+
+def funcionVolverBucle():
+    ventanaBucles.withdraw()
+    ventanaMenu.deiconify() 
+
+def funcionVolverFor():
+    ventanaFor.withdraw()
+    ventanaBucles.deiconify() 
+
+def funcionVolverWhile():
+    ventanaWhile.withdraw()
+    ventanaBucles.deiconify() 
+
+def funcionVolverDoWhile():
+    ventanaDoWhile.withdraw()
+    ventanaBucles.deiconify() 
+
+def funcionVector():
+    ventanaArreglos.withdraw()
+    ventanaVector.deiconify() 
+
+def funcionMatriz():
+    ventanaArreglos.withdraw()
+    ventanaMatriz.deiconify() 
+
+def funcionVolverArreglo():
+    ventanaArreglos.withdraw()
+    ventanaMenu.deiconify() 
+
+def funcionVolverVector():
+    ventanaVector.withdraw()
+    ventanaArreglos.deiconify() 
+
+def funcionVolverMatriz():
+    ventanaMatriz.withdraw()
+    ventanaArreglos.deiconify() 
 
 
 # ----------VENTANAS----------
@@ -141,7 +205,7 @@ ventanaVariable.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 # ventana condicionales
 ventanaCondicionales = grupoK.Tk()
 ventanaCondicionales.title("Condicionales")
-ventanaCondicionales.geometry("400x250+400+50")
+ventanaCondicionales.geometry("400x300+400+50")
 ventanaCondicionales.resizable(width=False, height=False)
 ventanaCondicionales.config(bg="aquamarine")
 ventanaCondicionales.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
@@ -151,16 +215,56 @@ ventanaBucles = grupoK.Tk()
 ventanaBucles.title("Bucles")
 ventanaBucles.geometry("400x250+400+50")
 ventanaBucles.resizable(width=False, height=False)
-ventanaBucles.config(bg="gold")
+ventanaBucles.config(bg="cyan2")
 ventanaBucles.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
+
+# ventana For
+ventanaFor = grupoK.Tk()
+ventanaFor.title("For")
+ventanaFor.geometry("400x250+400+50")
+ventanaFor.resizable(width=False, height=False)
+ventanaFor.config(bg="thistle1")
+ventanaFor.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
+
+# ventana While
+ventanaWhile = grupoK.Tk()
+ventanaWhile.title("While")
+ventanaWhile.geometry("400x250+400+50")
+ventanaWhile.resizable(width=False, height=False)
+ventanaWhile.config(bg="DarkSeaGreen1")
+ventanaWhile.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
+
+# ventana Do-While
+ventanaDoWhile = grupoK.Tk()
+ventanaDoWhile.title("Do-While")
+ventanaDoWhile.geometry("400x250+400+50")
+ventanaDoWhile.resizable(width=False, height=False)
+ventanaDoWhile.config(bg="powder blue")
+ventanaDoWhile.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 
 # ventana arreglos
 ventanaArreglos = grupoK.Tk()
 ventanaArreglos.title("Arreglos")
 ventanaArreglos.geometry("400x250+400+50")
 ventanaArreglos.resizable(width=False, height=False)
-ventanaArreglos.config(bg="darkorange1")
+ventanaArreglos.config(bg="maroon")
 ventanaArreglos.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
+
+# ventana Vector
+ventanaVector = grupoK.Tk()
+ventanaVector.title("Vectores")
+ventanaVector.geometry("400x250+400+50")
+ventanaVector.resizable(width=False, height=False)
+ventanaVector.config(bg="dark salmon")
+ventanaVector.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
+
+# ventana Matriz
+ventanaMatriz = grupoK.Tk()
+ventanaMatriz.title("Matrices")
+ventanaMatriz.geometry("400x250+400+50")
+ventanaMatriz.resizable(width=False, height=False)
+ventanaMatriz.config(bg="DarkOliveGreen4")
+ventanaMatriz.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 
 # ventana metodos
 ventanaMetodos = grupoK.Tk()
@@ -206,7 +310,8 @@ mensaje_nombre.place(x=125, y=40,  width=150, height=30)
 # etiquetas ventana menu
 cartel_opcion = grupoK.Label(ventanaMenu,
                              text="Elija el apartado al cual quiere ingresar",
-                             bg="royalblue")
+                             font="calibri",
+                             bg="cornflower blue")
 cartel_opcion.pack()
 
 # etiquetas ventana variables
@@ -229,6 +334,55 @@ etiquetaMetodos = grupoK.Label(ventanaMetodos,
                                font="calibri",
                                background="pink")
 etiquetaMetodos.pack()
+
+# etiquetas de ventana bucles
+etiquetaBucles = grupoK.Label(ventanaBucles,
+                               text="Elija el bucle que quiere aprender",
+                               font="calibri",
+                               background="LightBlue1")
+etiquetaBucles.pack()
+
+# etiquetas de ventana for
+etiquetaFor = grupoK.Label(ventanaFor,
+                               text="Teoría sobre For",
+                               font="calibri",
+                               background="pink1")
+etiquetaFor.pack()
+
+# etiquetas de ventana while
+etiquetaWhile = grupoK.Label(ventanaWhile,
+                               text="Teoría sobre While",
+                               font="calibri",
+                               background="pale green")
+etiquetaWhile.pack()
+
+# etiquetas de ventana do-while
+etiquetaDoWhile = grupoK.Label(ventanaDoWhile,
+                               text="Teoría sobre Do-While",
+                               font="calibri",
+                               background="CadetBlue1")
+etiquetaDoWhile.pack()
+
+# etiquetas de ventana Arreglo
+etiquetaArreglo = grupoK.Label(ventanaArreglos,
+                               text="Elija el arreglo que quiere aprender",
+                               font="calibri",
+                               background="indian red")
+etiquetaArreglo.pack()
+
+# etiquetas de ventana Vector
+etiquetaVector = grupoK.Label(ventanaVector,
+                               text="Teoría sobre Vectores",
+                               font="calibri",
+                               background="RosyBrown1")
+etiquetaVector.pack()
+
+# etiquetas de ventana Matriz
+etiquetaMatriz = grupoK.Label(ventanaMatriz,
+                               text="Teoría sobre Matrices",
+                               font="calibri",
+                               background="DarkOliveGreen1")
+etiquetaMatriz.pack()
 
 # ----------ENTRADAS----------
 # entrada ventana principal
@@ -344,11 +498,17 @@ botonCondicAnidado = grupoK.Button(ventanaCondicionales,
 botonCondicAnidado.pack()
 botonCondicAnidado.place(x=100, y=150, width=200, height=30)
 
+botonCondicSwitch = grupoK.Button(ventanaCondicionales,
+                                   text="Condicional Switch Case ",
+                                   command=funcionCondicionalSwitch)
+botonCondicSwitch.pack()
+botonCondicSwitch.place(x=100, y=200, width=200, height=30)
+
 boton_volver_condicionales = grupoK.Button(ventanaCondicionales,
                                            text="Volver",
                                            command=funcion_volver_condicionales)
 boton_volver_condicionales.pack()
-boton_volver_condicionales.place(x=150, y=200, width=100, height=30)
+boton_volver_condicionales.place(x=150, y=250, width=100, height=30)
 
 # botones de ventana métodos
 botonProcedimientos = grupoK.Button(ventanaMetodos,
@@ -369,12 +529,105 @@ boton_volver_metodos = grupoK.Button(ventanaMetodos,
 boton_volver_metodos.pack()
 boton_volver_metodos.place(x=150, y=150, width=100, height=30)
 
+boton_volver_funciones = grupoK.Button(ventanaFunciones,
+                                     text="Volver",
+                                     command=funcion_volver_funciones)
+boton_volver_funciones.pack()
+boton_volver_funciones.place(x=150, y=150, width=100, height=30)
+
+boton_volver_procedimientos = grupoK.Button(ventanaProcedimientos,
+                                     text="Volver",
+                                     command=funcion_volver_procedimientos)
+boton_volver_procedimientos.pack()
+boton_volver_procedimientos.place(x=150, y=150, width=100, height=30)
+
+#botones bucles
+botonFor = grupoK.Button(ventanaBucles,
+                            text="For",
+                            command=funcionFor)
+botonFor.pack()
+botonFor.place(x=150, y=50, width=100, height=30)
+
+botonWhile = grupoK.Button(ventanaBucles,
+                            text="While",
+                            command=funcionWhile)
+botonWhile.pack()
+botonWhile.place(x=150, y=100, width=100, height=30)
+
+botonDoWhile = grupoK.Button(ventanaBucles,
+                            text="Do-While",
+                            command=funcionDoWhile)
+botonDoWhile.pack()
+botonDoWhile.place(x=150, y=150, width=100, height=30)
+
+botonVolverBucles = grupoK.Button(ventanaBucles,
+                                     text="Volver",
+                                     command=funcionVolverBucle)
+botonVolverBucles.pack()
+botonVolverBucles.place(x=150, y=200, width=100, height=30)
+
+botonVolverFor = grupoK.Button(ventanaFor,
+                                     text="Volver",
+                                     command=funcionVolverFor)
+botonVolverFor.pack()
+botonVolverFor.place(x=150, y=200, width=100, height=30)
+
+botonVolverWhile = grupoK.Button(ventanaWhile,
+                                     text="Volver",
+                                     command=funcionVolverWhile)
+botonVolverWhile.pack()
+botonVolverWhile.place(x=150, y=200, width=100, height=30)
+
+botonVolverDoWhile = grupoK.Button(ventanaDoWhile,
+                                     text="Volver",
+                                     command=funcionVolverDoWhile)
+botonVolverDoWhile.pack()
+botonVolverDoWhile.place(x=150, y=200, width=100, height=30)
+
+#Botones arreglos 
+
+botonVector = grupoK.Button(ventanaArreglos,
+                            text="Vectores",
+                            command=funcionVector)
+botonVector.pack()
+botonVector.place(x=150, y=50, width=100, height=30)
+
+botonMatriz = grupoK.Button(ventanaArreglos,
+                            text="Matrices",
+                            command=funcionMatriz)
+botonMatriz.pack()
+botonMatriz.place(x=150, y=100, width=100, height=30)
+
+botonVolverArreglor = grupoK.Button(ventanaArreglos,
+                                     text="Volver",
+                                     command=funcionVolverArreglo)
+botonVolverArreglor.pack()
+botonVolverArreglor.place(x=150, y=150, width=100, height=30)
+
+botonVolverVector = grupoK.Button(ventanaVector,
+                                     text="Volver",
+                                     command=funcionVolverVector)
+botonVolverVector.pack()
+botonVolverVector.place(x=150, y=200, width=100, height=30)
+
+botonVolverMatriz = grupoK.Button(ventanaMatriz,
+                                     text="Volver",
+                                     command=funcionVolverMatriz)
+botonVolverMatriz.pack()
+botonVolverMatriz.place(x=150, y=200, width=100, height=30)
+
+
 # INICIO
 ventanaMenu.withdraw()
 ventanaVariable.withdraw()
 ventanaCondicionales.withdraw()
 ventanaBucles.withdraw()
+ventanaFor.withdraw()
+ventanaWhile.withdraw()
+ventanaDoWhile.withdraw()
 ventanaArreglos.withdraw()
+ventanaVector.withdraw()
+ventanaMatriz.withdraw()
 ventanaMetodos.withdraw()
 ventanaProcedimientos.withdraw()
 ventanaFunciones.withdraw()
