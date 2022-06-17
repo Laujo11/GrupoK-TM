@@ -73,6 +73,31 @@ def funcion_aprender_metodos():
     ventanaMenu.withdraw()
 
 
+def funcion_volver_enteros():
+    ventanaVariable.deiconify()
+    ventanaEnteros.withdraw()
+
+
+def funcion_volver_flotantes():
+    ventanaVariable.deiconify()
+    ventanaFlotantes.withdraw()
+
+
+def funcion_volver_logicos():
+    ventanaVariable.deiconify()
+    ventanaLogico.withdraw()
+
+
+def funcion_volver_caracter():
+    ventanaVariable.deiconify()
+    ventanaCaracter.withdraw()
+
+
+def funcion_volver_cadena():
+    ventanaVariable.deiconify()
+    ventanaCadena.withdraw()
+
+
 def funcion_volver_condicionales():
     ventanaMenu.deiconify()
     ventanaCondicionales.withdraw()
@@ -268,8 +293,8 @@ ventanaMenu.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 # etiquetas
 cartel_opcion = grupoK.Label(ventanaMenu,
                              text="Elija el apartado al cual quiere ingresar",
-                             font="calibri",
-                             bg="cornflower blue")
+                             font=("calibri", 12, "bold"),
+                             bg="royalblue")
 cartel_opcion.pack()
 
 # botones
@@ -321,7 +346,7 @@ ventanaVariable.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 # etiquetas
 elegir = grupoK.Label(ventanaVariable,
                       text="Elija el tipo de variable que quiere aprender",
-                      font="calibri",
+                      font=("calibri", 12, "bold"),
                       bg="coral")
 elegir.pack()
 
@@ -374,7 +399,7 @@ ventanaCondicionales.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 # etiquetas
 elegirCondic = grupoK.Label(ventanaCondicionales,
                             text="Elija el tipo de condicional que quiere aprender",
-                            font="calibri",
+                            font=("calibri", 12, "bold"),
                             bg="aquamarine")
 elegirCondic.pack()
 
@@ -421,8 +446,8 @@ ventanaBucles.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 # etiquetas
 etiquetaBucles = grupoK.Label(ventanaBucles,
                               text="Elija el bucle que quiere aprender",
-                              font="calibri",
-                              background="LightBlue1")
+                              font=("calibri", 12, "bold"),
+                              background="cyan2")
 etiquetaBucles.pack()
 
 # botones
@@ -462,8 +487,8 @@ ventanaFor.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 # etiquetas
 etiquetaFor = grupoK.Label(ventanaFor,
                            text="Teoría sobre For",
-                           font="calibri",
-                           background="pink1")
+                           font=("calibri", 12, "bold"),
+                           background="thistle1")
 etiquetaFor.pack()
 
 # botones
@@ -485,8 +510,8 @@ ventanaWhile.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 # etiquetas
 etiquetaWhile = grupoK.Label(ventanaWhile,
                              text="Teoría sobre While",
-                             font="calibri",
-                             background="pale green")
+                             font=("calibri", 12, "bold"),
+                             background="DarkSeaGreen1")
 etiquetaWhile.pack()
 
 # botones
@@ -508,8 +533,8 @@ ventanaDoWhile.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 # etiquetas
 etiquetaDoWhile = grupoK.Label(ventanaDoWhile,
                                text="Teoría sobre Do-While",
-                               font="calibri",
-                               background="CadetBlue1")
+                               font=("calibri", 12, "bold"),
+                               background="powder blue")
 etiquetaDoWhile.pack()
 
 # botones
@@ -531,8 +556,8 @@ ventanaArreglos.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 # etiquetas
 etiquetaArreglo = grupoK.Label(ventanaArreglos,
                                text="Elija el arreglo que quiere aprender",
-                               font="calibri",
-                               background="indian red")
+                               font=("calibri", 12, "bold"),
+                               background="maroon")
 etiquetaArreglo.pack()
 
 # botones
@@ -566,8 +591,8 @@ ventanaVector.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 # etiquetas
 etiquetaVector = grupoK.Label(ventanaVector,
                               text="Teoría sobre Vectores",
-                              font="calibri",
-                              background="RosyBrown1")
+                              font=("calibri", 12, "bold"),
+                              background="dark salmon")
 etiquetaVector.pack()
 
 # botones
@@ -589,8 +614,8 @@ ventanaMatriz.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 # etiquetas
 etiquetaMatriz = grupoK.Label(ventanaMatriz,
                               text="Teoría sobre Matrices",
-                              font="calibri",
-                              background="DarkOliveGreen1")
+                              font=("calibri", 12, "bold"),
+                              background="DarkOliveGreen4")
 etiquetaMatriz.pack()
 
 # botones
@@ -612,8 +637,8 @@ ventanaMetodos.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 # etiquetas
 etiquetaMetodos = grupoK.Label(ventanaMetodos,
                                text="Elegí una opción",
-                               font="calibri",
-                               background="pink")
+                               font=("calibri", 12, "bold"),
+                               background="orchid1")
 etiquetaMetodos.pack()
 
 # botones
@@ -683,7 +708,11 @@ ventanaEnteros.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 # etiquetas
 
 # botones
-
+boton_volver_enteros = grupoK.Button(ventanaEnteros,
+                                     text="Volver",
+                                     command=funcion_volver_enteros)
+boton_volver_enteros.pack()
+boton_volver_enteros.place(x=150, y=200, width=100, height=30)
 
 # VENTANA REALES
 # ventana
@@ -697,7 +726,11 @@ ventanaFlotantes.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 # etiquetas
 
 # botones
-
+boton_volver_flotantes = grupoK.Button(ventanaFlotantes,
+                                       text="Volver",
+                                       command=funcion_volver_flotantes)
+boton_volver_flotantes.pack()
+boton_volver_flotantes.place(x=150, y=200, width=100, height=30)
 
 # VENTANA LÓGICOS
 # ventana
@@ -712,7 +745,11 @@ ventanaLogico.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 # etiquetas
 
 # botones
-
+boton_volver_logicos = grupoK.Button(ventanaLogico,
+                                     text="Volver",
+                                     command=funcion_volver_logicos)
+boton_volver_logicos.pack()
+boton_volver_logicos.place(x=150, y=200, width=100, height=30)
 
 # VENTANA CARACTERES
 # ventana
@@ -726,7 +763,11 @@ ventanaCaracter.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 # etiquetas
 
 # botones
-
+boton_volver_caracter = grupoK.Button(ventanaCaracter,
+                                      text="Volver",
+                                      command=funcion_volver_caracter)
+boton_volver_caracter.pack()
+boton_volver_caracter.place(x=150, y=200, width=100, height=30)
 
 # VENTANA CADENAS
 # ventana
@@ -740,7 +781,11 @@ ventanaCadena.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 # etiquetas
 
 # botones
-
+boton_volver_cadena = grupoK.Button(ventanaCadena,
+                                    text="Volver",
+                                    command=funcion_volver_cadena)
+boton_volver_cadena.pack()
+boton_volver_cadena.place(x=150, y=200, width=100, height=30)
 # ------------------------------------------------------
 # INICIO
 ventanaMenu.withdraw()
