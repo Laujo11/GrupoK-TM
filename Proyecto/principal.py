@@ -78,19 +78,43 @@ def funcion_aprender_condicionales():
 
 
 def funcionCondicionalSimple():
-    ventana = grupoK.Tk()
+    ventanaCondicionalSimple.deiconify()
+    ventanaCondicionales.withdraw()
+
+
+def funcion_volver_condicional_simple():
+    ventanaCondicionales.deiconify()
+    ventanaCondicionalSimple.withdraw()
 
 
 def funcionCondicionalAlternativo():
-    ventana = grupoK.Tk()
+    ventanaCondicionalAlternativo.deiconify()
+    ventanaCondicionales.withdraw()
+
+
+def funcion_volver_condicional_alternativo():
+    ventanaCondicionales.deiconify()
+    ventanaCondicionalAlternativo.withdraw()
 
 
 def funcionCondicionalAnidado():
-    ventana = grupoK.Tk()
+    ventanaCondicionalAnidado.deiconify()
+    ventanaCondicionales.withdraw()
+
+
+def funcion_volver_condicional_anidado():
+    ventanaCondicionales.deiconify()
+    ventanaCondicionalAnidado.withdraw()
 
 
 def funcionCondicionalSwitch():
-    ventana = grupoK.Tk()
+    ventanaCondicionalSwitchCase.deiconify()
+    ventanaCondicionales.withdraw()
+
+
+def funcion_volver_condicional_switchCase():
+    ventanaCondicionales.deiconify()
+    ventanaCondicionalSwitchCase.withdraw()
 
 
 def funcion_volver_condicionales():
@@ -207,6 +231,11 @@ def salirProgramaDesdePrincipal():
     if cajaMensaje.askokcancel("No te vayas :(", "¿Seguro desea salir?"):
         ventanaPrincipal.destroy()
         ventanaMenu.destroy()
+        ventanaEnteros.destroy()
+        ventanaFlotantes.destroy()
+        ventanaCaracter.destroy()
+        ventanaCadena.destroy()
+        ventanaLogico.destroy()
         ventanaVariable.destroy()
         ventanaCondicionales.destroy()
         ventanaBucles.destroy()
@@ -219,11 +248,6 @@ def salirProgramaDesdePrincipal():
         ventanaMetodos.destroy()
         ventanaProcedimientos.destroy()
         ventanaFunciones.destroy()
-        ventanaEnteros.destroy()
-        ventanaFlotantes.destroy()
-        ventanaLogico.destroy()
-        ventanaCadena.destroy()
-        ventanaCaracter.destroy()
 
 
 # ----------ELEMENTOS----------
@@ -525,6 +549,82 @@ boton_volver_condicionales = grupoK.Button(ventanaCondicionales,
 boton_volver_condicionales.pack()
 boton_volver_condicionales.place(x=150, y=250, width=100, height=30)
 
+# VENTANA CONDICIONAL SIMPLE
+# ventana
+ventanaCondicionalSimple = grupoK.Tk()
+ventanaCondicionalSimple.title("Condicional Simple")
+ventanaCondicionalSimple.geometry("400x300+400+50")
+ventanaCondicionalSimple.resizable(width=False, height=False)
+ventanaCondicionalSimple.config(bg="aquamarine")
+ventanaCondicionalSimple.protocol(
+    "WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
+
+# etiquetas
+
+# botones
+boton_volver_condicional_simple = grupoK.Button(ventanaCondicionalSimple,
+                                                text="Volver",
+                                                command=funcion_volver_condicional_simple)
+boton_volver_condicional_simple.pack()
+boton_volver_condicional_simple.place(x=150, y=200, width=100, height=30)
+
+# VENTANA CONDICIONAL ALTERNATIVO
+# ventana
+ventanaCondicionalAlternativo = grupoK.Tk()
+ventanaCondicionalAlternativo.title("Condicional Alternativo")
+ventanaCondicionalAlternativo.geometry("400x300+400+50")
+ventanaCondicionalAlternativo.resizable(width=False, height=False)
+ventanaCondicionalAlternativo.config(bg="aquamarine")
+ventanaCondicionalAlternativo.protocol(
+    "WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
+
+# etiquetas
+
+# botones
+boton_volver_condicional_alternativo = grupoK.Button(ventanaCondicionalAlternativo,
+                                                     text="Volver",
+                                                     command=funcion_volver_condicional_alternativo)
+boton_volver_condicional_alternativo.pack()
+boton_volver_condicional_alternativo.place(x=150, y=200, width=100, height=30)
+
+# VENTANA CONDICIONAL SIMPLE
+# ventana
+ventanaCondicionalAnidado = grupoK.Tk()
+ventanaCondicionalAnidado.title("Condicional Anidado")
+ventanaCondicionalAnidado.geometry("400x300+400+50")
+ventanaCondicionalAnidado.resizable(width=False, height=False)
+ventanaCondicionalAnidado.config(bg="aquamarine")
+ventanaCondicionalAnidado.protocol(
+    "WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
+
+# etiquetas
+
+# botones
+boton_volver_condicional_anidado = grupoK.Button(ventanaCondicionalAnidado,
+                                                 text="Volver",
+                                                 command=funcion_volver_condicional_anidado)
+boton_volver_condicional_anidado.pack()
+boton_volver_condicional_anidado.place(x=150, y=200, width=100, height=30)
+
+# VENTANA CONDICIONAL SWITCH CASE
+# ventana
+ventanaCondicionalSwitchCase = grupoK.Tk()
+ventanaCondicionalSwitchCase.title("Condicional Switch Case")
+ventanaCondicionalSwitchCase.geometry("400x300+400+50")
+ventanaCondicionalSwitchCase.resizable(width=False, height=False)
+ventanaCondicionalSwitchCase.config(bg="aquamarine")
+ventanaCondicionalSwitchCase.protocol(
+    "WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
+
+# etiquetas
+
+# botones
+boton_volver_condicional_switch_case = grupoK.Button(ventanaCondicionalSwitchCase,
+                                                     text="Volver",
+                                                     command=funcion_volver_condicional_switchCase)
+boton_volver_condicional_switch_case.pack()
+boton_volver_condicional_switch_case.place(x=150, y=200, width=100, height=30)
+
 # VENTANA BUCLES
 # ventana
 ventanaBucles = grupoK.Tk()
@@ -791,7 +891,16 @@ boton_volver_funciones.place(x=150, y=150, width=100, height=30)
 # INICIO
 ventanaMenu.withdraw()
 ventanaVariable.withdraw()
+ventanaEnteros.withdraw()
+ventanaFlotantes.withdraw()
+ventanaCaracter.withdraw()
+ventanaCadena.withdraw()
+ventanaLogico.withdraw()
 ventanaCondicionales.withdraw()
+ventanaCondicionalSimple.withdraw()
+ventanaCondicionalAlternativo.withdraw()
+ventanaCondicionalAnidado.withdraw()
+ventanaCondicionalSwitchCase.withdraw()
 ventanaBucles.withdraw()
 ventanaFor.withdraw()
 ventanaWhile.withdraw()
@@ -802,9 +911,4 @@ ventanaMatriz.withdraw()
 ventanaMetodos.withdraw()
 ventanaProcedimientos.withdraw()
 ventanaFunciones.withdraw()
-ventanaEnteros.withdraw()
-ventanaCaracter.withdraw()
-ventanaFlotantes.withdraw()
-ventanaCadena.withdraw()
-ventanaLogico.withdraw()
 ventanaPrincipal.mainloop()
