@@ -7,9 +7,24 @@ from tkinter.font import BOLD
 # ----------FUNCIONES----------
 
 
+def abrirMenu():
+    ventanaPrincipal.withdraw()
+    ventanaMenu.deiconify()
+
+
+def funcion_aprender_variables():
+    ventanaVariable.deiconify()
+    ventanaMenu.withdraw()
+
+
 def funcionEnteros():
     ventanaEnteros.deiconify()
     ventanaVariable.withdraw()
+
+
+def funcion_volver_enteros():
+    ventanaVariable.deiconify()
+    ventanaEnteros.withdraw()
 
 
 def funcionFlotantes():
@@ -17,9 +32,29 @@ def funcionFlotantes():
     ventanaVariable.withdraw()
 
 
+def funcion_volver_flotantes():
+    ventanaVariable.deiconify()
+    ventanaFlotantes.withdraw()
+
+
+def funcionCaracter():
+    ventanaCaracter.deiconify()
+    ventanaVariable.withdraw()
+
+
+def funcion_volver_caracter():
+    ventanaVariable.deiconify()
+    ventanaCaracter.withdraw()
+
+
 def funcionCadena():
     ventanaCadena.deiconify()
     ventanaVariable.withdraw()
+
+
+def funcion_volver_cadena():
+    ventanaVariable.deiconify()
+    ventanaCadena.withdraw()
 
 
 def funcionLogico():
@@ -27,9 +62,19 @@ def funcionLogico():
     ventanaVariable.withdraw()
 
 
-def funcionCaracter():
-    ventanaCaracter.deiconify()
+def funcion_volver_logicos():
+    ventanaVariable.deiconify()
+    ventanaLogico.withdraw()
+
+
+def funcion_volver_variables():
     ventanaVariable.withdraw()
+    ventanaMenu.deiconify()
+
+
+def funcion_aprender_condicionales():
+    ventanaCondicionales.deiconify()
+    ventanaMenu.withdraw()
 
 
 def funcionCondicionalSimple():
@@ -48,14 +93,9 @@ def funcionCondicionalSwitch():
     ventana = grupoK.Tk()
 
 
-def funcion_aprender_variables():
-    ventanaVariable.deiconify()
-    ventanaMenu.withdraw()
-
-
-def funcion_aprender_condicionales():
-    ventanaCondicionales.deiconify()
-    ventanaMenu.withdraw()
+def funcion_volver_condicionales():
+    ventanaMenu.deiconify()
+    ventanaCondicionales.withdraw()
 
 
 def funcion_aprender_bucles():
@@ -63,104 +103,9 @@ def funcion_aprender_bucles():
     ventanaMenu.withdraw()
 
 
-def funcion_aprender_arreglos():
-    ventanaArreglos.deiconify()
-    ventanaMenu.withdraw()
-
-
-def funcion_aprender_metodos():
-    ventanaMetodos.deiconify()
-    ventanaMenu.withdraw()
-
-
-def funcion_volver_enteros():
-    ventanaVariable.deiconify()
-    ventanaEnteros.withdraw()
-
-
-def funcion_volver_flotantes():
-    ventanaVariable.deiconify()
-    ventanaFlotantes.withdraw()
-
-
-def funcion_volver_logicos():
-    ventanaVariable.deiconify()
-    ventanaLogico.withdraw()
-
-
-def funcion_volver_caracter():
-    ventanaVariable.deiconify()
-    ventanaCaracter.withdraw()
-
-
-def funcion_volver_cadena():
-    ventanaVariable.deiconify()
-    ventanaCadena.withdraw()
-
-
-def funcion_volver_condicionales():
-    ventanaMenu.deiconify()
-    ventanaCondicionales.withdraw()
-
-
-def funcion_volver_variables():
-    ventanaVariable.withdraw()
-    ventanaMenu.deiconify()
-
-
-def funcion_volver_menu():
-    ventanaMenu.withdraw()
-    ventanaPrincipal.deiconify()
-
-
-def abrirMenu():
-    ventanaPrincipal.withdraw()
-    ventanaMenu.deiconify()
-
-
-def funcion_procedimientos():
-    ventanaMetodos.withdraw()
-    ventanaProcedimientos.deiconify()
-
-
-def funcion_funciones():
-    ventanaMetodos.withdraw()
-    ventanaFunciones.deiconify()
-
-
-def funcion_volver_metodos():
-    ventanaMetodos.withdraw()
-    ventanaMenu.deiconify()
-
-
-def funcion_volver_funciones():
-    ventanaFunciones.withdraw()
-    ventanaMetodos.deiconify()
-
-
-def funcion_volver_procedimientos():
-    ventanaProcedimientos.withdraw()
-    ventanaMetodos.deiconify()
-
-
 def funcionFor():
     ventanaBucles.withdraw()
     ventanaFor.deiconify()
-
-
-def funcionWhile():
-    ventanaBucles.withdraw()
-    ventanaWhile.deiconify()
-
-
-def funcionDoWhile():
-    ventanaBucles.withdraw()
-    ventanaDoWhile.deiconify()
-
-
-def funcionVolverBucle():
-    ventanaBucles.withdraw()
-    ventanaMenu.deiconify()
 
 
 def funcionVolverFor():
@@ -168,9 +113,19 @@ def funcionVolverFor():
     ventanaBucles.deiconify()
 
 
+def funcionWhile():
+    ventanaBucles.withdraw()
+    ventanaWhile.deiconify()
+
+
 def funcionVolverWhile():
     ventanaWhile.withdraw()
     ventanaBucles.deiconify()
+
+
+def funcionDoWhile():
+    ventanaBucles.withdraw()
+    ventanaDoWhile.deiconify()
 
 
 def funcionVolverDoWhile():
@@ -178,19 +133,19 @@ def funcionVolverDoWhile():
     ventanaBucles.deiconify()
 
 
+def funcionVolverBucle():
+    ventanaBucles.withdraw()
+    ventanaMenu.deiconify()
+
+
+def funcion_aprender_arreglos():
+    ventanaArreglos.deiconify()
+    ventanaMenu.withdraw()
+
+
 def funcionVector():
     ventanaArreglos.withdraw()
     ventanaVector.deiconify()
-
-
-def funcionMatriz():
-    ventanaArreglos.withdraw()
-    ventanaMatriz.deiconify()
-
-
-def funcionVolverArreglo():
-    ventanaArreglos.withdraw()
-    ventanaMenu.deiconify()
 
 
 def funcionVolverVector():
@@ -198,9 +153,54 @@ def funcionVolverVector():
     ventanaArreglos.deiconify()
 
 
+def funcionMatriz():
+    ventanaArreglos.withdraw()
+    ventanaMatriz.deiconify()
+
+
 def funcionVolverMatriz():
     ventanaMatriz.withdraw()
     ventanaArreglos.deiconify()
+
+
+def funcionVolverArreglo():
+    ventanaArreglos.withdraw()
+    ventanaMenu.deiconify()
+
+
+def funcion_aprender_metodos():
+    ventanaMetodos.deiconify()
+    ventanaMenu.withdraw()
+
+
+def funcion_procedimientos():
+    ventanaMetodos.withdraw()
+    ventanaProcedimientos.deiconify()
+
+
+def funcion_volver_procedimientos():
+    ventanaProcedimientos.withdraw()
+    ventanaMetodos.deiconify()
+
+
+def funcion_funciones():
+    ventanaMetodos.withdraw()
+    ventanaFunciones.deiconify()
+
+
+def funcion_volver_funciones():
+    ventanaFunciones.withdraw()
+    ventanaMetodos.deiconify()
+
+
+def funcion_volver_metodos():
+    ventanaMetodos.withdraw()
+    ventanaMenu.deiconify()
+
+
+def funcion_volver_menu():
+    ventanaMenu.withdraw()
+    ventanaPrincipal.deiconify()
 
 
 def salirProgramaDesdePrincipal():
@@ -386,6 +386,97 @@ boton_volver_variables = grupoK.Button(ventanaVariable,
                                        command=funcion_volver_variables)
 boton_volver_variables.pack()
 boton_volver_variables.place(x=150, y=300, width=100, height=30)
+
+# VENTANA ENTEROS
+# ventana
+ventanaEnteros = grupoK.Tk()
+ventanaEnteros.title("Enteros")
+ventanaEnteros.geometry("400x250+400+50")
+ventanaEnteros.resizable(width=False, height=False)
+ventanaEnteros.config(bg="coral1")
+ventanaEnteros.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
+
+# etiquetas
+
+# botones
+boton_volver_enteros = grupoK.Button(ventanaEnteros,
+                                     text="Volver",
+                                     command=funcion_volver_enteros)
+boton_volver_enteros.pack()
+boton_volver_enteros.place(x=150, y=200, width=100, height=30)
+
+# VENTANA FLOTANTES/REALES
+# ventana
+ventanaFlotantes = grupoK.Tk()
+ventanaFlotantes.title("Flotantes")
+ventanaFlotantes.geometry("400x250+400+50")
+ventanaFlotantes.resizable(width=False, height=False)
+ventanaFlotantes.config(bg="coral2")
+ventanaFlotantes.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
+
+# etiquetas
+
+# botones
+boton_volver_flotantes = grupoK.Button(ventanaFlotantes,
+                                       text="Volver",
+                                       command=funcion_volver_flotantes)
+boton_volver_flotantes.pack()
+boton_volver_flotantes.place(x=150, y=200, width=100, height=30)
+
+
+# VENTANA CARACTERES
+# ventana
+ventanaCaracter = grupoK.Tk()
+ventanaCaracter.title("Caracteres")
+ventanaCaracter.geometry("400x250+400+50")
+ventanaCaracter.resizable(width=False, height=False)
+ventanaCaracter.config(bg="red")
+ventanaCaracter.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
+
+# etiquetas
+
+# botones
+boton_volver_caracter = grupoK.Button(ventanaCaracter,
+                                      text="Volver",
+                                      command=funcion_volver_caracter)
+boton_volver_caracter.pack()
+boton_volver_caracter.place(x=150, y=200, width=100, height=30)
+
+# VENTANA CADENAS
+# ventana
+ventanaCadena = grupoK.Tk()
+ventanaCadena.title("Cadenas de texto")
+ventanaCadena.geometry("400x250+400+50")
+ventanaCadena.resizable(width=False, height=False)
+ventanaCadena.config(bg="red")
+ventanaCadena.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
+
+# etiquetas
+
+# botones
+boton_volver_cadena = grupoK.Button(ventanaCadena,
+                                    text="Volver",
+                                    command=funcion_volver_cadena)
+boton_volver_cadena.pack()
+boton_volver_cadena.place(x=150, y=200, width=100, height=30)
+
+# VENTANA LÓGICOS
+# ventana
+ventanaLogico = grupoK.Tk()
+ventanaLogico.title("Lógicos")
+ventanaLogico.geometry("400x250+400+50")
+ventanaLogico.resizable(width=False, height=False)
+ventanaLogico.config(bg="coral3")
+ventanaLogico.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
+
+# etiquetas
+
+# botones
+boton_volver_logicos = grupoK.Button(ventanaLogico,
+                                     text="Volver",
+                                     command=funcion_volver_logicos)
+boton_volver_logicos.pack()
+boton_volver_logicos.place(x=150, y=200, width=100, height=30)
 
 # VENTANA CONDICIONALES
 # ventana
@@ -696,96 +787,6 @@ boton_volver_funciones = grupoK.Button(ventanaFunciones,
 boton_volver_funciones.pack()
 boton_volver_funciones.place(x=150, y=150, width=100, height=30)
 
-# VENTANA ENTEROS
-# ventana
-ventanaEnteros = grupoK.Tk()
-ventanaEnteros.title("Enteros")
-ventanaEnteros.geometry("400x250+400+50")
-ventanaEnteros.resizable(width=False, height=False)
-ventanaEnteros.config(bg="coral1")
-ventanaEnteros.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
-
-# etiquetas
-
-# botones
-boton_volver_enteros = grupoK.Button(ventanaEnteros,
-                                     text="Volver",
-                                     command=funcion_volver_enteros)
-boton_volver_enteros.pack()
-boton_volver_enteros.place(x=150, y=200, width=100, height=30)
-
-# VENTANA REALES
-# ventana
-ventanaFlotantes = grupoK.Tk()
-ventanaFlotantes.title("Flotantes")
-ventanaFlotantes.geometry("400x250+400+50")
-ventanaFlotantes.resizable(width=False, height=False)
-ventanaFlotantes.config(bg="coral2")
-ventanaFlotantes.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
-
-# etiquetas
-
-# botones
-boton_volver_flotantes = grupoK.Button(ventanaFlotantes,
-                                       text="Volver",
-                                       command=funcion_volver_flotantes)
-boton_volver_flotantes.pack()
-boton_volver_flotantes.place(x=150, y=200, width=100, height=30)
-
-# VENTANA LÓGICOS
-# ventana
-ventanaLogico = grupoK.Tk()
-ventanaLogico.title("Lógicos")
-ventanaLogico.geometry("400x250+400+50")
-ventanaLogico.resizable(width=False, height=False)
-ventanaLogico.config(bg="coral3")
-ventanaLogico.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
-
-
-# etiquetas
-
-# botones
-boton_volver_logicos = grupoK.Button(ventanaLogico,
-                                     text="Volver",
-                                     command=funcion_volver_logicos)
-boton_volver_logicos.pack()
-boton_volver_logicos.place(x=150, y=200, width=100, height=30)
-
-# VENTANA CARACTERES
-# ventana
-ventanaCaracter = grupoK.Tk()
-ventanaCaracter.title("Caracteres")
-ventanaCaracter.geometry("400x250+400+50")
-ventanaCaracter.resizable(width=False, height=False)
-ventanaCaracter.config(bg="red")
-ventanaCaracter.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
-
-# etiquetas
-
-# botones
-boton_volver_caracter = grupoK.Button(ventanaCaracter,
-                                      text="Volver",
-                                      command=funcion_volver_caracter)
-boton_volver_caracter.pack()
-boton_volver_caracter.place(x=150, y=200, width=100, height=30)
-
-# VENTANA CADENAS
-# ventana
-ventanaCadena = grupoK.Tk()
-ventanaCadena.title("Cadenas de texto")
-ventanaCadena.geometry("400x250+400+50")
-ventanaCadena.resizable(width=False, height=False)
-ventanaCadena.config(bg="red")
-ventanaCadena.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
-
-# etiquetas
-
-# botones
-boton_volver_cadena = grupoK.Button(ventanaCadena,
-                                    text="Volver",
-                                    command=funcion_volver_cadena)
-boton_volver_cadena.pack()
-boton_volver_cadena.place(x=150, y=200, width=100, height=30)
 # ------------------------------------------------------
 # INICIO
 ventanaMenu.withdraw()
