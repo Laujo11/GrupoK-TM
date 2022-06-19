@@ -1,7 +1,6 @@
 # ----------IMPORTS----------
-from this import s
 import tkinter as grupoK
-from tkinter import messagebox as cajaMensaje
+from tkinter import CENTER, messagebox as cajaMensaje
 from tkinter.font import BOLD
 
 # ----------FUNCIONES----------
@@ -238,6 +237,10 @@ def salirProgramaDesdePrincipal():
         ventanaLogico.destroy()
         ventanaVariable.destroy()
         ventanaCondicionales.destroy()
+        ventanaCondicionalSimple.destroy()
+        ventanaCondicionalAlternativo.destroy()
+        ventanaCondicionalAnidado.destroy()
+        ventanaCondicionalSwitchCase.destroy()
         ventanaBucles.destroy()
         ventanaFor.destroy()
         ventanaWhile.destroy()
@@ -259,8 +262,8 @@ ventanaPrincipal.title(tituloVentanaPrincipal)
 ventanaPrincipal.geometry("400x200+500+100")
 ventanaPrincipal.resizable(width=False, height=False)
 ventanaPrincipal.config(bg="greenyellow")
-photo1 = grupoK.PhotoImage(file="Proyecto/icono.png")
-ventanaPrincipal.iconphoto(False, photo1)
+#photo1 = grupoK.PhotoImage(file="Proyecto/icono.png")
+#ventanaPrincipal.iconphoto(False, photo1)
 ventanaPrincipal.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 
 # entradas
@@ -299,7 +302,7 @@ boton_salir_principal = grupoK.Button(ventanaPrincipal,
                                       text="Salir",
                                       font=("calibri", 13, "bold"),
                                       cursor="hand2",
-                                      command=exit)
+                                      command=salirProgramaDesdePrincipal)
 boton_salir_principal.pack()
 boton_salir_principal.place(x=290, y=150, width=100, height=30)
 
@@ -422,10 +425,19 @@ ventanaEnteros.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 
 # etiquetas
 etiquetaEnteros = grupoK.Label(ventanaEnteros,
-                               text="Teoría sobre enteros",
+                               text="Variables de tipo entero",
                                font=("calibri", 12, "bold"),
                                background="coral1")
 etiquetaEnteros.pack()
+etiquetaEnteros.place(x=100, y=5, width=200, height=30)
+
+etiquetaTeoriaEnteros = grupoK.Label(ventanaEnteros,
+                               text="Para definir este tipo de variables debemos asignar un \nvalor entero a una variable al momento de declararla",
+                               font=("calibri", 11,"normal"),
+                               background="coral1",
+                               anchor="nw")
+etiquetaTeoriaEnteros.pack()
+etiquetaTeoriaEnteros.place(x=20, y=30, width=360, height=200)
 
 # botones
 boton_volver_enteros = grupoK.Button(ventanaEnteros,
@@ -464,14 +476,14 @@ ventanaCaracter = grupoK.Tk()
 ventanaCaracter.title("Caracteres")
 ventanaCaracter.geometry("400x250+500+100")
 ventanaCaracter.resizable(width=False, height=False)
-ventanaCaracter.config(bg="red")
+ventanaCaracter.config(bg="coral3")
 ventanaCaracter.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 
 # etiquetas
 etiquetaCaracter = grupoK.Label(ventanaCaracter,
                                 text="Teoría sobre carácteres",
                                 font=("calibri", 12, "bold"),
-                                background="red")
+                                background="coral3")
 etiquetaCaracter.pack()
 
 # botones
