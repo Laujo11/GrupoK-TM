@@ -256,7 +256,7 @@ def salirProgramaDesdePrincipal():
 ventanaPrincipal = grupoK.Tk()
 tituloVentanaPrincipal = "While(true): Aprender!"
 ventanaPrincipal.title(tituloVentanaPrincipal)
-ventanaPrincipal.geometry("400x200+500+50")
+ventanaPrincipal.geometry("400x200+500+100")
 ventanaPrincipal.resizable(width=False, height=False)
 ventanaPrincipal.config(bg="greenyellow")
 photo1 = grupoK.PhotoImage(file="Proyecto/icono.png")
@@ -307,7 +307,7 @@ boton_salir_principal.place(x=290, y=150, width=100, height=30)
 # ventana
 ventanaMenu = grupoK.Tk()
 ventanaMenu.title("Menú de elección")
-ventanaMenu.geometry("400x400+400+50")
+ventanaMenu.geometry("400x400+500+100")
 ventanaMenu.resizable(width=False, height=False)
 ventanaMenu.config(bg="royalblue")
 #photo2 = grupoK.PhotoImage(file = "Proyecto/icono.png")
@@ -362,7 +362,7 @@ boton_volver_menu.place(x=150, y=300, width=100, height=30)
 # ventana
 ventanaVariable = grupoK.Tk()
 ventanaVariable.title("Variables")
-ventanaVariable.geometry("400x350+400+50")
+ventanaVariable.geometry("400x350+500+100")
 ventanaVariable.resizable(width=False, height=False)
 ventanaVariable.config(bg="coral")
 ventanaVariable.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
@@ -389,7 +389,7 @@ botonFlotantes.place(x=150, y=100, width=100, height=30)
 
 botonCaracter = grupoK.Button(ventanaVariable,
                               text="Caracter",
-                              command=funcionCadena)
+                              command=funcionCaracter)
 botonCaracter.pack()
 botonCaracter.place(x=150, y=150, width=100, height=30)
 
@@ -415,12 +415,17 @@ boton_volver_variables.place(x=150, y=300, width=100, height=30)
 # ventana
 ventanaEnteros = grupoK.Tk()
 ventanaEnteros.title("Enteros")
-ventanaEnteros.geometry("400x250+400+50")
+ventanaEnteros.geometry("400x250+500+100")
 ventanaEnteros.resizable(width=False, height=False)
 ventanaEnteros.config(bg="coral1")
 ventanaEnteros.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 
 # etiquetas
+etiquetaEnteros = grupoK.Label(ventanaEnteros,
+                               text="Teoría sobre enteros",
+                               font=("calibri", 12, "bold"),
+                               background="coral1")
+etiquetaEnteros.pack()
 
 # botones
 boton_volver_enteros = grupoK.Button(ventanaEnteros,
@@ -433,12 +438,17 @@ boton_volver_enteros.place(x=150, y=200, width=100, height=30)
 # ventana
 ventanaFlotantes = grupoK.Tk()
 ventanaFlotantes.title("Flotantes")
-ventanaFlotantes.geometry("400x250+400+50")
+ventanaFlotantes.geometry("400x250+500+100")
 ventanaFlotantes.resizable(width=False, height=False)
 ventanaFlotantes.config(bg="coral2")
 ventanaFlotantes.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 
 # etiquetas
+etiquetaFlotantes = grupoK.Label(ventanaFlotantes,
+                                 text="Teoría sobre flotantes",
+                                 font=("calibri", 12, "bold"),
+                                 background="coral2")
+etiquetaFlotantes.pack()
 
 # botones
 boton_volver_flotantes = grupoK.Button(ventanaFlotantes,
@@ -452,12 +462,17 @@ boton_volver_flotantes.place(x=150, y=200, width=100, height=30)
 # ventana
 ventanaCaracter = grupoK.Tk()
 ventanaCaracter.title("Caracteres")
-ventanaCaracter.geometry("400x250+400+50")
+ventanaCaracter.geometry("400x250+500+100")
 ventanaCaracter.resizable(width=False, height=False)
 ventanaCaracter.config(bg="red")
 ventanaCaracter.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 
 # etiquetas
+etiquetaCaracter = grupoK.Label(ventanaCaracter,
+                                text="Teoría sobre carácteres",
+                                font=("calibri", 12, "bold"),
+                                background="red")
+etiquetaCaracter.pack()
 
 # botones
 boton_volver_caracter = grupoK.Button(ventanaCaracter,
@@ -470,12 +485,18 @@ boton_volver_caracter.place(x=150, y=200, width=100, height=30)
 # ventana
 ventanaCadena = grupoK.Tk()
 ventanaCadena.title("Cadenas de texto")
-ventanaCadena.geometry("400x250+400+50")
+ventanaCadena.geometry("400x250+500+100")
 ventanaCadena.resizable(width=False, height=False)
 ventanaCadena.config(bg="red")
 ventanaCadena.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 
 # etiquetas
+etiquetaCadena = grupoK.Label(ventanaCadena,
+                              text="Teoría sobre cadenas",
+                              font=("calibri", 12, "bold"),
+                              background="red")
+etiquetaCadena.pack()
+
 
 # botones
 boton_volver_cadena = grupoK.Button(ventanaCadena,
@@ -488,12 +509,17 @@ boton_volver_cadena.place(x=150, y=200, width=100, height=30)
 # ventana
 ventanaLogico = grupoK.Tk()
 ventanaLogico.title("Lógicos")
-ventanaLogico.geometry("400x250+400+50")
+ventanaLogico.geometry("400x250+500+100")
 ventanaLogico.resizable(width=False, height=False)
 ventanaLogico.config(bg="coral3")
 ventanaLogico.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 
 # etiquetas
+etiquetaLogico = grupoK.Label(ventanaLogico,
+                              text="Teoría sobre lógicos",
+                              font=("calibri", 12, "bold"),
+                              background="coral3")
+etiquetaLogico.pack()
 
 # botones
 boton_volver_logicos = grupoK.Button(ventanaLogico,
@@ -506,7 +532,7 @@ boton_volver_logicos.place(x=150, y=200, width=100, height=30)
 # ventana
 ventanaCondicionales = grupoK.Tk()
 ventanaCondicionales.title("Condicionales")
-ventanaCondicionales.geometry("400x300+400+50")
+ventanaCondicionales.geometry("400x300+500+100")
 ventanaCondicionales.resizable(width=False, height=False)
 ventanaCondicionales.config(bg="aquamarine")
 ventanaCondicionales.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
@@ -553,83 +579,103 @@ boton_volver_condicionales.place(x=150, y=250, width=100, height=30)
 # ventana
 ventanaCondicionalSimple = grupoK.Tk()
 ventanaCondicionalSimple.title("Condicional Simple")
-ventanaCondicionalSimple.geometry("400x300+400+50")
+ventanaCondicionalSimple.geometry("400x300+500+100")
 ventanaCondicionalSimple.resizable(width=False, height=False)
 ventanaCondicionalSimple.config(bg="aquamarine")
 ventanaCondicionalSimple.protocol(
     "WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 
 # etiquetas
+etiquetaCondSimple = grupoK.Label(ventanaCondicionalSimple,
+                                  text="Teoría sobre condicional simple",
+                                  font=("calibri", 12, "bold"),
+                                  background="aquamarine")
+etiquetaCondSimple.pack()
 
 # botones
 boton_volver_condicional_simple = grupoK.Button(ventanaCondicionalSimple,
                                                 text="Volver",
                                                 command=funcion_volver_condicional_simple)
 boton_volver_condicional_simple.pack()
-boton_volver_condicional_simple.place(x=150, y=200, width=100, height=30)
+boton_volver_condicional_simple.place(x=150, y=250, width=100, height=30)
 
 # VENTANA CONDICIONAL ALTERNATIVO
 # ventana
 ventanaCondicionalAlternativo = grupoK.Tk()
 ventanaCondicionalAlternativo.title("Condicional Alternativo")
-ventanaCondicionalAlternativo.geometry("400x300+400+50")
+ventanaCondicionalAlternativo.geometry("400x300+500+100")
 ventanaCondicionalAlternativo.resizable(width=False, height=False)
 ventanaCondicionalAlternativo.config(bg="aquamarine")
 ventanaCondicionalAlternativo.protocol(
     "WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 
 # etiquetas
+etiquetaCondAlter = grupoK.Label(ventanaCondicionalAlternativo,
+                                 text="Teoría sobre condicional alternativo",
+                                 font=("calibri", 12, "bold"),
+                                 background="aquamarine")
+etiquetaCondAlter.pack()
 
 # botones
 boton_volver_condicional_alternativo = grupoK.Button(ventanaCondicionalAlternativo,
                                                      text="Volver",
                                                      command=funcion_volver_condicional_alternativo)
 boton_volver_condicional_alternativo.pack()
-boton_volver_condicional_alternativo.place(x=150, y=200, width=100, height=30)
+boton_volver_condicional_alternativo.place(x=150, y=250, width=100, height=30)
 
 # VENTANA CONDICIONAL SIMPLE
 # ventana
 ventanaCondicionalAnidado = grupoK.Tk()
 ventanaCondicionalAnidado.title("Condicional Anidado")
-ventanaCondicionalAnidado.geometry("400x300+400+50")
+ventanaCondicionalAnidado.geometry("400x300+500+100")
 ventanaCondicionalAnidado.resizable(width=False, height=False)
 ventanaCondicionalAnidado.config(bg="aquamarine")
 ventanaCondicionalAnidado.protocol(
     "WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 
 # etiquetas
+etiquetaCondAnid = grupoK.Label(ventanaCondicionalAnidado,
+                                text="Teoría sobre condicional anidado",
+                                font=("calibri", 12, "bold"),
+                                background="aquamarine")
+etiquetaCondAnid.pack()
 
 # botones
 boton_volver_condicional_anidado = grupoK.Button(ventanaCondicionalAnidado,
                                                  text="Volver",
                                                  command=funcion_volver_condicional_anidado)
 boton_volver_condicional_anidado.pack()
-boton_volver_condicional_anidado.place(x=150, y=200, width=100, height=30)
+boton_volver_condicional_anidado.place(x=150, y=250, width=100, height=30)
 
 # VENTANA CONDICIONAL SWITCH CASE
 # ventana
 ventanaCondicionalSwitchCase = grupoK.Tk()
 ventanaCondicionalSwitchCase.title("Condicional Switch Case")
-ventanaCondicionalSwitchCase.geometry("400x300+400+50")
+ventanaCondicionalSwitchCase.geometry("400x300+500+100")
 ventanaCondicionalSwitchCase.resizable(width=False, height=False)
 ventanaCondicionalSwitchCase.config(bg="aquamarine")
 ventanaCondicionalSwitchCase.protocol(
     "WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 
 # etiquetas
+etiquetaCondSC = grupoK.Label(ventanaCondicionalSwitchCase,
+                              text="Teoría sobre condicional switch-case",
+                              font=("calibri", 12, "bold"),
+                              background="aquamarine")
+etiquetaCondSC.pack()
 
 # botones
 boton_volver_condicional_switch_case = grupoK.Button(ventanaCondicionalSwitchCase,
                                                      text="Volver",
                                                      command=funcion_volver_condicional_switchCase)
 boton_volver_condicional_switch_case.pack()
-boton_volver_condicional_switch_case.place(x=150, y=200, width=100, height=30)
+boton_volver_condicional_switch_case.place(x=150, y=250, width=100, height=30)
 
 # VENTANA BUCLES
 # ventana
 ventanaBucles = grupoK.Tk()
 ventanaBucles.title("Bucles")
-ventanaBucles.geometry("400x250+400+50")
+ventanaBucles.geometry("400x250+500+100")
 ventanaBucles.resizable(width=False, height=False)
 ventanaBucles.config(bg="cyan2")
 ventanaBucles.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
@@ -670,7 +716,7 @@ botonVolverBucles.place(x=150, y=200, width=100, height=30)
 # ventana
 ventanaFor = grupoK.Tk()
 ventanaFor.title("For")
-ventanaFor.geometry("400x250+400+50")
+ventanaFor.geometry("400x250+500+100")
 ventanaFor.resizable(width=False, height=False)
 ventanaFor.config(bg="thistle1")
 ventanaFor.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
@@ -693,7 +739,7 @@ botonVolverFor.place(x=150, y=200, width=100, height=30)
 # ventana
 ventanaWhile = grupoK.Tk()
 ventanaWhile.title("While")
-ventanaWhile.geometry("400x250+400+50")
+ventanaWhile.geometry("400x250+500+100")
 ventanaWhile.resizable(width=False, height=False)
 ventanaWhile.config(bg="DarkSeaGreen1")
 ventanaWhile.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
@@ -716,7 +762,7 @@ botonVolverWhile.place(x=150, y=200, width=100, height=30)
 # ventana
 ventanaDoWhile = grupoK.Tk()
 ventanaDoWhile.title("Do-While")
-ventanaDoWhile.geometry("400x250+400+50")
+ventanaDoWhile.geometry("400x250+500+100")
 ventanaDoWhile.resizable(width=False, height=False)
 ventanaDoWhile.config(bg="powder blue")
 ventanaDoWhile.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
@@ -739,7 +785,7 @@ botonVolverDoWhile.place(x=150, y=200, width=100, height=30)
 # ventana
 ventanaArreglos = grupoK.Tk()
 ventanaArreglos.title("Arreglos")
-ventanaArreglos.geometry("400x250+400+50")
+ventanaArreglos.geometry("400x250+500+100")
 ventanaArreglos.resizable(width=False, height=False)
 ventanaArreglos.config(bg="maroon")
 ventanaArreglos.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
@@ -774,7 +820,7 @@ botonVolverArreglor.place(x=150, y=150, width=100, height=30)
 # ventana
 ventanaVector = grupoK.Tk()
 ventanaVector.title("Vectores")
-ventanaVector.geometry("400x250+400+50")
+ventanaVector.geometry("400x250+500+100")
 ventanaVector.resizable(width=False, height=False)
 ventanaVector.config(bg="dark salmon")
 ventanaVector.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
@@ -797,7 +843,7 @@ botonVolverVector.place(x=150, y=200, width=100, height=30)
 # ventana
 ventanaMatriz = grupoK.Tk()
 ventanaMatriz.title("Matrices")
-ventanaMatriz.geometry("400x250+400+50")
+ventanaMatriz.geometry("400x250+500+100")
 ventanaMatriz.resizable(width=False, height=False)
 ventanaMatriz.config(bg="DarkOliveGreen4")
 ventanaMatriz.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
@@ -820,7 +866,7 @@ botonVolverMatriz.place(x=150, y=200, width=100, height=30)
 # ventana
 ventanaMetodos = grupoK.Tk()
 ventanaMetodos.title("Métodos")
-ventanaMetodos.geometry("400x250+400+50")
+ventanaMetodos.geometry("400x250+500+100")
 ventanaMetodos.resizable(width=False, height=False)
 ventanaMetodos.config(bg="orchid1")
 ventanaMetodos.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
@@ -855,12 +901,17 @@ boton_volver_metodos.place(x=150, y=150, width=100, height=30)
 # ventana
 ventanaProcedimientos = grupoK.Tk()
 ventanaProcedimientos.title("Procedimientos")
-ventanaProcedimientos.geometry("400x250+400+50")
+ventanaProcedimientos.geometry("400x250+500+100")
 ventanaProcedimientos.resizable(width=False, height=False)
 ventanaProcedimientos.config(bg="orange")
 ventanaProcedimientos.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 
 # etiquetas
+etiquetaProcedimientos = grupoK.Label(ventanaProcedimientos,
+                                      text="Teoría sobre procedimientos",
+                                      font=("calibri", 12, "bold"),
+                                      background="orange")
+etiquetaProcedimientos.pack()
 
 # botones
 boton_volver_procedimientos = grupoK.Button(ventanaProcedimientos,
@@ -873,12 +924,17 @@ boton_volver_procedimientos.place(x=150, y=150, width=100, height=30)
 # ventana
 ventanaFunciones = grupoK.Tk()
 ventanaFunciones.title("Funciones")
-ventanaFunciones.geometry("400x250+400+50")
+ventanaFunciones.geometry("400x250+500+100")
 ventanaFunciones.resizable(width=False, height=False)
 ventanaFunciones.config(bg="red")
 ventanaFunciones.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 
 # etiquetas
+etiquetaFunciones = grupoK.Label(ventanaFunciones,
+                                 text="Teoría sobre funciones",
+                                 font=("calibri", 12, "bold"),
+                                 background="red")
+etiquetaFunciones.pack()
 
 # botones
 boton_volver_funciones = grupoK.Button(ventanaFunciones,
