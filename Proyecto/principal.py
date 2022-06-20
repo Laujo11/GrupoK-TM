@@ -5,11 +5,14 @@ from tkinter.font import BOLD
 
 # ----------FUNCIONES----------
 
-
 def abrirMenu():
-    ventanaPrincipal.withdraw()
-    ventanaMenu.deiconify()
-
+    if bool(campoDeTextoPrincipal.get().strip()):
+        cartel_opcion.configure(text= campoDeTextoPrincipal.get().strip() + ", elija el apartado al cual quiere ingresar")
+        ventanaPrincipal.withdraw()
+        ventanaMenu.deiconify()
+    else:
+        cajaMensaje.showwarning("Ups!","No te olvides de ingresar tu nombre")
+        
 
 def funcion_aprender_variables():
     ventanaVariable.deiconify()
@@ -268,9 +271,9 @@ ventanaPrincipal.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 
 # entradas
 campoDeTextoPrincipal = grupoK.Entry(ventanaPrincipal,
-                                     text="Ingresa tu nombre",
-                                     font="calibri",
-                                     background="white")
+                                     font="Arial",
+                                     background="white",
+                                     width=11)
 campoDeTextoPrincipal.pack()
 campoDeTextoPrincipal.place(x=100, y=80, width=200, height=30)
 
@@ -319,7 +322,6 @@ ventanaMenu.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 
 # etiquetas
 cartel_opcion = grupoK.Label(ventanaMenu,
-                             text="Elija el apartado al cual quiere ingresar",
                              font=("calibri", 12, "bold"),
                              bg="royalblue")
 cartel_opcion.pack()
@@ -418,7 +420,7 @@ boton_volver_variables.place(x=150, y=300, width=100, height=30)
 # ventana
 ventanaEnteros = grupoK.Tk()
 ventanaEnteros.title("Enteros")
-ventanaEnteros.geometry("400x350+500+100")
+ventanaEnteros.geometry("400x250+500+100")
 ventanaEnteros.resizable(width=False, height=False)
 ventanaEnteros.config(bg="coral1")
 ventanaEnteros.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
@@ -432,7 +434,7 @@ etiquetaEnteros.pack()
 etiquetaEnteros.place(x=100, y=5, width=200, height=30)
 
 etiquetaTeoriaEnteros = grupoK.Label(ventanaEnteros,
-                                     text="Para definir este tipo de variables debemos asignar un \nvalor entero a una variable al momento de declararla...\n\nPor ejemplo: num_entero = 2",
+                                     text="Para definir este tipo de variables debemos asignar un \nvalor entero a una variable al momento de declararla...\n\nPor ejemplo: \"numero_de_manzanas = 2\"",
                                      font=("calibri", 11, "normal"),
                                      background="coral1",
                                      anchor="nw")
@@ -440,20 +442,28 @@ etiquetaTeoriaEnteros.pack()
 etiquetaTeoriaEnteros.place(x=20, y=30, width=360, height=90)
 
 etiquetaIntentoEnteros = grupoK.Label(ventanaEnteros,
-                                      text="¡Ahora intentalo tu!",
+                                      text="¡Ahora intentalo tu!, ingresa el ejemplo anterior en el siguiente campo:",
                                       font=("calibri", 11, "normal"),
                                       background="coral1",
                                       anchor="nw")
 etiquetaIntentoEnteros.pack()
 etiquetaIntentoEnteros.place(x=20, y=120, width=360, height=40)
 
+#entradas
+campoDeTextoEnteros = grupoK.Entry(ventanaEnteros,
+                                     text="Ingresa tu nombre",
+                                     font=("calibri",12),
+                                     background="white"
+                                     )
+campoDeTextoEnteros.pack()
+campoDeTextoEnteros.place(x=50, y=150, width=300, height=40)
 
 # botones
 boton_volver_enteros = grupoK.Button(ventanaEnteros,
                                      text="Volver",
                                      command=funcion_volver_enteros)
 boton_volver_enteros.pack()
-boton_volver_enteros.place(x=150, y=300, width=100, height=30)
+boton_volver_enteros.place(x=150, y=200, width=100, height=30)
 
 # VENTANA FLOTANTES/REALES
 # ventana
