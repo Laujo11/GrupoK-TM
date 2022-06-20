@@ -418,7 +418,7 @@ boton_volver_variables.place(x=150, y=300, width=100, height=30)
 # ventana
 ventanaEnteros = grupoK.Tk()
 ventanaEnteros.title("Enteros")
-ventanaEnteros.geometry("400x250+500+100")
+ventanaEnteros.geometry("400x350+500+100")
 ventanaEnteros.resizable(width=False, height=False)
 ventanaEnteros.config(bg="coral1")
 ventanaEnteros.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
@@ -432,19 +432,28 @@ etiquetaEnteros.pack()
 etiquetaEnteros.place(x=100, y=5, width=200, height=30)
 
 etiquetaTeoriaEnteros = grupoK.Label(ventanaEnteros,
-                               text="Para definir este tipo de variables debemos asignar un \nvalor entero a una variable al momento de declararla",
-                               font=("calibri", 11,"normal"),
-                               background="coral1",
-                               anchor="nw")
+                                     text="Para definir este tipo de variables debemos asignar un \nvalor entero a una variable al momento de declararla...\n\nPor ejemplo: num_entero = 2",
+                                     font=("calibri", 11, "normal"),
+                                     background="coral1",
+                                     anchor="nw")
 etiquetaTeoriaEnteros.pack()
-etiquetaTeoriaEnteros.place(x=20, y=30, width=360, height=200)
+etiquetaTeoriaEnteros.place(x=20, y=30, width=360, height=90)
+
+etiquetaIntentoEnteros = grupoK.Label(ventanaEnteros,
+                                      text="¡Ahora intentalo tu!",
+                                      font=("calibri", 11, "normal"),
+                                      background="coral1",
+                                      anchor="nw")
+etiquetaIntentoEnteros.pack()
+etiquetaIntentoEnteros.place(x=20, y=120, width=360, height=40)
+
 
 # botones
 boton_volver_enteros = grupoK.Button(ventanaEnteros,
                                      text="Volver",
                                      command=funcion_volver_enteros)
 boton_volver_enteros.pack()
-boton_volver_enteros.place(x=150, y=200, width=100, height=30)
+boton_volver_enteros.place(x=150, y=300, width=100, height=30)
 
 # VENTANA FLOTANTES/REALES
 # ventana
