@@ -33,8 +33,10 @@ def funcion_confirmar_enteros():
         cajaMensaje.showwarning(
             "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (numero_de_manzanas = 2)")
     else:
-        ventanaVariable.deiconify()
-        ventanaEnteros.withdraw()
+        cajaMensaje.showinfo(
+            "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
+        # ventanaVariable.deiconify()
+        # ventanaEnteros.withdraw()
 
 
 def funcion_volver_enteros():
@@ -54,8 +56,10 @@ def funcion_confirmar_flotantes():
         cajaMensaje.showwarning(
             "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (precioDeRemeras = 1560.99)")
     else:
-        ventanaVariable.deiconify()
-        ventanaFlotantes.withdraw()
+        cajaMensaje.showinfo(
+            "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
+        # ventanaVariable.deiconify()
+        # ventanaFlotantes.withdraw()
 
 
 def funcion_volver_flotantes():
@@ -75,8 +79,10 @@ def funcion_confirmar_caracter():
         cajaMensaje.showwarning(
             "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (estoEsUnCaracter = 'a')")
     else:
-        ventanaVariable.deiconify()
-        ventanaCaracter.withdraw()
+        cajaMensaje.showinfo(
+            "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
+        # ventanaVariable.deiconify()
+        # ventanaCaracter.withdraw()
 
 
 def funcion_volver_caracter():
@@ -96,8 +102,10 @@ def funcion_confirmar_cadena():
         cajaMensaje.showwarning(
             "Ups!", '¡Lo que escribiste no es igual al ejemplo!\n (estoEsUnaCadena = "Hola estas en nuestro proyecto de metodologia")')
     else:
-        ventanaVariable.deiconify()
-        ventanaCadena.withdraw()
+        cajaMensaje.showinfo(
+            "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
+        # ventanaVariable.deiconify()
+        # ventanaCadena.withdraw()
 
 
 def funcion_volver_cadena():
@@ -124,11 +132,15 @@ def funcion_confirmar_logicos():
                 cajaMensaje.showwarning(
                     "Ups!", "¡Lo que escribiste no es igual a alguno de los ejemplos!\n (x = true , y = false)")
             else:
-                ventanaVariable.deiconify()
-                ventanaLogico.withdraw()
+                cajaMensaje.showinfo(
+                    "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
+                # ventanaVariable.deiconify()
+                # ventanaLogico.withdraw()
         else:
-            ventanaVariable.deiconify()
-            ventanaLogico.withdraw()
+            cajaMensaje.showinfo(
+                "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
+            # ventanaVariable.deiconify()
+            # ventanaLogico.withdraw()
 
 
 def funcion_volver_logicos():
@@ -158,8 +170,10 @@ def funcion_confirmar_cond_simple():
         cajaMensaje.showwarning(
             "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
     else:
-        ventanaCondicionales.deiconify()
-        ventanaCondicionalSimple.withdraw()
+        cajaMensaje.showinfo(
+            "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
+        # ventanaCondicionales.deiconify()
+        # ventanaCondicionalSimple.withdraw()
 
 
 def funcion_volver_condicional_simple():
@@ -179,8 +193,10 @@ def funcion_confirmar_cond_alternativo():
         cajaMensaje.showwarning(
             "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
     else:
-        ventanaCondicionales.deiconify()
-        ventanaCondicionalAlternativo.withdraw()
+        cajaMensaje.showinfo(
+            "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
+        # ventanaCondicionales.deiconify()
+        # ventanaCondicionalAlternativo.withdraw()
 
 
 def funcion_volver_condicional_alternativo():
@@ -200,8 +216,10 @@ def funcion_confirmar_cond_anidado():
         cajaMensaje.showwarning(
             "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
     else:
-        ventanaCondicionales.deiconify()
-        ventanaCondicionalAnidado.withdraw()
+        cajaMensaje.showinfo(
+            "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
+        # ventanaCondicionales.deiconify()
+        # ventanaCondicionalAnidado.withdraw()
 
 
 def funcion_volver_condicional_anidado():
@@ -221,8 +239,10 @@ def funcion_confirmar_cond_switch_case():
         cajaMensaje.showwarning(
             "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
     else:
-        ventanaCondicionales.deiconify()
-        ventanaCondicionalSwitchCase.withdraw()
+        cajaMensaje.showinfo(
+            "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
+        # ventanaCondicionales.deiconify()
+        # ventanaCondicionalSwitchCase.withdraw()
 
 
 def funcion_volver_condicional_switchCase():
@@ -252,8 +272,10 @@ def funcion_confirmar_for():
         cajaMensaje.showwarning(
             "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
     else:
-        ventanaFor.withdraw()
-        ventanaBucles.deiconify()
+        cajaMensaje.showinfo(
+            "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
+        # ventanaFor.withdraw()
+        # ventanaBucles.deiconify()
 
 
 def funcionVolverFor():
@@ -273,8 +295,10 @@ def funcion_confirmar_while():
         cajaMensaje.showwarning(
             "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
     else:
-        ventanaWhile.withdraw()
-        ventanaBucles.deiconify()
+        cajaMensaje.showinfo(
+            "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
+        # ventanaWhile.withdraw()
+        # ventanaBucles.deiconify()
 
 
 def funcionVolverWhile():
@@ -294,8 +318,10 @@ def funcion_confirmar_Dowhile():
         cajaMensaje.showwarning(
             "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
     else:
-        ventanaDoWhile.withdraw()
-        ventanaBucles.deiconify()
+        cajaMensaje.showinfo(
+            "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
+        # ventanaDoWhile.withdraw()
+        # ventanaBucles.deiconify()
 
 
 def funcionVolverDoWhile():
@@ -325,8 +351,10 @@ def funcion_confirmar_vector():
         cajaMensaje.showwarning(
             "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
     else:
-        ventanaVector.withdraw()
-        ventanaArreglos.deiconify()
+        cajaMensaje.showinfo(
+            "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
+        # ventanaVector.withdraw()
+        # ventanaArreglos.deiconify()
 
 
 def funcionVolverVector():
@@ -346,8 +374,10 @@ def funcion_confirmar_matriz():
         cajaMensaje.showwarning(
             "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
     else:
-        ventanaMatriz.withdraw()
-        ventanaArreglos.deiconify()
+        cajaMensaje.showinfo(
+            "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
+        # ventanaMatriz.withdraw()
+        # ventanaArreglos.deiconify()
 
 
 def funcionVolverMatriz():
@@ -377,8 +407,10 @@ def funcion_confirmar_procedimientos():
         cajaMensaje.showwarning(
             "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
     else:
-        ventanaProcedimientos.withdraw()
-        ventanaMetodos.deiconify()
+        cajaMensaje.showinfo(
+            "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
+        # ventanaProcedimientos.withdraw()
+        # ventanaMetodos.deiconify()
 
 
 def funcion_volver_procedimientos():
@@ -398,8 +430,10 @@ def funcion_confirmar_funciones():
         cajaMensaje.showwarning(
             "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
     else:
-        ventanaFunciones.withdraw()
-        ventanaMetodos.deiconify()
+        cajaMensaje.showinfo(
+            "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
+        # ventanaFunciones.withdraw()
+        # ventanaMetodos.deiconify()
 
 
 def funcion_volver_funciones():
