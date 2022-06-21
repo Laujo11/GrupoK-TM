@@ -151,6 +151,17 @@ def funcionCondicionalSimple():
     ventanaCondicionales.withdraw()
 
 
+def funcion_confirmar_cond_simple():
+    ejemploCampo = campoDeTextoCondSimple.get().strip()
+    ejemploDado = "-"
+    if (ejemploCampo != ejemploDado):
+        cajaMensaje.showwarning(
+            "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
+    else:
+        ventanaCondicionales.deiconify()
+        ventanaCondicionalSimple.withdraw()
+
+
 def funcion_volver_condicional_simple():
     ventanaCondicionales.deiconify()
     ventanaCondicionalSimple.withdraw()
@@ -159,6 +170,17 @@ def funcion_volver_condicional_simple():
 def funcionCondicionalAlternativo():
     ventanaCondicionalAlternativo.deiconify()
     ventanaCondicionales.withdraw()
+
+
+def funcion_confirmar_cond_alternativo():
+    ejemploCampo = campoDeTextoCondAlter.get().strip()
+    ejemploDado = "-"
+    if (ejemploCampo != ejemploDado):
+        cajaMensaje.showwarning(
+            "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
+    else:
+        ventanaCondicionales.deiconify()
+        ventanaCondicionalAlternativo.withdraw()
 
 
 def funcion_volver_condicional_alternativo():
@@ -171,6 +193,17 @@ def funcionCondicionalAnidado():
     ventanaCondicionales.withdraw()
 
 
+def funcion_confirmar_cond_anidado():
+    ejemploCampo = campoDeTextoCondAnid.get().strip()
+    ejemploDado = "-"
+    if (ejemploCampo != ejemploDado):
+        cajaMensaje.showwarning(
+            "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
+    else:
+        ventanaCondicionales.deiconify()
+        ventanaCondicionalAnidado.withdraw()
+
+
 def funcion_volver_condicional_anidado():
     ventanaCondicionales.deiconify()
     ventanaCondicionalAnidado.withdraw()
@@ -179,6 +212,17 @@ def funcion_volver_condicional_anidado():
 def funcionCondicionalSwitch():
     ventanaCondicionalSwitchCase.deiconify()
     ventanaCondicionales.withdraw()
+
+
+def funcion_confirmar_cond_switch_case():
+    ejemploCampo = campoDeTextoCondSwitchCase.get().strip()
+    ejemploDado = "-"
+    if (ejemploCampo != ejemploDado):
+        cajaMensaje.showwarning(
+            "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
+    else:
+        ventanaCondicionales.deiconify()
+        ventanaCondicionalSwitchCase.withdraw()
 
 
 def funcion_volver_condicional_switchCase():
@@ -201,6 +245,17 @@ def funcionFor():
     ventanaFor.deiconify()
 
 
+def funcion_confirmar_for():
+    ejemploCampo = campoDeTextoFor.get().strip()
+    ejemploDado = "-"
+    if (ejemploCampo != ejemploDado):
+        cajaMensaje.showwarning(
+            "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
+    else:
+        ventanaFor.withdraw()
+        ventanaBucles.deiconify()
+
+
 def funcionVolverFor():
     ventanaFor.withdraw()
     ventanaBucles.deiconify()
@@ -211,6 +266,17 @@ def funcionWhile():
     ventanaWhile.deiconify()
 
 
+def funcion_confirmar_while():
+    ejemploCampo = campoDeTextoWhile.get().strip()
+    ejemploDado = "-"
+    if (ejemploCampo != ejemploDado):
+        cajaMensaje.showwarning(
+            "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
+    else:
+        ventanaWhile.withdraw()
+        ventanaBucles.deiconify()
+
+
 def funcionVolverWhile():
     ventanaWhile.withdraw()
     ventanaBucles.deiconify()
@@ -219,6 +285,17 @@ def funcionVolverWhile():
 def funcionDoWhile():
     ventanaBucles.withdraw()
     ventanaDoWhile.deiconify()
+
+
+def funcion_confirmar_Dowhile():
+    ejemploCampo = campoDeTextoDoWhile.get().strip()
+    ejemploDado = "-"
+    if (ejemploCampo != ejemploDado):
+        cajaMensaje.showwarning(
+            "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
+    else:
+        ventanaDoWhile.withdraw()
+        ventanaBucles.deiconify()
 
 
 def funcionVolverDoWhile():
@@ -241,6 +318,17 @@ def funcionVector():
     ventanaVector.deiconify()
 
 
+def funcion_confirmar_vector():
+    ejemploCampo = campoDeTextoVector.get().strip()
+    ejemploDado = "-"
+    if (ejemploCampo != ejemploDado):
+        cajaMensaje.showwarning(
+            "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
+    else:
+        ventanaVector.withdraw()
+        ventanaArreglos.deiconify()
+
+
 def funcionVolverVector():
     ventanaVector.withdraw()
     ventanaArreglos.deiconify()
@@ -249,6 +337,17 @@ def funcionVolverVector():
 def funcionMatriz():
     ventanaArreglos.withdraw()
     ventanaMatriz.deiconify()
+
+
+def funcion_confirmar_matriz():
+    ejemploCampo = campoDeTextoMatriz.get().strip()
+    ejemploDado = "-"
+    if (ejemploCampo != ejemploDado):
+        cajaMensaje.showwarning(
+            "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
+    else:
+        ventanaMatriz.withdraw()
+        ventanaArreglos.deiconify()
 
 
 def funcionVolverMatriz():
@@ -271,6 +370,17 @@ def funcion_procedimientos():
     ventanaProcedimientos.deiconify()
 
 
+def funcion_confirmar_procedimientos():
+    ejemploCampo = campoDeTextoProcedimientos.get().strip()
+    ejemploDado = "-"
+    if (ejemploCampo != ejemploDado):
+        cajaMensaje.showwarning(
+            "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
+    else:
+        ventanaProcedimientos.withdraw()
+        ventanaMetodos.deiconify()
+
+
 def funcion_volver_procedimientos():
     ventanaProcedimientos.withdraw()
     ventanaMetodos.deiconify()
@@ -279,6 +389,17 @@ def funcion_volver_procedimientos():
 def funcion_funciones():
     ventanaMetodos.withdraw()
     ventanaFunciones.deiconify()
+
+
+def funcion_confirmar_funciones():
+    ejemploCampo = campoDeTextoFunciones.get().strip()
+    ejemploDado = "-"
+    if (ejemploCampo != ejemploDado):
+        cajaMensaje.showwarning(
+            "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
+    else:
+        ventanaFunciones.withdraw()
+        ventanaMetodos.deiconify()
 
 
 def funcion_volver_funciones():
@@ -830,11 +951,17 @@ campoDeTextoCondSimple.pack()
 campoDeTextoCondSimple.place(x=50, y=200, width=300, height=40)
 
 # botones
+boton_confirmar_condSimple = grupoK.Button(ventanaCondicionalSimple,
+                                           text="Confirmar",
+                                           command=funcion_confirmar_cond_simple)
+boton_confirmar_condSimple.pack()
+boton_confirmar_condSimple.place(x=80, y=250, width=100, height=30)
+
 boton_volver_condicional_simple = grupoK.Button(ventanaCondicionalSimple,
                                                 text="Volver",
                                                 command=funcion_volver_condicional_simple)
 boton_volver_condicional_simple.pack()
-boton_volver_condicional_simple.place(x=150, y=250, width=100, height=30)
+boton_volver_condicional_simple.place(x=220, y=250, width=100, height=30)
 
 # VENTANA CONDICIONAL ALTERNATIVO
 # ventana
@@ -862,11 +989,17 @@ campoDeTextoCondAlter.pack()
 campoDeTextoCondAlter.place(x=50, y=200, width=300, height=40)
 
 # botones
+boton_confirmar_condAlter = grupoK.Button(ventanaCondicionalAlternativo,
+                                          text="Confirmar",
+                                          command=funcion_confirmar_cond_alternativo)
+boton_confirmar_condAlter.pack()
+boton_confirmar_condAlter.place(x=80, y=250, width=100, height=30)
+
 boton_volver_condicional_alternativo = grupoK.Button(ventanaCondicionalAlternativo,
                                                      text="Volver",
                                                      command=funcion_volver_condicional_alternativo)
 boton_volver_condicional_alternativo.pack()
-boton_volver_condicional_alternativo.place(x=150, y=250, width=100, height=30)
+boton_volver_condicional_alternativo.place(x=220, y=250, width=100, height=30)
 
 # VENTANA CONDICIONAL SIMPLE
 # ventana
@@ -894,11 +1027,17 @@ campoDeTextoCondAnid.pack()
 campoDeTextoCondAnid.place(x=50, y=200, width=300, height=40)
 
 # botones
+boton_confirmar_condAnid = grupoK.Button(ventanaCondicionalAnidado,
+                                         text="Confirmar",
+                                         command=funcion_confirmar_cond_anidado)
+boton_confirmar_condAnid.pack()
+boton_confirmar_condAnid.place(x=80, y=250, width=100, height=30)
+
 boton_volver_condicional_anidado = grupoK.Button(ventanaCondicionalAnidado,
                                                  text="Volver",
                                                  command=funcion_volver_condicional_anidado)
 boton_volver_condicional_anidado.pack()
-boton_volver_condicional_anidado.place(x=150, y=250, width=100, height=30)
+boton_volver_condicional_anidado.place(x=220, y=250, width=100, height=30)
 
 # VENTANA CONDICIONAL SWITCH CASE
 # ventana
@@ -926,11 +1065,17 @@ campoDeTextoCondSwitchCase.pack()
 campoDeTextoCondSwitchCase.place(x=50, y=200, width=300, height=40)
 
 # botones
+boton_confirmar_condSC = grupoK.Button(ventanaCondicionalSwitchCase,
+                                       text="Confirmar",
+                                       command=funcion_confirmar_cond_switch_case)
+boton_confirmar_condSC.pack()
+boton_confirmar_condSC.place(x=80, y=250, width=100, height=30)
+
 boton_volver_condicional_switch_case = grupoK.Button(ventanaCondicionalSwitchCase,
                                                      text="Volver",
                                                      command=funcion_volver_condicional_switchCase)
 boton_volver_condicional_switch_case.pack()
-boton_volver_condicional_switch_case.place(x=150, y=250, width=100, height=30)
+boton_volver_condicional_switch_case.place(x=220, y=250, width=100, height=30)
 
 # VENTANA BUCLES
 # ventana
@@ -998,11 +1143,17 @@ campoDeTextoFor.pack()
 campoDeTextoFor.place(x=50, y=200, width=300, height=40)
 
 # botones
+boton_confirmar_for = grupoK.Button(ventanaFor,
+                                    text="Confirmar",
+                                    command=funcion_confirmar_for)
+boton_confirmar_for.pack()
+boton_confirmar_for.place(x=80, y=250, width=100, height=30)
+
 botonVolverFor = grupoK.Button(ventanaFor,
                                text="Volver",
                                command=funcionVolverFor)
 botonVolverFor.pack()
-botonVolverFor.place(x=150, y=250, width=100, height=30)
+botonVolverFor.place(x=220, y=250, width=100, height=30)
 
 # VENTANA WHILE
 # ventana
@@ -1029,11 +1180,17 @@ campoDeTextoWhile.pack()
 campoDeTextoWhile.place(x=50, y=200, width=300, height=40)
 
 # botones
+boton_confirmar_while = grupoK.Button(ventanaWhile,
+                                      text="Confirmar",
+                                      command=funcion_confirmar_while)
+boton_confirmar_while.pack()
+boton_confirmar_while.place(x=80, y=250, width=100, height=30)
+
 botonVolverWhile = grupoK.Button(ventanaWhile,
                                  text="Volver",
                                  command=funcionVolverWhile)
 botonVolverWhile.pack()
-botonVolverWhile.place(x=150, y=250, width=100, height=30)
+botonVolverWhile.place(x=220, y=250, width=100, height=30)
 
 # VENTANA DO-WHILE
 # ventana
@@ -1060,11 +1217,17 @@ campoDeTextoDoWhile.pack()
 campoDeTextoDoWhile.place(x=50, y=200, width=300, height=40)
 
 # botones
+boton_confirmar_Dowhile = grupoK.Button(ventanaDoWhile,
+                                        text="Confirmar",
+                                        command=funcion_confirmar_Dowhile)
+boton_confirmar_Dowhile.pack()
+boton_confirmar_Dowhile.place(x=80, y=250, width=100, height=30)
+
 botonVolverDoWhile = grupoK.Button(ventanaDoWhile,
                                    text="Volver",
                                    command=funcionVolverDoWhile)
 botonVolverDoWhile.pack()
-botonVolverDoWhile.place(x=150, y=250, width=100, height=30)
+botonVolverDoWhile.place(x=220, y=250, width=100, height=30)
 
 # VENTANA ARREGLOS
 # ventana
@@ -1126,11 +1289,17 @@ campoDeTextoVector.pack()
 campoDeTextoVector.place(x=50, y=200, width=300, height=40)
 
 # botones
+boton_confirmar_vector = grupoK.Button(ventanaVector,
+                                       text="Confirmar",
+                                       command=funcion_confirmar_vector)
+boton_confirmar_vector.pack()
+boton_confirmar_vector.place(x=80, y=250, width=100, height=30)
+
 botonVolverVector = grupoK.Button(ventanaVector,
                                   text="Volver",
                                   command=funcionVolverVector)
 botonVolverVector.pack()
-botonVolverVector.place(x=150, y=250, width=100, height=30)
+botonVolverVector.place(x=220, y=250, width=100, height=30)
 
 # VENTANA MATRIZ
 # ventana
@@ -1157,11 +1326,18 @@ campoDeTextoMatriz.pack()
 campoDeTextoMatriz.place(x=50, y=200, width=300, height=40)
 
 # botones
+boton_confirmar_matriz = grupoK.Button(ventanaMatriz,
+                                       text="Confirmar",
+                                       command=funcion_confirmar_matriz)
+boton_confirmar_matriz.pack()
+boton_confirmar_matriz.place(x=80, y=250, width=100, height=30)
+
+
 botonVolverMatriz = grupoK.Button(ventanaMatriz,
                                   text="Volver",
                                   command=funcionVolverMatriz)
 botonVolverMatriz.pack()
-botonVolverMatriz.place(x=150, y=250, width=100, height=30)
+botonVolverMatriz.place(x=220, y=250, width=100, height=30)
 
 # VENTANA MÉTODOS
 # ventana
@@ -1223,11 +1399,17 @@ campoDeTextoProcedimientos.pack()
 campoDeTextoProcedimientos.place(x=50, y=200, width=300, height=40)
 
 # botones
+boton_confirmar_procedimientos = grupoK.Button(ventanaProcedimientos,
+                                               text="Confirmar",
+                                               command=funcion_confirmar_procedimientos)
+boton_confirmar_procedimientos.pack()
+boton_confirmar_procedimientos.place(x=80, y=250, width=100, height=30)
+
 boton_volver_procedimientos = grupoK.Button(ventanaProcedimientos,
                                             text="Volver",
                                             command=funcion_volver_procedimientos)
 boton_volver_procedimientos.pack()
-boton_volver_procedimientos.place(x=150, y=250, width=100, height=30)
+boton_volver_procedimientos.place(x=220, y=250, width=100, height=30)
 
 # VENTANA FUNCIONES
 # ventana
@@ -1254,11 +1436,18 @@ campoDeTextoFunciones.pack()
 campoDeTextoFunciones.place(x=50, y=200, width=300, height=40)
 
 # botones
+# botones
+boton_confirmar_funciones = grupoK.Button(ventanaFunciones,
+                                          text="Confirmar",
+                                          command=funcion_confirmar_funciones)
+boton_confirmar_funciones.pack()
+boton_confirmar_funciones.place(x=80, y=250, width=100, height=30)
+
 boton_volver_funciones = grupoK.Button(ventanaFunciones,
                                        text="Volver",
                                        command=funcion_volver_funciones)
 boton_volver_funciones.pack()
-boton_volver_funciones.place(x=150, y=250, width=100, height=30)
+boton_volver_funciones.place(x=220, y=250, width=100, height=30)
 
 # ------------------------------------------------------
 # INICIO
