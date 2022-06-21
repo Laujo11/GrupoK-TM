@@ -451,7 +451,6 @@ etiquetaIntentoEnteros.place(x=20, y=120, width=360, height=40)
 
 #entradas
 campoDeTextoEnteros = grupoK.Entry(ventanaEnteros,
-                                     text="Ingresa tu nombre",
                                      font=("calibri",12),
                                      background="white"
                                      )
@@ -469,7 +468,7 @@ boton_volver_enteros.place(x=150, y=200, width=100, height=30)
 # ventana
 ventanaFlotantes = grupoK.Tk()
 ventanaFlotantes.title("Flotantes")
-ventanaFlotantes.geometry("400x250+500+100")
+ventanaFlotantes.geometry("400x320+500+100")
 ventanaFlotantes.resizable(width=False, height=False)
 ventanaFlotantes.config(bg="coral2")
 ventanaFlotantes.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
@@ -481,19 +480,44 @@ etiquetaFlotantes = grupoK.Label(ventanaFlotantes,
                                  background="coral2")
 etiquetaFlotantes.pack()
 
+etiquetaTeoriaFlotantes = grupoK.Label(ventanaFlotantes,
+                                     text="Para definir este tipo de variables debemos asignar \nun valor decimal a una variable al momento \nde declararla...\n\nPor ejemplo: \"precioDeRemeras = 1560.99\"",
+                                     font=("calibri", 11, "normal"),
+                                     background="coral2",
+                                     anchor="nw")
+etiquetaTeoriaFlotantes.pack()
+etiquetaTeoriaFlotantes.place(x=20, y=30, width=360, height=120)
+
+etiquetaIntentoFloat = grupoK.Label(ventanaFlotantes,
+                                      text="¡Ahora intentalo tu!, ingresa el ejemplo anterior \nen el siguiente campo:",
+                                      font=("calibri", 11, "normal"),
+                                      background="coral2",
+                                      anchor="nw")
+etiquetaIntentoFloat.pack()
+etiquetaIntentoFloat.place(x=20, y=150, width=360, height=70)
+
+#entradas
+
+campoDeTextoFloat = grupoK.Entry(ventanaFlotantes,
+                                     font=("calibri",12),
+                                     background="white"
+                                     )
+campoDeTextoFloat.pack()
+campoDeTextoFloat.place(x=50, y=220, width=300, height=40)
+
 # botones
 boton_volver_flotantes = grupoK.Button(ventanaFlotantes,
                                        text="Volver",
                                        command=funcion_volver_flotantes)
 boton_volver_flotantes.pack()
-boton_volver_flotantes.place(x=150, y=200, width=100, height=30)
+boton_volver_flotantes.place(x=150, y=280, width=100, height=30)
 
 
 # VENTANA CARACTERES
 # ventana
 ventanaCaracter = grupoK.Tk()
 ventanaCaracter.title("Caracteres")
-ventanaCaracter.geometry("400x250+500+100")
+ventanaCaracter.geometry("400x305+500+100")
 ventanaCaracter.resizable(width=False, height=False)
 ventanaCaracter.config(bg="coral3")
 ventanaCaracter.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
@@ -505,18 +529,43 @@ etiquetaCaracter = grupoK.Label(ventanaCaracter,
                                 background="coral3")
 etiquetaCaracter.pack()
 
+etiquetaTeoriaCaracter = grupoK.Label(ventanaCaracter,
+                                     text="Para definir este tipo de variables debemos \ningresar un caracter entre un par de comillas \nsimple en una variable al momento de declararla...\n\nPor ejemplo: \"estoEsUnCaracter = 'a' \"",
+                                     font=("calibri", 11, "normal"),
+                                     background="coral3",
+                                     anchor="nw")
+etiquetaTeoriaCaracter.pack()
+etiquetaTeoriaCaracter.place(x=20, y=30, width=360, height=120)
+
+etiquetaIntentoCaracter = grupoK.Label(ventanaCaracter,
+                                      text="¡Ahora intentalo tu!, ingresa el ejemplo anterior \nen el siguiente campo:",
+                                      font=("calibri", 11, "normal"),
+                                      background="coral3",
+                                      anchor="nw")
+etiquetaIntentoCaracter.pack()
+etiquetaIntentoCaracter.place(x=20, y=150, width=360, height=70)
+
+#entradas
+
+campoDeTextoCaracter = grupoK.Entry(ventanaCaracter,
+                                     font=("calibri",12),
+                                     background="white"
+                                     )
+campoDeTextoCaracter.pack()
+campoDeTextoCaracter.place(x=50, y=210, width=300, height=40)
+
 # botones
 boton_volver_caracter = grupoK.Button(ventanaCaracter,
                                       text="Volver",
                                       command=funcion_volver_caracter)
 boton_volver_caracter.pack()
-boton_volver_caracter.place(x=150, y=200, width=100, height=30)
+boton_volver_caracter.place(x=150, y=260, width=100, height=30)
 
 # VENTANA CADENAS
 # ventana
 ventanaCadena = grupoK.Tk()
 ventanaCadena.title("Cadenas de texto")
-ventanaCadena.geometry("400x250+500+100")
+ventanaCadena.geometry("400x350+500+100")
 ventanaCadena.resizable(width=False, height=False)
 ventanaCadena.config(bg="red")
 ventanaCadena.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
@@ -528,19 +577,44 @@ etiquetaCadena = grupoK.Label(ventanaCadena,
                               background="red")
 etiquetaCadena.pack()
 
+etiquetaTeoriaCadena = grupoK.Label(ventanaCadena,
+                                     text="Para definir este tipo de variables debemos \ningresar un texto entre un par de comillas \ndoble en una variable al momento de declararla...\n\nPor ejemplo: \"estoEsUnaCadena = \"Hola estas en \nnuestro proyecto de metodologia \"\"",
+                                     font=("calibri", 11, "normal"),
+                                     background="red",
+                                     anchor="nw")
+etiquetaTeoriaCadena.pack()
+etiquetaTeoriaCadena.place(x=20, y=30, width=360, height=150)
+
+etiquetaIntentoCadena = grupoK.Label(ventanaCadena,
+                                      text="¡Ahora intentalo tu!, ingresa el ejemplo anterior \nen el siguiente campo:",
+                                      font=("calibri", 11, "normal"),
+                                      background="red",
+                                      anchor="nw")
+etiquetaIntentoCadena.pack()
+etiquetaIntentoCadena.place(x=20, y=180, width=360, height=70)
+
+#entradas
+
+campoDeTextoCadena = grupoK.Entry(ventanaCadena,
+                                     font=("calibri",12),
+                                     background="white"
+                                     )
+campoDeTextoCadena.pack()
+campoDeTextoCadena.place(x=50, y=250, width=300, height=40)
+
 
 # botones
 boton_volver_cadena = grupoK.Button(ventanaCadena,
                                     text="Volver",
                                     command=funcion_volver_cadena)
 boton_volver_cadena.pack()
-boton_volver_cadena.place(x=150, y=200, width=100, height=30)
+boton_volver_cadena.place(x=150, y=300, width=100, height=30)
 
 # VENTANA LÓGICOS
 # ventana
 ventanaLogico = grupoK.Tk()
 ventanaLogico.title("Lógicos")
-ventanaLogico.geometry("400x250+500+100")
+ventanaLogico.geometry("400x350+500+100")
 ventanaLogico.resizable(width=False, height=False)
 ventanaLogico.config(bg="coral3")
 ventanaLogico.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
@@ -552,12 +626,38 @@ etiquetaLogico = grupoK.Label(ventanaLogico,
                               background="coral3")
 etiquetaLogico.pack()
 
+etiquetaTeoriaLogico = grupoK.Label(ventanaLogico,
+                                     text="Para definir este tipo de variables debemos \ningresar True si es verdadero y False \nsi es falso, a una variable al momento de declararla...\n\nPor ejemplo: \"x = true, y = false\"",
+                                     font=("calibri", 11, "normal"),
+                                     background="coral3",
+                                     anchor="nw")
+etiquetaTeoriaLogico.pack()
+etiquetaTeoriaLogico.place(x=20, y=30, width=360, height=150)
+
+etiquetaIntentoLogico = grupoK.Label(ventanaLogico,
+                                      text="¡Ahora intentalo tu!, ingresa el ejemplo anterior \nen el siguiente campo:",
+                                      font=("calibri", 11, "normal"),
+                                      background="coral3",
+                                      anchor="nw")
+etiquetaIntentoLogico.pack()
+etiquetaIntentoLogico.place(x=20, y=150, width=360, height=70)
+
+#entradas
+
+campoDeTextoLogico = grupoK.Entry(ventanaLogico,
+                                     font=("calibri",12),
+                                     background="white"
+                                     )
+campoDeTextoLogico.pack()
+campoDeTextoLogico.place(x=50, y=230, width=300, height=40)
+
+
 # botones
 boton_volver_logicos = grupoK.Button(ventanaLogico,
                                      text="Volver",
                                      command=funcion_volver_logicos)
 boton_volver_logicos.pack()
-boton_volver_logicos.place(x=150, y=200, width=100, height=30)
+boton_volver_logicos.place(x=150, y=300, width=100, height=30)
 
 # VENTANA CONDICIONALES
 # ventana
