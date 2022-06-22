@@ -187,11 +187,11 @@ def funcionCondicionalAlternativo():
 
 
 def funcion_confirmar_cond_alternativo():
-    ejemploCampo = campoDeTextoCondAlter.get().strip()
-    ejemploDado = "-"
+    ejemploCampo = campoDeTextoCondAlter.get("1.0", "end").strip()
+    ejemploDado = "if (edad>18):\n\tprint(\"Es mayor de edad\")\nelse:\n\tprint(\"Es menor de edad\")"
     if (ejemploCampo != ejemploDado):
         cajaMensaje.showwarning(
-            "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
+            "Ups!", "¡Lo que escribiste no es igual al ejemplo!\nif (edad>18):\n\tprint(\"Es mayor de edad\")\nelse:\n\tprint(\"Es menor de edad\")")
     else:
         cajaMensaje.showinfo(
             "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
@@ -210,11 +210,11 @@ def funcionCondicionalAnidado():
 
 
 def funcion_confirmar_cond_anidado():
-    ejemploCampo = campoDeTextoCondAnid.get().strip()
-    ejemploDado = "-"
+    ejemploCampo = campoDeTextoCondAnid.get("1.0", "end").strip()
+    ejemploDado = "if (edad>=18):\n\tif (edad>18):\n\t\tprint(\"Ya entró en la etapa de juventud\")\n\telse:\n\t\tprint(\"Sigue en la etapa de adolescencia\")\nelse:\n\tprint(\"Es menor de edad\")"
     if (ejemploCampo != ejemploDado):
         cajaMensaje.showwarning(
-            "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
+            "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n if (edad>=18):\n\tif (edad>18):\n\t\tprint(\"Ya entró en la etapa de juventud\") \n\telse:\n\t\tprint(\"Sigue en la etapa de adolescencia\") \n else:\n\tprint(\"Es menor de edad\")")
     else:
         cajaMensaje.showinfo(
             "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
@@ -233,11 +233,11 @@ def funcionCondicionalSwitch():
 
 
 def funcion_confirmar_cond_switch_case():
-    ejemploCampo = campoDeTextoCondMCase.get().strip()
-    ejemploDado = "-"
+    ejemploCampo = campoDeTextoCondMCase.get("1.0", "end").strip()
+    ejemploDado = "match color:\n\tcase \"rojo\":\n\t\tprint(\"El color es rojo\")\n\tcase \"azul\":\n\t\tprint(\"El color es azul\")\n\tcase \"verde\":\n\t\tprint(\"El color es verde\")\n\tcase_:\n\t\tprint(\"No existe ese color\")"
     if (ejemploCampo != ejemploDado):
         cajaMensaje.showwarning(
-            "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
+            "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n match color: \n\tcase \"rojo\":\n\t\tprint(\"El color es rojo\")\n\tcase \"azul\":\n\t\tprint(\"El color es azul\")\n\tcase \"verde\":\n\t\tprint(\"El color es verde\")\n\tcase_:\n\t\tprint(\"No existe ese color\")")
     else:
         cajaMensaje.showinfo(
             "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
@@ -266,11 +266,11 @@ def funcionFor():
 
 
 def funcion_confirmar_for():
-    ejemploCampo = campoDeTextoFor.get().strip()
-    ejemploDado = "-"
+    ejemploCampo = campoDeTextoFor.get("1.0","end").strip()
+    ejemploDado = "for i in range(1, 11):\n\tprint(i)"
     if (ejemploCampo != ejemploDado):
         cajaMensaje.showwarning(
-            "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
+            "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n for i in range(1, 11): \n\tprint(i)")
     else:
         cajaMensaje.showinfo(
             "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
@@ -289,11 +289,11 @@ def funcionWhile():
 
 
 def funcion_confirmar_while():
-    ejemploCampo = campoDeTextoWhile.get().strip()
-    ejemploDado = "-"
+    ejemploCampo = campoDeTextoWhile.get("1.0","end").strip()
+    ejemploDado = "a = 1\nwhile (a < 10):\n\tprint(\"¡Hola, mundo!\")\n\ta = a + 1"
     if (ejemploCampo != ejemploDado):
         cajaMensaje.showwarning(
-            "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
+            "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n a = 1\nwhile (a < 10):\n\tprint(\"¡Hola, mundo!\")\n\ta = a + 1")
     else:
         cajaMensaje.showinfo(
             "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
@@ -346,10 +346,10 @@ def funcionVector():
 
 def funcion_confirmar_vector():
     ejemploCampo = campoDeTextoVector.get().strip()
-    ejemploDado = "-"
+    ejemploDado = "m = [1,2,3,4]"
     if (ejemploCampo != ejemploDado):
         cajaMensaje.showwarning(
-            "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
+            "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n m = [1,2,3,4]")
     else:
         cajaMensaje.showinfo(
             "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
@@ -369,10 +369,10 @@ def funcionMatriz():
 
 def funcion_confirmar_matriz():
     ejemploCampo = campoDeTextoMatriz.get().strip()
-    ejemploDado = "-"
+    ejemploDado = "m = [[1,2],[3,4]]"
     if (ejemploCampo != ejemploDado):
         cajaMensaje.showwarning(
-            "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
+            "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n m = [[1,2],[3,4]]")
     else:
         cajaMensaje.showinfo(
             "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
@@ -391,7 +391,7 @@ def funcionVolverArreglo():
 
 
 def funcion_aprender_metodos():
-    ventanaMetodos.deiconify()
+    ventanaFunciones.deiconify()
     ventanaMenu.withdraw()
 
 
@@ -418,31 +418,31 @@ def funcion_aprender_metodos():
     #ventanaMetodos.deiconify()
 
 
-def funcion_funciones():
-    ventanaMetodos.withdraw()
-    ventanaFunciones.deiconify()
+#def funcion_funciones():
+#    ventanaMetodos.withdraw()
+#    ventanaFunciones.deiconify()
 
 
 def funcion_confirmar_funciones():
-    ejemploCampo = campoDeTextoFunciones.get().strip()
-    ejemploDado = "-"
+    ejemploCampo = campoDeTextoFunciones.get("1.0","end").strip()
+    ejemploDado = "def es_par(numero):\n\tif (numero % 2 == 0):\n\t\treturn True\n\telse:\n\t\treturn False"
     if (ejemploCampo != ejemploDado):
         cajaMensaje.showwarning(
-            "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
+            "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n def es_par(numero):\n\tif (numero % 2 == 0):\n\t\treturn True\n\telse:\n\t\treturn False")
     else:
         cajaMensaje.showinfo(
             "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
         ventanaFunciones.withdraw()
-        ventanaMetodos.deiconify()
+        ventanaMenu.deiconify()
 
 
-def funcion_volver_funciones():
-    ventanaFunciones.withdraw()
-    ventanaMetodos.deiconify()
+#def funcion_volver_funciones():
+#    ventanaFunciones.withdraw()
+#    ventanaMetodos.deiconify()
 
 
 def funcion_volver_metodos():
-    ventanaMetodos.withdraw()
+    ventanaFunciones.withdraw()
     ventanaMenu.deiconify()
 
 
@@ -473,7 +473,7 @@ def salirProgramaDesdePrincipal():
         ventanaArreglos.destroy()
         ventanaVector.destroy()
         ventanaMatriz.destroy()
-        ventanaMetodos.destroy()
+        #ventanaMetodos.destroy()
         #ventanaProcedimientos.destroy()
         ventanaFunciones.destroy()
 
@@ -574,7 +574,7 @@ boton_arreglos.pack()
 boton_arreglos.place(x=150, y=200, width=100, height=30)
 
 boton_metodos = grupoK.Button(ventanaMenu,
-                              text="Métodos",
+                              text="Funciones",
                               command=funcion_aprender_metodos)
 boton_metodos.pack()
 boton_metodos.place(x=150, y=250, width=100, height=30)
@@ -1050,7 +1050,7 @@ etiquetaTeoriaCondAlter.pack()
 etiquetaTeoriaCondAlter.place(x=30, y=30, width=450, height=150)
 
 etiquetaTeoriaCondAlterEj = grupoK.Label(ventanaCondicionalAlternativo,
-                                    text="\tPor ejemplo: \n\"if edad>18: \n\t\"print(\"Es mayor de edad\")\" \n else: \n \t\"print(\"Es menor de edad\")\"\"",
+                                    text="\tPor ejemplo: \n\"if (edad>18): \n\tprint(\"Es mayor de edad\") \n else: \n \tprint(\"Es menor de edad\")\"",
                                     font=("calibri", 11, "normal"),
                                     background="aquamarine",
                                     justify= "left",
@@ -1068,12 +1068,13 @@ etiquetaIntentoCondAlter.place(x=90, y=250, width=360, height=70)
 
 
 # entradas
-campoDeTextoCondAlter = grupoK.Entry(ventanaCondicionalAlternativo,
-                                     font=("calibri", 12),
-                                     background="white"
-                                     )
+campoDeTextoCondAlter = grupoK.Text(ventanaCondicionalAlternativo,
+                                      font=("calibri", 12),
+                                      background="white")
 campoDeTextoCondAlter.pack()
-campoDeTextoCondAlter.place(x=110, y=320, width=300, height=100)
+campoDeTextoCondAlter.place(x=80, y=320)
+campoDeTextoCondAlter.config(width=37, 
+                                height=4)
 
 # botones
 boton_confirmar_condAlter = grupoK.Button(ventanaCondicionalAlternativo,
@@ -1092,7 +1093,7 @@ boton_volver_condicional_alternativo.place(x=350, y=460, width=100, height=30)
 # ventana
 ventanaCondicionalAnidado = grupoK.Tk()
 ventanaCondicionalAnidado.title("Condicional Anidado")
-ventanaCondicionalAnidado.geometry("510x550+500+100")
+ventanaCondicionalAnidado.geometry("550x570+500+100")
 ventanaCondicionalAnidado.resizable(width=False, height=False)
 ventanaCondicionalAnidado.config(bg="aquamarine")
 ventanaCondicionalAnidado.protocol(
@@ -1114,7 +1115,7 @@ etiquetaTeoriaCondAnid.pack()
 etiquetaTeoriaCondAnid.place(x=40, y=30, width=470, height=150)
 
 etiquetaTeoriaCondAnidEj = grupoK.Label(ventanaCondicionalAnidado,
-                                    text="\t\tPor ejemplo: \n\"if edad>=18: \n\tif edad>18: \n\t\t\"print(\"Ya entro en la etapa de juventud\")\" \n\telse: \n\t\t\"print(\"Sigue en la etapa de adolescencia\")\" \n else: \n\t\"print(\"Es menor de edad\")\"\"",
+                                    text="\t\tPor ejemplo: \n\"if (edad>=18): \n\tif (edad>18): \n\t\tprint(\"Ya entró en la etapa de juventud\") \n\telse: \n\t\tprint(\"Sigue en la etapa de adolescencia\") \n else: \n\tprint(\"Es menor de edad\")\"",
                                     font=("calibri", 11, "normal"),
                                     background="aquamarine",
                                     justify= "left",
@@ -1131,31 +1132,32 @@ etiquetaIntentoCondAnid.pack()
 etiquetaIntentoCondAnid.place(x=90, y=310, width=360, height=70)
 
 # entradas
-campoDeTextoCondAnid = grupoK.Entry(ventanaCondicionalAnidado,
-                                    font=("calibri", 12),
-                                    background="white"
-                                    )
+campoDeTextoCondAnid = grupoK.Text(ventanaCondicionalAnidado,
+                                      font=("calibri", 12),
+                                      background="white")
 campoDeTextoCondAnid.pack()
-campoDeTextoCondAnid.place(x=110, y=370, width=300, height=40)
+campoDeTextoCondAnid.place(x=60, y=380)
+campoDeTextoCondAnid.config(width=51, 
+                                height=7)
 
 # botones
 boton_confirmar_condAnid = grupoK.Button(ventanaCondicionalAnidado,
                                          text="Confirmar",
                                          command=funcion_confirmar_cond_anidado)
 boton_confirmar_condAnid.pack()
-boton_confirmar_condAnid.place(x=70, y=500, width=100, height=30)
+boton_confirmar_condAnid.place(x=70, y=530, width=100, height=30)
 
 boton_volver_condicional_anidado = grupoK.Button(ventanaCondicionalAnidado,
                                                  text="Volver",
                                                  command=funcion_volver_condicional_anidado)
 boton_volver_condicional_anidado.pack()
-boton_volver_condicional_anidado.place(x=350, y=500, width=100, height=30)
+boton_volver_condicional_anidado.place(x=350, y=530, width=100, height=30)
 
 # VENTANA CONDICIONAL MATCH CASE
 # ventana
 ventanaCondicionalSwitchCase = grupoK.Tk()
 ventanaCondicionalSwitchCase.title("Condicional Match Case")
-ventanaCondicionalSwitchCase.geometry("700x600+500+100")
+ventanaCondicionalSwitchCase.geometry("640x700+400+100")
 ventanaCondicionalSwitchCase.resizable(width=False, height=False)
 ventanaCondicionalSwitchCase.config(bg="aquamarine")
 ventanaCondicionalSwitchCase.protocol(
@@ -1177,7 +1179,7 @@ etiquetaTeoriaCondMc.pack()
 etiquetaTeoriaCondMc.place(x=50, y=30, width=600, height=400)
 
 etiquetaTeoriaCondMcEj = grupoK.Label(ventanaCondicionalSwitchCase,
-                                    text="\t\tPor ejemplo: \nmatch color: \n\tcase \"rojo\": \n\t\tprint(\"El color es rojo\") \n\tcase \"azul\": \n\t\tprint(\"El color es azul\") \n\tcase \"verde\": \n\t\tprint(\"El color es verde\") \n\tcase _: \n\t\tprint(\"No existe ese color\")",
+                                    text="\t\tPor ejemplo: \nmatch color: \n\tcase \"rojo\": \n\t\tprint(\"El color es rojo\") \n\tcase \"azul\": \n\t\tprint(\"El color es azul\") \n\tcase \"verde\": \n\t\tprint(\"El color es verde\") \n\tcase_: \n\t\tprint(\"No existe ese color\")",
                                     font=("calibri", 11, "normal"),
                                     background="aquamarine",
                                     justify= "left",
@@ -1194,25 +1196,26 @@ etiquetaIntentoMc.pack()
 etiquetaIntentoMc.place(x=150, y=370, width=360, height=70)
 
 # entradas
-campoDeTextoCondMCase = grupoK.Entry(ventanaCondicionalSwitchCase,
-                                          font=("calibri", 12),
-                                          background="white"
-                                          )
+campoDeTextoCondMCase = grupoK.Text(ventanaCondicionalSwitchCase,
+                                      font=("calibri", 12),
+                                      background="white")
 campoDeTextoCondMCase.pack()
-campoDeTextoCondMCase.place(x=200, y=480, width=300, height=40)
+campoDeTextoCondMCase.place(x=130, y=420)
+campoDeTextoCondMCase.config(width=39, 
+                                height=9)
 
 # botones
 boton_confirmar_condMC = grupoK.Button(ventanaCondicionalSwitchCase,
                                        text="Confirmar",
                                        command=funcion_confirmar_cond_switch_case)
 boton_confirmar_condMC.pack()
-boton_confirmar_condMC.place(x=80, y=530, width=100, height=30)
+boton_confirmar_condMC.place(x=80, y=630, width=100, height=30)
 
 boton_volver_condicional_match_case = grupoK.Button(ventanaCondicionalSwitchCase,
                                                      text="Volver",
                                                      command=funcion_volver_condicional_switchCase)
 boton_volver_condicional_match_case.pack()
-boton_volver_condicional_match_case.place(x=550, y=530, width=100, height=30)
+boton_volver_condicional_match_case.place(x=520, y=630, width=100, height=30)
 
 # VENTANA BUCLES
 # ventana
@@ -1294,16 +1297,17 @@ etiquetaIntentoFor = grupoK.Label(ventanaFor,
                                      background="thistle1",
                                      anchor="nw")
 etiquetaIntentoFor.pack()
-etiquetaIntentoFor.place(x=30, y=290, width=360, height=70)
+etiquetaIntentoFor.place(x=70, y=290, width=360, height=70)
 
 
 # entradas
-campoDeTextoFor = grupoK.Entry(ventanaFor,
-                               font=("calibri", 12),
-                               background="white"
-                               )
+campoDeTextoFor = grupoK.Text(ventanaFor,
+                                      font=("calibri", 12),
+                                      background="white")
 campoDeTextoFor.pack()
-campoDeTextoFor.place(x=50, y=390, width=300, height=40)
+campoDeTextoFor.place(x=80, y=350)
+campoDeTextoFor.config(width=37, 
+                            height=3)
 
 # botones
 boton_confirmar_for = grupoK.Button(ventanaFor,
@@ -1343,7 +1347,7 @@ etiquetaTeoriaWhile.pack()
 etiquetaTeoriaWhile.place(x=40, y=30, width=450, height=150)
 
 etiquetaTeoriaWhileEj = grupoK.Label(ventanaWhile,
-                                    text="\tPor ejemplo: \na = 1 \nwhile a < 10: \n\tprint(\"¡Hola, mundo!\") \n\ta = a + 1",
+                                    text="\tPor ejemplo: \na = 1 \nwhile (a < 10): \n\tprint(\"¡Hola, mundo!\") \n\ta = a + 1",
                                     font=("calibri", 11, "normal"),
                                     background="DarkSeaGreen1",
                                     justify= "left",
@@ -1360,12 +1364,13 @@ etiquetaIntentoWhile.pack()
 etiquetaIntentoWhile.place(x=100, y=290, width=360, height=70)
 
 # entradas
-campoDeTextoWhile = grupoK.Entry(ventanaWhile,
-                                 font=("calibri", 12),
-                                 background="white"
-                                 )
+campoDeTextoWhile = grupoK.Text(ventanaWhile,
+                                      font=("calibri", 12),
+                                      background="white")
 campoDeTextoWhile.pack()
-campoDeTextoWhile.place(x=100, y=350, width=300, height=40)
+campoDeTextoWhile.place(x=100, y=350)
+campoDeTextoWhile.config(width=37, 
+                            height=4)
 
 # botones
 boton_confirmar_while = grupoK.Button(ventanaWhile,
@@ -1581,19 +1586,19 @@ botonVolverMatriz.place(x=220, y=450, width=100, height=30)
 
 # VENTANA MÉTODOS
 # ventana
-ventanaMetodos = grupoK.Tk()
-ventanaMetodos.title("Métodos")
-ventanaMetodos.geometry("400x350+500+100")
-ventanaMetodos.resizable(width=False, height=False)
-ventanaMetodos.config(bg="orchid1")
-ventanaMetodos.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
+#ventanaMetodos = grupoK.Tk()
+#ventanaMetodos.title("Métodos")
+#ventanaMetodos.geometry("400x350+500+100")
+#ventanaMetodos.resizable(width=False, height=False)
+#ventanaMetodos.config(bg="orchid1")
+#ventanaMetodos.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 
 # etiquetas
-etiquetaMetodos = grupoK.Label(ventanaMetodos,
-                               text="Elegí una opción",
-                               font=("calibri", 12, "bold"),
-                               background="orchid1")
-etiquetaMetodos.pack()
+#etiquetaMetodos = grupoK.Label(ventanaMetodos,
+#                               text="Elegí una opción",
+#                               font=("calibri", 12, "bold"),
+#                               background="orchid1")
+#etiquetaMetodos.pack()
 
 # botones
 #botonProcedimientos = grupoK.Button(ventanaMetodos,
@@ -1602,17 +1607,17 @@ etiquetaMetodos.pack()
 #botonProcedimientos.pack()
 #botonProcedimientos.place(x=150, y=50, width=100, height=30)
 
-botonFunciones = grupoK.Button(ventanaMetodos,
-                               text="Funciones",
-                               command=funcion_funciones)
-botonFunciones.pack()
-botonFunciones.place(x=150, y=100, width=100, height=30)
+#botonFunciones = grupoK.Button(ventanaMetodos,
+#                               text="Funciones",
+#                               command=funcion_funciones)
+#botonFunciones.pack()
+#botonFunciones.place(x=150, y=100, width=100, height=30)
 
-boton_volver_metodos = grupoK.Button(ventanaMetodos,
-                                     text="Volver",
-                                     command=funcion_volver_metodos)
-boton_volver_metodos.pack()
-boton_volver_metodos.place(x=150, y=150, width=100, height=30)
+#boton_volver_metodos = grupoK.Button(ventanaMetodos,
+#                                     text="Volver",
+#                                     command=funcion_volver_metodos)
+#boton_volver_metodos.pack()
+#boton_volver_metodos.place(x=150, y=150, width=100, height=30)
 
 # VENTANA PROCEDIMIENTOS
 # ventana
@@ -1681,7 +1686,8 @@ boton_volver_metodos.place(x=150, y=150, width=100, height=30)
 ventanaFunciones = grupoK.Tk()
 ventanaFunciones.title("Funciones")
 ventanaFunciones.geometry("450x500+500+100")
-ventanaFunciones.resizable(width=False, height=False)
+ventanaFunciones.resizable(width=False, 
+                            height=False)
 ventanaFunciones.config(bg="red")
 ventanaFunciones.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 
@@ -1693,7 +1699,7 @@ etiquetaFunciones = grupoK.Label(ventanaFunciones,
 etiquetaFunciones.pack()
 
 etiquetaTeoriaFunciones= grupoK.Label(ventanaFunciones,
-                                    text="Las funciones son bloques de código que se \npueden reutilizar simplemente llamando a la función. \nSe definen con la palabra clave \"def\", \nseguida del nombre de la función y sus parámetros.",
+                                    text="Las funciones son bloques de código que se \npueden reutilizar simplemente llamando a la función. \nSe definen con la palabra clave \"def\", \nseguida del nombre de la función y, si tiene, sus parámetros.",
                                     font=("calibri", 11, "normal"),
                                     background="red",
                                     anchor="nw")
@@ -1701,7 +1707,7 @@ etiquetaTeoriaFunciones.pack()
 etiquetaTeoriaFunciones.place(x=40, y=30, width=380, height=150)
 
 etiquetaTeoriaFuncionesEj = grupoK.Label(ventanaFunciones,
-                                    text="\tPor ejemplo: \ndef es_par(numero): \n\tif numero % 2 == 0: \n\t\treturn True \n\telse: \n\t\treturn False",
+                                    text="\tPor ejemplo: \ndef es_par(numero): \n\tif (numero % 2 == 0): \n\t\treturn True \n\telse: \n\t\treturn False",
                                     font=("calibri", 11, "normal"),
                                     background="red",
                                     justify= "left",
@@ -1715,15 +1721,16 @@ etiquetaIntentoFunciones = grupoK.Label(ventanaFunciones,
                                      background="red",
                                      anchor="nw")
 etiquetaIntentoFunciones.pack()
-etiquetaIntentoFunciones.place(x=30, y=270, width=360, height=70)
+etiquetaIntentoFunciones.place(x=70, y=270, width=360, height=70)
 
 # entradas
-campoDeTextoFunciones = grupoK.Entry(ventanaFunciones,
-                                     font=("calibri", 12),
-                                     background="white"
-                                     )
+campoDeTextoFunciones = grupoK.Text(ventanaFunciones,
+                                      font=("calibri", 12),
+                                      background="white")
 campoDeTextoFunciones.pack()
-campoDeTextoFunciones.place(x=50, y=350, width=300, height=40)
+campoDeTextoFunciones.place(x=70, y=320)
+campoDeTextoFunciones.config(width=37, 
+                                height=5)
 
 # botones
 # botones
@@ -1735,9 +1742,9 @@ boton_confirmar_funciones.place(x=80, y=450, width=100, height=30)
 
 boton_volver_funciones = grupoK.Button(ventanaFunciones,
                                        text="Volver",
-                                       command=funcion_volver_funciones)
+                                       command=funcion_volver_metodos)
 boton_volver_funciones.pack()
-boton_volver_funciones.place(x=220, y=450, width=100, height=30)
+boton_volver_funciones.place(x=250, y=450, width=100, height=30)
 
 # ------------------------------------------------------
 # INICIO
@@ -1760,7 +1767,7 @@ ventanaWhile.withdraw()
 ventanaArreglos.withdraw()
 ventanaVector.withdraw()
 ventanaMatriz.withdraw()
-ventanaMetodos.withdraw()
+#ventanaMetodos.withdraw()
 #ventanaProcedimientos.withdraw()
 ventanaFunciones.withdraw()
 ventanaPrincipal.mainloop()
