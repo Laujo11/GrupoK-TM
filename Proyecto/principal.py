@@ -2,6 +2,7 @@
 import tkinter as grupoK
 from tkinter import CENTER, messagebox as cajaMensaje
 from tkinter.font import BOLD
+from turtle import left
 
 # ----------FUNCIONES----------
 
@@ -653,23 +654,23 @@ etiquetaEnteros = grupoK.Label(ventanaEnteros,
                                font=("calibri", 12, "bold"),
                                background="coral1")
 etiquetaEnteros.pack()
-etiquetaEnteros.place(x=100, y=5, width=200, height=30)
+etiquetaEnteros.place(x=100, y=5, width=200, height=40)
 
 etiquetaTeoriaEnteros = grupoK.Label(ventanaEnteros,
-                                     text="Para definir este tipo de variables debemos asignar un \nvalor entero a una variable al momento de declararla...\n\nPor ejemplo: \"numero_de_manzanas = 2\"",
+                                     text="Para definir este tipo de variables debemos asignar un \nvalor entero a una variable al momento \nde declararla...\n\nPor ejemplo: \"numero_de_manzanas = 2\"",
                                      font=("calibri", 11, "normal"),
                                      background="coral1",
                                      anchor="nw")
 etiquetaTeoriaEnteros.pack()
-etiquetaTeoriaEnteros.place(x=20, y=30, width=360, height=90)
+etiquetaTeoriaEnteros.place(x=20, y=40, width=360, height=140)
 
 etiquetaIntentoEnteros = grupoK.Label(ventanaEnteros,
-                                      text="¡Ahora intentalo tu!, ingresa el ejemplo anterior en el \nsiguiente campo:",
+                                      text="¡Ahora intentalo tu!, ingresa el ejemplo anterior \nen el siguiente campo:",
                                       font=("calibri", 11, "normal"),
                                       background="coral1",
                                       anchor="nw")
 etiquetaIntentoEnteros.pack()
-etiquetaIntentoEnteros.place(x=20, y=120, width=360, height=40)
+etiquetaIntentoEnteros.place(x=20, y=170, width=360, height=50)
 
 # entradas
 campoDeTextoEnteros = grupoK.Entry(ventanaEnteros,
@@ -677,20 +678,20 @@ campoDeTextoEnteros = grupoK.Entry(ventanaEnteros,
                                    background="white"
                                    )
 campoDeTextoEnteros.pack()
-campoDeTextoEnteros.place(x=50, y=200, width=300, height=40)
+campoDeTextoEnteros.place(x=50, y=240, width=300, height=40)
 
 # botones
 boton_confirmar_enteros = grupoK.Button(ventanaEnteros,
                                         text="Confirmar",
                                         command=funcion_confirmar_enteros)
 boton_confirmar_enteros.pack()
-boton_confirmar_enteros.place(x=80, y=250, width=100, height=30)
+boton_confirmar_enteros.place(x=80, y=300, width=100, height=30)
 
 boton_volver_enteros = grupoK.Button(ventanaEnteros,
                                      text="Volver",
                                      command=funcion_volver_enteros)
 boton_volver_enteros.pack()
-boton_volver_enteros.place(x=220, y=250, width=100, height=30)
+boton_volver_enteros.place(x=220, y=300, width=100, height=30)
 
 # VENTANA FLOTANTES/REALES
 # ventana
@@ -948,7 +949,7 @@ botonCondicAnidado.pack()
 botonCondicAnidado.place(x=100, y=150, width=200, height=30)
 
 botonCondicSwitch = grupoK.Button(ventanaCondicionales,
-                                  text="Condicional Switch Case ",
+                                  text="Condicional Match Case ",
                                   command=funcionCondicionalSwitch)
 botonCondicSwitch.pack()
 botonCondicSwitch.place(x=100, y=200, width=200, height=30)
@@ -976,32 +977,57 @@ etiquetaCondSimple = grupoK.Label(ventanaCondicionalSimple,
                                   background="aquamarine")
 etiquetaCondSimple.pack()
 
+etiquetaTeoriaCondSimple = grupoK.Label(ventanaCondicionalSimple,
+                                    text="Para definir un condicional simple tiene que \ncolocarse un \"if\" acompañado con la \ncondicion que necesite y una accion.",
+                                    font=("calibri", 11, "normal"),
+                                    background="aquamarine",
+                                    anchor="nw")
+etiquetaTeoriaCondSimple.pack()
+etiquetaTeoriaCondSimple.place(x=40, y=30, width=360, height=150)
+
+etiquetaTeoriaCondSimpleEj = grupoK.Label(ventanaCondicionalSimple,
+                                    text="                   Por ejemplo: \n\"if edad>18: \n       \"print(\"Es mayor de edad\")\"\"",
+                                    font=("calibri", 11, "normal"),
+                                    background="aquamarine",
+                                    justify= "left",
+                                    anchor="nw")
+etiquetaTeoriaCondSimpleEj.pack()
+etiquetaTeoriaCondSimpleEj.place(x=50, y=120, width=360, height=200)
+
+etiquetaIntentoCondSimple = grupoK.Label(ventanaCondicionalSimple,
+                                     text="¡Ahora intentalo tu!, ingresa el ejemplo anterior \nen el siguiente campo:",
+                                     font=("calibri", 11, "normal"),
+                                     background="aquamarine",
+                                     anchor="nw")
+etiquetaIntentoCondSimple.pack()
+etiquetaIntentoCondSimple.place(x=30, y=200, width=360, height=70)
+
 # entradas
 campoDeTextoCondSimple = grupoK.Entry(ventanaCondicionalSimple,
                                       font=("calibri", 12),
                                       background="white"
                                       )
 campoDeTextoCondSimple.pack()
-campoDeTextoCondSimple.place(x=50, y=200, width=300, height=40)
+campoDeTextoCondSimple.place(x=50, y=250, width=300, height=40)
 
 # botones
 boton_confirmar_condSimple = grupoK.Button(ventanaCondicionalSimple,
                                            text="Confirmar",
                                            command=funcion_confirmar_cond_simple)
 boton_confirmar_condSimple.pack()
-boton_confirmar_condSimple.place(x=80, y=250, width=100, height=30)
+boton_confirmar_condSimple.place(x=80, y=300, width=100, height=30)
 
 boton_volver_condicional_simple = grupoK.Button(ventanaCondicionalSimple,
                                                 text="Volver",
                                                 command=funcion_volver_condicional_simple)
 boton_volver_condicional_simple.pack()
-boton_volver_condicional_simple.place(x=220, y=250, width=100, height=30)
+boton_volver_condicional_simple.place(x=220, y=300, width=100, height=30)
 
 # VENTANA CONDICIONAL ALTERNATIVO
 # ventana
 ventanaCondicionalAlternativo = grupoK.Tk()
 ventanaCondicionalAlternativo.title("Condicional Alternativo")
-ventanaCondicionalAlternativo.geometry("400x350+500+100")
+ventanaCondicionalAlternativo.geometry("400x400+500+100")
 ventanaCondicionalAlternativo.resizable(width=False, height=False)
 ventanaCondicionalAlternativo.config(bg="aquamarine")
 ventanaCondicionalAlternativo.protocol(
@@ -1014,32 +1040,59 @@ etiquetaCondAlter = grupoK.Label(ventanaCondicionalAlternativo,
                                  background="aquamarine")
 etiquetaCondAlter.pack()
 
+
+etiquetaTeoriaCondAlter = grupoK.Label(ventanaCondicionalAlternativo,
+                                    text="Para definir un condicional alternativo tiene que \ncolocarse un \"if\" y un \"else\" acompañado con una \ncondicion y dos acciones.",
+                                    font=("calibri", 11, "normal"),
+                                    background="aquamarine",
+                                    anchor="nw")
+etiquetaTeoriaCondAlter.pack()
+etiquetaTeoriaCondAlter.place(x=30, y=30, width=360, height=150)
+
+etiquetaTeoriaCondAlterEj = grupoK.Label(ventanaCondicionalAlternativo,
+                                    text="                   Por ejemplo: \n\"if edad>18: \n       \"print(\"Es mayor de edad\")\" \n else: \n       \"print(\"Es menor de edad\")\"\"",
+                                    font=("calibri", 11, "normal"),
+                                    background="aquamarine",
+                                    justify= "left",
+                                    anchor="nw")
+etiquetaTeoriaCondAlterEj.pack()
+etiquetaTeoriaCondAlterEj.place(x=50, y=110, width=360, height=250)
+
+etiquetaIntentoCondAlter = grupoK.Label(ventanaCondicionalAlternativo,
+                                     text="¡Ahora intentalo tu!, ingresa el ejemplo anterior \nen el siguiente campo:",
+                                     font=("calibri", 11, "normal"),
+                                     background="aquamarine",
+                                     anchor="nw")
+etiquetaIntentoCondAlter.pack()
+etiquetaIntentoCondAlter.place(x=30, y=230, width=360, height=70)
+
+
 # entradas
 campoDeTextoCondAlter = grupoK.Entry(ventanaCondicionalAlternativo,
                                      font=("calibri", 12),
                                      background="white"
                                      )
 campoDeTextoCondAlter.pack()
-campoDeTextoCondAlter.place(x=50, y=200, width=300, height=40)
+campoDeTextoCondAlter.place(x=50, y=300, width=300, height=40)
 
 # botones
 boton_confirmar_condAlter = grupoK.Button(ventanaCondicionalAlternativo,
                                           text="Confirmar",
                                           command=funcion_confirmar_cond_alternativo)
 boton_confirmar_condAlter.pack()
-boton_confirmar_condAlter.place(x=80, y=250, width=100, height=30)
+boton_confirmar_condAlter.place(x=80, y=360, width=100, height=30)
 
 boton_volver_condicional_alternativo = grupoK.Button(ventanaCondicionalAlternativo,
                                                      text="Volver",
                                                      command=funcion_volver_condicional_alternativo)
 boton_volver_condicional_alternativo.pack()
-boton_volver_condicional_alternativo.place(x=220, y=250, width=100, height=30)
+boton_volver_condicional_alternativo.place(x=220, y=360, width=100, height=30)
 
-# VENTANA CONDICIONAL SIMPLE
+# VENTANA CONDICIONAL ANIDADO
 # ventana
 ventanaCondicionalAnidado = grupoK.Tk()
 ventanaCondicionalAnidado.title("Condicional Anidado")
-ventanaCondicionalAnidado.geometry("400x350+500+100")
+ventanaCondicionalAnidado.geometry("450x450+500+100")
 ventanaCondicionalAnidado.resizable(width=False, height=False)
 ventanaCondicionalAnidado.config(bg="aquamarine")
 ventanaCondicionalAnidado.protocol(
@@ -1052,32 +1105,57 @@ etiquetaCondAnid = grupoK.Label(ventanaCondicionalAnidado,
                                 background="aquamarine")
 etiquetaCondAnid.pack()
 
+etiquetaTeoriaCondAnid = grupoK.Label(ventanaCondicionalAnidado,
+                                    text="Para definir un condicional anidado tiene que colocarse \nun nuevo \"if\" dentro de otro \"if\" o \"else\". ",
+                                    font=("calibri", 11, "normal"),
+                                    background="aquamarine",
+                                    anchor="nw")
+etiquetaTeoriaCondAnid.pack()
+etiquetaTeoriaCondAnid.place(x=30, y=30, width=370, height=150)
+
+etiquetaTeoriaCondAnidEj = grupoK.Label(ventanaCondicionalAnidado,
+                                    text="                               Por ejemplo: \n\"if edad>=18: \n        if edad>18: \n            \"print(\"Ya entro en la etapa de juventud\")\" \n        else: \n            \"print(\"Sigue en la etapa de adolescencia \")\" \n else: \n       \"print(\"Es menor de edad\")\"\"",
+                                    font=("calibri", 11, "normal"),
+                                    background="aquamarine",
+                                    justify= "left",
+                                    anchor="nw")
+etiquetaTeoriaCondAnidEj.pack()
+etiquetaTeoriaCondAnidEj.place(x=50, y=100, width=360, height=350)
+
+etiquetaIntentoCondAnid = grupoK.Label(ventanaCondicionalAnidado,
+                                     text="¡Ahora intentalo tu!, ingresa el ejemplo anterior \nen el siguiente campo:",
+                                     font=("calibri", 11, "normal"),
+                                     background="aquamarine",
+                                     anchor="nw")
+etiquetaIntentoCondAnid.pack()
+etiquetaIntentoCondAnid.place(x=60, y=280, width=360, height=70)
+
 # entradas
 campoDeTextoCondAnid = grupoK.Entry(ventanaCondicionalAnidado,
                                     font=("calibri", 12),
                                     background="white"
                                     )
 campoDeTextoCondAnid.pack()
-campoDeTextoCondAnid.place(x=50, y=200, width=300, height=40)
+campoDeTextoCondAnid.place(x=70, y=340, width=300, height=40)
 
 # botones
 boton_confirmar_condAnid = grupoK.Button(ventanaCondicionalAnidado,
                                          text="Confirmar",
                                          command=funcion_confirmar_cond_anidado)
 boton_confirmar_condAnid.pack()
-boton_confirmar_condAnid.place(x=80, y=250, width=100, height=30)
+boton_confirmar_condAnid.place(x=80, y=400, width=100, height=30)
 
 boton_volver_condicional_anidado = grupoK.Button(ventanaCondicionalAnidado,
                                                  text="Volver",
                                                  command=funcion_volver_condicional_anidado)
 boton_volver_condicional_anidado.pack()
-boton_volver_condicional_anidado.place(x=220, y=250, width=100, height=30)
+boton_volver_condicional_anidado.place(x=220, y=400, width=100, height=30)
 
-# VENTANA CONDICIONAL SWITCH CASE
+# VENTANA CONDICIONAL MATCH CASE
 # ventana
 ventanaCondicionalSwitchCase = grupoK.Tk()
-ventanaCondicionalSwitchCase.title("Condicional Switch Case")
-ventanaCondicionalSwitchCase.geometry("400x350+500+100")
+ventanaCondicionalSwitchCase.title("Condicional Match Case")
+ventanaCondicionalSwitchCase.geometry("450x600+500+100")
 ventanaCondicionalSwitchCase.resizable(width=False, height=False)
 ventanaCondicionalSwitchCase.config(bg="aquamarine")
 ventanaCondicionalSwitchCase.protocol(
@@ -1085,10 +1163,35 @@ ventanaCondicionalSwitchCase.protocol(
 
 # etiquetas
 etiquetaCondSC = grupoK.Label(ventanaCondicionalSwitchCase,
-                              text="Teoría sobre condicional switch-case",
+                              text="Teoría sobre condicional match-case",
                               font=("calibri", 12, "bold"),
                               background="aquamarine")
 etiquetaCondSC.pack()
+
+etiquetaTeoriaCondAnid = grupoK.Label(ventanaCondicionalSwitchCase,
+                                text="Para definir un condicional match-case tiene que \ncolocarse un \"match\" acompañado de la variable\n que se va a comparar y varios \"case\" que son\n las distintas opciones y un \"case_\" \nque se usa cuando no es ninguna de las opciones. ",
+                                    font=("calibri", 11, "normal"),
+                                    background="aquamarine",
+                                    anchor="nw")
+etiquetaTeoriaCondAnid.pack()
+etiquetaTeoriaCondAnid.place(x=50, y=30, width=370, height=150)
+
+etiquetaTeoriaCondAnidEj = grupoK.Label(ventanaCondicionalSwitchCase,
+                                    text="                               Por ejemplo: \n match color: \n   case \"rojo\": \n      print(\"El color es rojo\")\n   case \"azul\": \n      print(\"El color es azul\")\n   case \"verde\":\n       print(\"El color es verde\")\n    case _: \n       print(\"No existe ese color\")",
+                                    font=("calibri", 11, "normal"),
+                                    background="aquamarine",
+                                    justify= "left",
+                                    anchor="nw")
+etiquetaTeoriaCondAnidEj.pack()
+etiquetaTeoriaCondAnidEj.place(x=50, y=150, width=360, height=350)
+
+etiquetaIntentoCondAnid = grupoK.Label(ventanaCondicionalSwitchCase,
+                                     text="¡Ahora intentalo tu!, ingresa el ejemplo anterior \nen el siguiente campo:",
+                                     font=("calibri", 11, "normal"),
+                                     background="aquamarine",
+                                     anchor="nw")
+etiquetaIntentoCondAnid.pack()
+etiquetaIntentoCondAnid.place(x=60, y=380, width=360, height=70)
 
 # entradas
 campoDeTextoCondSwitchCase = grupoK.Entry(ventanaCondicionalSwitchCase,
@@ -1096,20 +1199,20 @@ campoDeTextoCondSwitchCase = grupoK.Entry(ventanaCondicionalSwitchCase,
                                           background="white"
                                           )
 campoDeTextoCondSwitchCase.pack()
-campoDeTextoCondSwitchCase.place(x=50, y=200, width=300, height=40)
+campoDeTextoCondSwitchCase.place(x=70, y=480, width=300, height=40)
 
 # botones
 boton_confirmar_condSC = grupoK.Button(ventanaCondicionalSwitchCase,
                                        text="Confirmar",
                                        command=funcion_confirmar_cond_switch_case)
 boton_confirmar_condSC.pack()
-boton_confirmar_condSC.place(x=80, y=250, width=100, height=30)
+boton_confirmar_condSC.place(x=80, y=530, width=100, height=30)
 
 boton_volver_condicional_switch_case = grupoK.Button(ventanaCondicionalSwitchCase,
                                                      text="Volver",
                                                      command=funcion_volver_condicional_switchCase)
 boton_volver_condicional_switch_case.pack()
-boton_volver_condicional_switch_case.place(x=220, y=250, width=100, height=30)
+boton_volver_condicional_switch_case.place(x=250, y=530, width=100, height=30)
 
 # VENTANA BUCLES
 # ventana
