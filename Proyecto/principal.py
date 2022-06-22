@@ -2,7 +2,6 @@
 import tkinter as grupoK
 from tkinter import CENTER, messagebox as cajaMensaje
 from tkinter.font import BOLD
-from turtle import left
 
 # ----------FUNCIONES----------
 
@@ -36,8 +35,8 @@ def funcion_confirmar_enteros():
     else:
         cajaMensaje.showinfo(
             "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
-        # ventanaVariable.deiconify()
-        # ventanaEnteros.withdraw()
+        ventanaVariable.deiconify()
+        ventanaEnteros.withdraw()
 
 
 def funcion_volver_enteros():
@@ -59,8 +58,8 @@ def funcion_confirmar_flotantes():
     else:
         cajaMensaje.showinfo(
             "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
-        # ventanaVariable.deiconify()
-        # ventanaFlotantes.withdraw()
+        ventanaVariable.deiconify()
+        ventanaFlotantes.withdraw()
 
 
 def funcion_volver_flotantes():
@@ -82,8 +81,8 @@ def funcion_confirmar_caracter():
     else:
         cajaMensaje.showinfo(
             "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
-        # ventanaVariable.deiconify()
-        # ventanaCaracter.withdraw()
+        ventanaVariable.deiconify()
+        ventanaCaracter.withdraw()
 
 
 def funcion_volver_caracter():
@@ -105,8 +104,8 @@ def funcion_confirmar_cadena():
     else:
         cajaMensaje.showinfo(
             "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
-        # ventanaVariable.deiconify()
-        # ventanaCadena.withdraw()
+        ventanaVariable.deiconify()
+        ventanaCadena.withdraw()
 
 
 def funcion_volver_cadena():
@@ -135,13 +134,13 @@ def funcion_confirmar_logicos():
             else:
                 cajaMensaje.showinfo(
                     "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
-                # ventanaVariable.deiconify()
-                # ventanaLogico.withdraw()
+                ventanaVariable.deiconify()
+                ventanaLogico.withdraw()
         else:
             cajaMensaje.showinfo(
                 "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
-            # ventanaVariable.deiconify()
-            # ventanaLogico.withdraw()
+            ventanaVariable.deiconify()
+            ventanaLogico.withdraw()
 
 
 def funcion_volver_logicos():
@@ -165,16 +164,16 @@ def funcionCondicionalSimple():
 
 
 def funcion_confirmar_cond_simple():
-    ejemploCampo = campoDeTextoCondSimple.get().strip()
-    ejemploDado = "-"
+    ejemploCampo = campoDeTextoCondSimple.get("1.0", "end").strip()
+    ejemploDado = "if (edad>18):\n\tprint(\"Es mayor de edad\")"
     if (ejemploCampo != ejemploDado):
         cajaMensaje.showwarning(
-            "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n (-)")
+            "Ups!", "¡Lo que escribiste no es igual al ejemplo!\n if (edad>18):\n\tprint(\"Es mayor de edad\")")
     else:
         cajaMensaje.showinfo(
             "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
-        # ventanaCondicionales.deiconify()
-        # ventanaCondicionalSimple.withdraw()
+        ventanaCondicionales.deiconify()
+        ventanaCondicionalSimple.withdraw()
 
 
 def funcion_volver_condicional_simple():
@@ -196,8 +195,8 @@ def funcion_confirmar_cond_alternativo():
     else:
         cajaMensaje.showinfo(
             "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
-        # ventanaCondicionales.deiconify()
-        # ventanaCondicionalAlternativo.withdraw()
+        ventanaCondicionales.deiconify()
+        ventanaCondicionalAlternativo.withdraw()
 
 
 def funcion_volver_condicional_alternativo():
@@ -219,8 +218,8 @@ def funcion_confirmar_cond_anidado():
     else:
         cajaMensaje.showinfo(
             "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
-        # ventanaCondicionales.deiconify()
-        # ventanaCondicionalAnidado.withdraw()
+        ventanaCondicionales.deiconify()
+        ventanaCondicionalAnidado.withdraw()
 
 
 def funcion_volver_condicional_anidado():
@@ -242,8 +241,8 @@ def funcion_confirmar_cond_switch_case():
     else:
         cajaMensaje.showinfo(
             "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
-        # ventanaCondicionales.deiconify()
-        # ventanaCondicionalSwitchCase.withdraw()
+        ventanaCondicionales.deiconify()
+        ventanaCondicionalSwitchCase.withdraw()
 
 
 def funcion_volver_condicional_switchCase():
@@ -275,8 +274,8 @@ def funcion_confirmar_for():
     else:
         cajaMensaje.showinfo(
             "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
-        # ventanaFor.withdraw()
-        # ventanaBucles.deiconify()
+        ventanaFor.withdraw()
+        ventanaBucles.deiconify()
 
 
 def funcionVolverFor():
@@ -298,8 +297,8 @@ def funcion_confirmar_while():
     else:
         cajaMensaje.showinfo(
             "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
-        # ventanaWhile.withdraw()
-        # ventanaBucles.deiconify()
+        ventanaWhile.withdraw()
+        ventanaBucles.deiconify()
 
 
 def funcionVolverWhile():
@@ -321,8 +320,8 @@ def funcion_confirmar_Dowhile():
     else:
         cajaMensaje.showinfo(
             "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
-        # ventanaDoWhile.withdraw()
-        # ventanaBucles.deiconify()
+        ventanaDoWhile.withdraw()
+        ventanaBucles.deiconify()
 
 
 def funcionVolverDoWhile():
@@ -354,8 +353,8 @@ def funcion_confirmar_vector():
     else:
         cajaMensaje.showinfo(
             "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
-        # ventanaVector.withdraw()
-        # ventanaArreglos.deiconify()
+        ventanaVector.withdraw()
+        ventanaArreglos.deiconify()
 
 
 def funcionVolverVector():
@@ -377,8 +376,8 @@ def funcion_confirmar_matriz():
     else:
         cajaMensaje.showinfo(
             "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
-        # ventanaMatriz.withdraw()
-        # ventanaArreglos.deiconify()
+        ventanaMatriz.withdraw()
+        ventanaArreglos.deiconify()
 
 
 def funcionVolverMatriz():
@@ -410,8 +409,8 @@ def funcion_confirmar_procedimientos():
     else:
         cajaMensaje.showinfo(
             "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
-        # ventanaProcedimientos.withdraw()
-        # ventanaMetodos.deiconify()
+        ventanaProcedimientos.withdraw()
+        ventanaMetodos.deiconify()
 
 
 def funcion_volver_procedimientos():
@@ -433,8 +432,8 @@ def funcion_confirmar_funciones():
     else:
         cajaMensaje.showinfo(
             "Muy bien!", "¡Completaste este apartado! Ya puedes volver.")
-        # ventanaFunciones.withdraw()
-        # ventanaMetodos.deiconify()
+        ventanaFunciones.withdraw()
+        ventanaMetodos.deiconify()
 
 
 def funcion_volver_funciones():
@@ -808,20 +807,20 @@ ventanaCadena = grupoK.Tk()
 ventanaCadena.title("Cadenas de texto")
 ventanaCadena.geometry("400x350+500+100")
 ventanaCadena.resizable(width=False, height=False)
-ventanaCadena.config(bg="red")
+ventanaCadena.config(bg="brown")
 ventanaCadena.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 
 # etiquetas
 etiquetaCadena = grupoK.Label(ventanaCadena,
                               text="Teoría sobre cadenas",
                               font=("calibri", 12, "bold"),
-                              background="red")
+                              background="brown")
 etiquetaCadena.pack()
 
 etiquetaTeoriaCadena = grupoK.Label(ventanaCadena,
                                     text="Para definir este tipo de variables debemos \ningresar un texto entre un par de comillas \ndoble en una variable al momento de declararla...\n\nPor ejemplo: \"estoEsUnaCadena = \"Hola estas en \nnuestro proyecto de metodologia \"\"",
                                     font=("calibri", 11, "normal"),
-                                    background="red",
+                                    background="brown",
                                     anchor="nw")
 etiquetaTeoriaCadena.pack()
 etiquetaTeoriaCadena.place(x=20, y=30, width=360, height=150)
@@ -829,7 +828,7 @@ etiquetaTeoriaCadena.place(x=20, y=30, width=360, height=150)
 etiquetaIntentoCadena = grupoK.Label(ventanaCadena,
                                      text="¡Ahora intentalo tu!, ingresa el ejemplo anterior \nen el siguiente campo:",
                                      font=("calibri", 11, "normal"),
-                                     background="red",
+                                     background="brown",
                                      anchor="nw")
 etiquetaIntentoCadena.pack()
 etiquetaIntentoCadena.place(x=20, y=180, width=360, height=70)
@@ -864,20 +863,20 @@ ventanaLogico = grupoK.Tk()
 ventanaLogico.title("Lógicos")
 ventanaLogico.geometry("400x350+500+100")
 ventanaLogico.resizable(width=False, height=False)
-ventanaLogico.config(bg="coral3")
+ventanaLogico.config(bg="brown1")
 ventanaLogico.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 
 # etiquetas
 etiquetaLogico = grupoK.Label(ventanaLogico,
                               text="Teoría sobre lógicos",
                               font=("calibri", 12, "bold"),
-                              background="coral3")
+                              background="brown1")
 etiquetaLogico.pack()
 
 etiquetaTeoriaLogico = grupoK.Label(ventanaLogico,
                                     text="Para definir este tipo de variables debemos \ningresar True si es verdadero y False \nsi es falso, a una variable al momento de declararla...\n\nPor ejemplo: \"x = true, y = false\"",
                                     font=("calibri", 11, "normal"),
-                                    background="coral3",
+                                    background="brown1",
                                     anchor="nw")
 etiquetaTeoriaLogico.pack()
 etiquetaTeoriaLogico.place(x=20, y=30, width=360, height=150)
@@ -885,7 +884,7 @@ etiquetaTeoriaLogico.place(x=20, y=30, width=360, height=150)
 etiquetaIntentoLogico = grupoK.Label(ventanaLogico,
                                      text="¡Ahora intentalo tu!, ingresa el ejemplo anterior \nen el siguiente campo:",
                                      font=("calibri", 11, "normal"),
-                                     background="coral3",
+                                     background="brown1",
                                      anchor="nw")
 etiquetaIntentoLogico.pack()
 etiquetaIntentoLogico.place(x=20, y=150, width=360, height=70)
@@ -964,7 +963,7 @@ boton_volver_condicionales.place(x=150, y=250, width=100, height=30)
 # ventana
 ventanaCondicionalSimple = grupoK.Tk()
 ventanaCondicionalSimple.title("Condicional Simple")
-ventanaCondicionalSimple.geometry("400x350+500+100")
+ventanaCondicionalSimple.geometry("400x380+500+100")
 ventanaCondicionalSimple.resizable(width=False, height=False)
 ventanaCondicionalSimple.config(bg="aquamarine")
 ventanaCondicionalSimple.protocol(
@@ -986,7 +985,7 @@ etiquetaTeoriaCondSimple.pack()
 etiquetaTeoriaCondSimple.place(x=40, y=30, width=360, height=150)
 
 etiquetaTeoriaCondSimpleEj = grupoK.Label(ventanaCondicionalSimple,
-                                    text="                   Por ejemplo: \n\"if edad>18: \n       \"print(\"Es mayor de edad\")\"\"",
+                                    text="\tPor ejemplo: \n\"if (edad>18): \n\tprint(\"Es mayor de edad\")\"",
                                     font=("calibri", 11, "normal"),
                                     background="aquamarine",
                                     justify= "left",
@@ -1003,25 +1002,26 @@ etiquetaIntentoCondSimple.pack()
 etiquetaIntentoCondSimple.place(x=30, y=200, width=360, height=70)
 
 # entradas
-campoDeTextoCondSimple = grupoK.Entry(ventanaCondicionalSimple,
+campoDeTextoCondSimple = grupoK.Text(ventanaCondicionalSimple,
                                       font=("calibri", 12),
-                                      background="white"
-                                      )
+                                      background="white")
 campoDeTextoCondSimple.pack()
-campoDeTextoCondSimple.place(x=50, y=250, width=300, height=40)
+campoDeTextoCondSimple.place(x=50, y=250)
+campoDeTextoCondSimple.config(width=37, 
+                                height=3)
 
 # botones
 boton_confirmar_condSimple = grupoK.Button(ventanaCondicionalSimple,
                                            text="Confirmar",
                                            command=funcion_confirmar_cond_simple)
 boton_confirmar_condSimple.pack()
-boton_confirmar_condSimple.place(x=80, y=300, width=100, height=30)
+boton_confirmar_condSimple.place(x=80, y=330, width=100, height=30)
 
 boton_volver_condicional_simple = grupoK.Button(ventanaCondicionalSimple,
                                                 text="Volver",
                                                 command=funcion_volver_condicional_simple)
 boton_volver_condicional_simple.pack()
-boton_volver_condicional_simple.place(x=220, y=300, width=100, height=30)
+boton_volver_condicional_simple.place(x=220, y=330, width=100, height=30)
 
 # VENTANA CONDICIONAL ALTERNATIVO
 # ventana
