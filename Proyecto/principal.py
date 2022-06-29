@@ -653,7 +653,7 @@ etiquetaEnteros = grupoK.Label(ventanaEnteros,
                                font=("calibri", 12, "bold"),
                                background="coral1")
 etiquetaEnteros.pack()
-etiquetaEnteros.place(x=90, y=5, width=220, height=40)
+etiquetaEnteros.place(x=90, y=5, width=230, height=40)
 
 etiquetaTeoriaEnteros = grupoK.Label(ventanaEnteros,
                                      text="Para definir este tipo de variables debemos \nasignar un valor entero a una \nvariable al momento de declararla...\n\nPor ejemplo: \"numero_de_manzanas = 2\"",
