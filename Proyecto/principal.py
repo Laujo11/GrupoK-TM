@@ -9,7 +9,7 @@ from tkinter.font import BOLD
 def abrirMenu():
     if bool(campoDeTextoPrincipal.get().strip()):
         cartel_opcion.configure(text=campoDeTextoPrincipal.get(
-        ).strip() + ", elija el apartado al cual quiere ingresar")
+        ).strip() + ", elija el \napartado al cual quiere ingresar")
         ventanaPrincipal.withdraw()
         ventanaMenu.deiconify()
     else:
@@ -505,14 +505,14 @@ etiqueta_bienvenida = grupoK.Label(ventanaPrincipal,
                                    bg="greenyellow",
                                    font=("calibri", 20, "bold"))
 etiqueta_bienvenida.pack()
-etiqueta_bienvenida.place(x=125, y=10,  width=150, height=30)
+etiqueta_bienvenida.place(x=115, y=10,  width=170, height=30)
 
 mensaje_nombre = grupoK.Label(ventanaPrincipal,
                               text="Ingresá tu nombre",
                               bg="greenyellow",
                               font=("calibri", 12, "bold"))
 mensaje_nombre.pack()
-mensaje_nombre.place(x=125, y=40,  width=150, height=30)
+mensaje_nombre.place(x=105, y=40,  width=190, height=30)
 
 # botones
 boton_menu_principal = grupoK.Button(ventanaPrincipal,
@@ -589,7 +589,7 @@ boton_volver_menu.place(x=150, y=300, width=100, height=30)
 # ventana
 ventanaVariable = grupoK.Tk()
 ventanaVariable.title("Variables")
-ventanaVariable.geometry("400x350+500+100")
+ventanaVariable.geometry("420x350+500+100")
 ventanaVariable.resizable(width=False, height=False)
 ventanaVariable.config(bg="coral")
 ventanaVariable.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
@@ -653,15 +653,15 @@ etiquetaEnteros = grupoK.Label(ventanaEnteros,
                                font=("calibri", 12, "bold"),
                                background="coral1")
 etiquetaEnteros.pack()
-etiquetaEnteros.place(x=100, y=5, width=200, height=40)
+etiquetaEnteros.place(x=90, y=5, width=220, height=40)
 
 etiquetaTeoriaEnteros = grupoK.Label(ventanaEnteros,
-                                     text="Para definir este tipo de variables debemos asignar un \nvalor entero a una variable al momento \nde declararla...\n\nPor ejemplo: \"numero_de_manzanas = 2\"",
+                                     text="Para definir este tipo de variables debemos \nasignar un valor entero a una \nvariable al momento de declararla...\n\nPor ejemplo: \"numero_de_manzanas = 2\"",
                                      font=("calibri", 11, "normal"),
                                      background="coral1",
                                      anchor="nw")
 etiquetaTeoriaEnteros.pack()
-etiquetaTeoriaEnteros.place(x=20, y=40, width=360, height=140)
+etiquetaTeoriaEnteros.place(x=30, y=40, width=360, height=140)
 
 etiquetaIntentoEnteros = grupoK.Label(ventanaEnteros,
                                       text="¡Ahora intentalo tu!, ingresa el ejemplo anterior \nen el siguiente campo:",
@@ -709,12 +709,12 @@ etiquetaFlotantes = grupoK.Label(ventanaFlotantes,
 etiquetaFlotantes.pack()
 
 etiquetaTeoriaFlotantes = grupoK.Label(ventanaFlotantes,
-                                       text="Para definir este tipo de variables debemos asignar \nun valor decimal a una variable al momento \nde declararla...\n\nPor ejemplo: \"precioDeRemeras = 1560.99\"",
+                                       text="Para definir este tipo de variables debemos \nasignar un valor decimal a una \nvariable al momento de declararla...\n\nPor ejemplo: \"precioDeRemeras = 1560.99\"",
                                        font=("calibri", 11, "normal"),
                                        background="coral2",
                                        anchor="nw")
 etiquetaTeoriaFlotantes.pack()
-etiquetaTeoriaFlotantes.place(x=20, y=30, width=360, height=120)
+etiquetaTeoriaFlotantes.place(x=30, y=30, width=360, height=120)
 
 etiquetaIntentoFloat = grupoK.Label(ventanaFlotantes,
                                     text="¡Ahora intentalo tu!, ingresa el ejemplo anterior \nen el siguiente campo:",
@@ -751,7 +751,7 @@ boton_volver_flotantes.place(x=220, y=280, width=100, height=30)
 # ventana
 ventanaCaracter = grupoK.Tk()
 ventanaCaracter.title("Caracteres")
-ventanaCaracter.geometry("400x305+500+100")
+ventanaCaracter.geometry("410x305+500+100")
 ventanaCaracter.resizable(width=False, height=False)
 ventanaCaracter.config(bg="coral3")
 ventanaCaracter.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
@@ -764,12 +764,12 @@ etiquetaCaracter = grupoK.Label(ventanaCaracter,
 etiquetaCaracter.pack()
 
 etiquetaTeoriaCaracter = grupoK.Label(ventanaCaracter,
-                                      text="Para definir este tipo de variables debemos \ningresar un caracter entre un par de comillas \nsimple en una variable al momento de declararla...\n\nPor ejemplo: \"estoEsUnCaracter = 'a' \"",
+                                      text="Para definir este tipo de variables debemos \ningresar un caracter entre un par de comillas \nsimples en una variable al momento de declararla...\n\nPor ejemplo: \"estoEsUnCaracter = 'a' \"",
                                       font=("calibri", 11, "normal"),
                                       background="coral3",
                                       anchor="nw")
 etiquetaTeoriaCaracter.pack()
-etiquetaTeoriaCaracter.place(x=20, y=30, width=360, height=120)
+etiquetaTeoriaCaracter.place(x=10, y=30, width=390, height=120)
 
 etiquetaIntentoCaracter = grupoK.Label(ventanaCaracter,
                                        text="¡Ahora intentalo tu!, ingresa el ejemplo anterior \nen el siguiente campo:",
@@ -805,7 +805,7 @@ boton_volver_caracter.place(x=220, y=260, width=100, height=30)
 # ventana
 ventanaCadena = grupoK.Tk()
 ventanaCadena.title("Cadenas de texto")
-ventanaCadena.geometry("400x350+500+100")
+ventanaCadena.geometry("410x350+500+100")
 ventanaCadena.resizable(width=False, height=False)
 ventanaCadena.config(bg="brown")
 ventanaCadena.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
@@ -818,12 +818,12 @@ etiquetaCadena = grupoK.Label(ventanaCadena,
 etiquetaCadena.pack()
 
 etiquetaTeoriaCadena = grupoK.Label(ventanaCadena,
-                                    text="Para definir este tipo de variables debemos \ningresar un texto entre un par de comillas \ndoble en una variable al momento de declararla...\n\nPor ejemplo: \"estoEsUnaCadena = \"Hola estas en \nnuestro proyecto de metodologia \"\"",
+                                    text="Para definir este tipo de variables debemos \ningresar un texto entre un par de comillas \ndoble en una variable al momento de declararla...\n\nPor ejemplo: \"estoEsUnaCadena = \"Hola estas en \nnuestro proyecto de metodologia\"\"",
                                     font=("calibri", 11, "normal"),
                                     background="brown",
                                     anchor="nw")
 etiquetaTeoriaCadena.pack()
-etiquetaTeoriaCadena.place(x=20, y=30, width=360, height=150)
+etiquetaTeoriaCadena.place(x=10, y=30, width=380, height=150)
 
 etiquetaIntentoCadena = grupoK.Label(ventanaCadena,
                                      text="¡Ahora intentalo tu!, ingresa el ejemplo anterior \nen el siguiente campo:",
@@ -874,12 +874,12 @@ etiquetaLogico = grupoK.Label(ventanaLogico,
 etiquetaLogico.pack()
 
 etiquetaTeoriaLogico = grupoK.Label(ventanaLogico,
-                                    text="Para definir este tipo de variables debemos \ningresar True si es verdadero y False \nsi es falso, a una variable al momento de declararla...\n\nPor ejemplo: \"x = true, y = false\"",
+                                    text="Para definir este tipo de variables debemos \ningresar \"True\" si es verdadero y \"False\" si es\nfalso, a una variable al momento de declararla...\n\nPor ejemplo: \"x = true, y = false\"",
                                     font=("calibri", 11, "normal"),
                                     background="brown1",
                                     anchor="nw")
 etiquetaTeoriaLogico.pack()
-etiquetaTeoriaLogico.place(x=20, y=30, width=360, height=150)
+etiquetaTeoriaLogico.place(x=10, y=30, width=380, height=150)
 
 etiquetaIntentoLogico = grupoK.Label(ventanaLogico,
                                      text="¡Ahora intentalo tu!, ingresa el ejemplo anterior \nen el siguiente campo:",
@@ -924,7 +924,7 @@ ventanaCondicionales.protocol("WM_DELETE_WINDOW", salirProgramaDesdePrincipal)
 # etiquetas
 elegirCondic = grupoK.Label(ventanaCondicionales,
                             text="Elija el tipo de condicional que quiere aprender",
-                            font=("calibri", 12, "bold"),
+                            font=("calibri", 11, "bold"),
                             bg="aquamarine")
 elegirCondic.pack()
 
@@ -963,7 +963,7 @@ boton_volver_condicionales.place(x=150, y=250, width=100, height=30)
 # ventana
 ventanaCondicionalSimple = grupoK.Tk()
 ventanaCondicionalSimple.title("Condicional Simple")
-ventanaCondicionalSimple.geometry("400x450+500+100")
+ventanaCondicionalSimple.geometry("410x450+500+100")
 ventanaCondicionalSimple.resizable(width=False, height=False)
 ventanaCondicionalSimple.config(bg="aquamarine")
 ventanaCondicionalSimple.protocol(
@@ -982,7 +982,7 @@ etiquetaTeoriaCondSimple = grupoK.Label(ventanaCondicionalSimple,
                                     background="aquamarine",
                                     anchor="nw")
 etiquetaTeoriaCondSimple.pack()
-etiquetaTeoriaCondSimple.place(x=40, y=30, width=360, height=150)
+etiquetaTeoriaCondSimple.place(x=30, y=30, width=360, height=150)
 
 etiquetaTeoriaCondSimpleEj = grupoK.Label(ventanaCondicionalSimple,
                                     text="\tPor ejemplo: \n\"if (edad>18): \n\tprint(\"Es mayor de edad\")\"",
@@ -1006,7 +1006,7 @@ campoDeTextoCondSimple = grupoK.Text(ventanaCondicionalSimple,
                                       font=("calibri", 12),
                                       background="white")
 campoDeTextoCondSimple.pack()
-campoDeTextoCondSimple.place(x=30, y=320)
+campoDeTextoCondSimple.place(x=20, y=320)
 campoDeTextoCondSimple.config(width=37, 
                                 height=3)
 
@@ -1027,7 +1027,7 @@ boton_volver_condicional_simple.place(x=220, y=400, width=100, height=30)
 # ventana
 ventanaCondicionalAlternativo = grupoK.Tk()
 ventanaCondicionalAlternativo.title("Condicional Alternativo")
-ventanaCondicionalAlternativo.geometry("500x500+500+100")
+ventanaCondicionalAlternativo.geometry("510x500+500+100")
 ventanaCondicionalAlternativo.resizable(width=False, height=False)
 ventanaCondicionalAlternativo.config(bg="aquamarine")
 ventanaCondicionalAlternativo.protocol(
@@ -1047,7 +1047,7 @@ etiquetaTeoriaCondAlter = grupoK.Label(ventanaCondicionalAlternativo,
                                     background="aquamarine",
                                     anchor="nw")
 etiquetaTeoriaCondAlter.pack()
-etiquetaTeoriaCondAlter.place(x=30, y=30, width=450, height=150)
+etiquetaTeoriaCondAlter.place(x=20, y=30, width=470, height=150)
 
 etiquetaTeoriaCondAlterEj = grupoK.Label(ventanaCondicionalAlternativo,
                                     text="\tPor ejemplo: \n\"if (edad>18): \n\tprint(\"Es mayor de edad\") \n else: \n \tprint(\"Es menor de edad\")\"",
@@ -1056,7 +1056,7 @@ etiquetaTeoriaCondAlterEj = grupoK.Label(ventanaCondicionalAlternativo,
                                     justify= "left",
                                     anchor="nw")
 etiquetaTeoriaCondAlterEj.pack()
-etiquetaTeoriaCondAlterEj.place(x=100, y=130, width=360, height=250)
+etiquetaTeoriaCondAlterEj.place(x=90, y=130, width=360, height=250)
 
 etiquetaIntentoCondAlter = grupoK.Label(ventanaCondicionalAlternativo,
                                      text="¡Ahora intentalo tu!, ingresa el ejemplo anterior \nen el siguiente campo:",
@@ -1064,7 +1064,7 @@ etiquetaIntentoCondAlter = grupoK.Label(ventanaCondicionalAlternativo,
                                      background="aquamarine",
                                      anchor="nw")
 etiquetaIntentoCondAlter.pack()
-etiquetaIntentoCondAlter.place(x=90, y=250, width=360, height=70)
+etiquetaIntentoCondAlter.place(x=80, y=250, width=360, height=70)
 
 
 # entradas
@@ -1072,7 +1072,7 @@ campoDeTextoCondAlter = grupoK.Text(ventanaCondicionalAlternativo,
                                       font=("calibri", 12),
                                       background="white")
 campoDeTextoCondAlter.pack()
-campoDeTextoCondAlter.place(x=80, y=320)
+campoDeTextoCondAlter.place(x=70, y=320)
 campoDeTextoCondAlter.config(width=37, 
                                 height=4)
 
@@ -1081,13 +1081,13 @@ boton_confirmar_condAlter = grupoK.Button(ventanaCondicionalAlternativo,
                                           text="Confirmar",
                                           command=funcion_confirmar_cond_alternativo)
 boton_confirmar_condAlter.pack()
-boton_confirmar_condAlter.place(x=80, y=460, width=100, height=30)
+boton_confirmar_condAlter.place(x=80, y=440, width=100, height=30)
 
 boton_volver_condicional_alternativo = grupoK.Button(ventanaCondicionalAlternativo,
                                                      text="Volver",
                                                      command=funcion_volver_condicional_alternativo)
 boton_volver_condicional_alternativo.pack()
-boton_volver_condicional_alternativo.place(x=350, y=460, width=100, height=30)
+boton_volver_condicional_alternativo.place(x=350, y=440, width=100, height=30)
 
 # VENTANA CONDICIONAL ANIDADO
 # ventana
@@ -1121,7 +1121,7 @@ etiquetaTeoriaCondAnidEj = grupoK.Label(ventanaCondicionalAnidado,
                                     justify= "left",
                                     anchor="nw")
 etiquetaTeoriaCondAnidEj.pack()
-etiquetaTeoriaCondAnidEj.place(x=50, y=130, width=450, height=350)
+etiquetaTeoriaCondAnidEj.place(x=45, y=130, width=460, height=350)
 
 etiquetaIntentoCondAnid = grupoK.Label(ventanaCondicionalAnidado,
                                      text="¡Ahora intentalo tu!, ingresa el ejemplo anterior \nen el siguiente campo:",
@@ -1136,7 +1136,7 @@ campoDeTextoCondAnid = grupoK.Text(ventanaCondicionalAnidado,
                                       font=("calibri", 12),
                                       background="white")
 campoDeTextoCondAnid.pack()
-campoDeTextoCondAnid.place(x=60, y=380)
+campoDeTextoCondAnid.place(x=15, y=380)
 campoDeTextoCondAnid.config(width=51, 
                                 height=7)
 
@@ -1157,7 +1157,7 @@ boton_volver_condicional_anidado.place(x=350, y=530, width=100, height=30)
 # ventana
 ventanaCondicionalSwitchCase = grupoK.Tk()
 ventanaCondicionalSwitchCase.title("Condicional Match Case")
-ventanaCondicionalSwitchCase.geometry("640x700+400+100")
+ventanaCondicionalSwitchCase.geometry("650x700+400+100")
 ventanaCondicionalSwitchCase.resizable(width=False, height=False)
 ventanaCondicionalSwitchCase.config(bg="aquamarine")
 ventanaCondicionalSwitchCase.protocol(
@@ -1176,7 +1176,7 @@ etiquetaTeoriaCondMc = grupoK.Label(ventanaCondicionalSwitchCase,
                                     background="aquamarine",
                                     anchor="nw")
 etiquetaTeoriaCondMc.pack()
-etiquetaTeoriaCondMc.place(x=50, y=30, width=600, height=400)
+etiquetaTeoriaCondMc.place(x=20, y=30, width=620, height=400)
 
 etiquetaTeoriaCondMcEj = grupoK.Label(ventanaCondicionalSwitchCase,
                                     text="\t\tPor ejemplo: \nmatch color: \n\tcase \"rojo\": \n\t\tprint(\"El color es rojo\") \n\tcase \"azul\": \n\t\tprint(\"El color es azul\") \n\tcase \"verde\": \n\t\tprint(\"El color es verde\") \n\tcase_: \n\t\tprint(\"No existe ese color\")",
@@ -1209,13 +1209,13 @@ boton_confirmar_condMC = grupoK.Button(ventanaCondicionalSwitchCase,
                                        text="Confirmar",
                                        command=funcion_confirmar_cond_switch_case)
 boton_confirmar_condMC.pack()
-boton_confirmar_condMC.place(x=80, y=630, width=100, height=30)
+boton_confirmar_condMC.place(x=140, y=630, width=100, height=30)
 
 boton_volver_condicional_match_case = grupoK.Button(ventanaCondicionalSwitchCase,
                                                      text="Volver",
                                                      command=funcion_volver_condicional_switchCase)
 boton_volver_condicional_match_case.pack()
-boton_volver_condicional_match_case.place(x=520, y=630, width=100, height=30)
+boton_volver_condicional_match_case.place(x=420, y=630, width=100, height=30)
 
 # VENTANA BUCLES
 # ventana
@@ -1280,7 +1280,7 @@ etiquetaTeoriaFor = grupoK.Label(ventanaFor,
                                     background="thistle1",
                                     anchor="nw")
 etiquetaTeoriaFor.pack()
-etiquetaTeoriaFor.place(x=40, y=30, width=360, height=170)
+etiquetaTeoriaFor.place(x=20, y=30, width=400, height=170)
 
 etiquetaTeoriaForEj = grupoK.Label(ventanaFor,
                                     text="\tPor ejemplo: \nfor i in range(1, 11): \n\tprint(i)",
@@ -1297,7 +1297,7 @@ etiquetaIntentoFor = grupoK.Label(ventanaFor,
                                      background="thistle1",
                                      anchor="nw")
 etiquetaIntentoFor.pack()
-etiquetaIntentoFor.place(x=70, y=290, width=360, height=70)
+etiquetaIntentoFor.place(x=50, y=290, width=360, height=70)
 
 
 # entradas
@@ -1305,7 +1305,7 @@ campoDeTextoFor = grupoK.Text(ventanaFor,
                                       font=("calibri", 12),
                                       background="white")
 campoDeTextoFor.pack()
-campoDeTextoFor.place(x=80, y=350)
+campoDeTextoFor.place(x=30, y=350)
 campoDeTextoFor.config(width=37, 
                             height=3)
 
@@ -1320,7 +1320,7 @@ botonVolverFor = grupoK.Button(ventanaFor,
                                text="Volver",
                                command=funcionVolverFor)
 botonVolverFor.pack()
-botonVolverFor.place(x=220, y=450, width=100, height=30)
+botonVolverFor.place(x=250, y=450, width=100, height=30)
 
 # VENTANA WHILE
 # ventana
@@ -1344,7 +1344,7 @@ etiquetaTeoriaWhile= grupoK.Label(ventanaWhile,
                                     background="DarkSeaGreen1",
                                     anchor="nw")
 etiquetaTeoriaWhile.pack()
-etiquetaTeoriaWhile.place(x=40, y=30, width=450, height=150)
+etiquetaTeoriaWhile.place(x=20, y=30, width=480, height=150)
 
 etiquetaTeoriaWhileEj = grupoK.Label(ventanaWhile,
                                     text="\tPor ejemplo: \na = 1 \nwhile (a < 10): \n\tprint(\"¡Hola, mundo!\") \n\ta = a + 1",
@@ -1353,7 +1353,7 @@ etiquetaTeoriaWhileEj = grupoK.Label(ventanaWhile,
                                     justify= "left",
                                     anchor="nw")
 etiquetaTeoriaWhileEj.pack()
-etiquetaTeoriaWhileEj.place(x=100, y=170, width=360, height=200)
+etiquetaTeoriaWhileEj.place(x=90, y=170, width=360, height=200)
 
 etiquetaIntentoWhile = grupoK.Label(ventanaWhile,
                                      text="¡Ahora intentalo tu!, ingresa el ejemplo anterior \nen el siguiente campo:",
@@ -1361,14 +1361,14 @@ etiquetaIntentoWhile = grupoK.Label(ventanaWhile,
                                      background="DarkSeaGreen1",
                                      anchor="nw")
 etiquetaIntentoWhile.pack()
-etiquetaIntentoWhile.place(x=100, y=290, width=360, height=70)
+etiquetaIntentoWhile.place(x=70, y=290, width=360, height=70)
 
 # entradas
 campoDeTextoWhile = grupoK.Text(ventanaWhile,
                                       font=("calibri", 12),
                                       background="white")
 campoDeTextoWhile.pack()
-campoDeTextoWhile.place(x=100, y=350)
+campoDeTextoWhile.place(x=60, y=350)
 campoDeTextoWhile.config(width=37, 
                             height=4)
 
@@ -1383,7 +1383,7 @@ botonVolverWhile = grupoK.Button(ventanaWhile,
                                  text="Volver",
                                  command=funcionVolverWhile)
 botonVolverWhile.pack()
-botonVolverWhile.place(x=370, y=450, width=100, height=30)
+botonVolverWhile.place(x=320, y=450, width=100, height=30)
 
 # VENTANA DO-WHILE
 # ventana
@@ -1542,7 +1542,7 @@ etiquetaTeoriaMatriz= grupoK.Label(ventanaMatriz,
                                     background="DarkOliveGreen4",
                                     anchor="nw")
 etiquetaTeoriaMatriz.pack()
-etiquetaTeoriaMatriz.place(x=40, y=30, width=370, height=180)
+etiquetaTeoriaMatriz.place(x=15, y=30, width=400, height=180)
 
 etiquetaTeoriaMatrizEj = grupoK.Label(ventanaMatriz,
                                     text="\tPor ejemplo: \n m = [[1,2],[3,4]]",
@@ -1559,7 +1559,7 @@ etiquetaIntentoMatriz = grupoK.Label(ventanaMatriz,
                                      background="DarkOliveGreen4",
                                      anchor="nw")
 etiquetaIntentoMatriz.pack()
-etiquetaIntentoMatriz.place(x=30, y=280, width=360, height=70)
+etiquetaIntentoMatriz.place(x=40, y=280, width=360, height=70)
 
 
 # entradas
@@ -1568,7 +1568,7 @@ campoDeTextoMatriz = grupoK.Entry(ventanaMatriz,
                                   background="white"
                                   )
 campoDeTextoMatriz.pack()
-campoDeTextoMatriz.place(x=50, y=360, width=300, height=40)
+campoDeTextoMatriz.place(x=70, y=360, width=300, height=40)
 
 # botones
 boton_confirmar_matriz = grupoK.Button(ventanaMatriz,
@@ -1582,7 +1582,7 @@ botonVolverMatriz = grupoK.Button(ventanaMatriz,
                                   text="Volver",
                                   command=funcionVolverMatriz)
 botonVolverMatriz.pack()
-botonVolverMatriz.place(x=220, y=450, width=100, height=30)
+botonVolverMatriz.place(x=250, y=450, width=100, height=30)
 
 # VENTANA MÉTODOS
 # ventana
@@ -1699,12 +1699,12 @@ etiquetaFunciones = grupoK.Label(ventanaFunciones,
 etiquetaFunciones.pack()
 
 etiquetaTeoriaFunciones= grupoK.Label(ventanaFunciones,
-                                    text="Las funciones son bloques de código que se \npueden reutilizar simplemente llamando a la función. \nSe definen con la palabra clave \"def\", \nseguida del nombre de la función y, si tiene, sus parámetros.",
+                                    text="Las funciones son bloques de código que se \npueden reutilizar simplemente llamando a la función. \nSe definen con la palabra clave \"def\", seguida\ndel nombre de la función y, si tiene, sus parámetros.",
                                     font=("calibri", 11, "normal"),
                                     background="red",
                                     anchor="nw")
 etiquetaTeoriaFunciones.pack()
-etiquetaTeoriaFunciones.place(x=40, y=30, width=380, height=150)
+etiquetaTeoriaFunciones.place(x=15, y=30, width=410, height=150)
 
 etiquetaTeoriaFuncionesEj = grupoK.Label(ventanaFunciones,
                                     text="\tPor ejemplo: \ndef es_par(numero): \n\tif (numero % 2 == 0): \n\t\treturn True \n\telse: \n\t\treturn False",
@@ -1721,14 +1721,14 @@ etiquetaIntentoFunciones = grupoK.Label(ventanaFunciones,
                                      background="red",
                                      anchor="nw")
 etiquetaIntentoFunciones.pack()
-etiquetaIntentoFunciones.place(x=70, y=270, width=360, height=70)
+etiquetaIntentoFunciones.place(x=50, y=270, width=360, height=70)
 
 # entradas
 campoDeTextoFunciones = grupoK.Text(ventanaFunciones,
                                       font=("calibri", 12),
                                       background="white")
 campoDeTextoFunciones.pack()
-campoDeTextoFunciones.place(x=70, y=320)
+campoDeTextoFunciones.place(x=30, y=320)
 campoDeTextoFunciones.config(width=37, 
                                 height=5)
 
@@ -1744,7 +1744,7 @@ boton_volver_funciones = grupoK.Button(ventanaFunciones,
                                        text="Volver",
                                        command=funcion_volver_metodos)
 boton_volver_funciones.pack()
-boton_volver_funciones.place(x=250, y=450, width=100, height=30)
+boton_volver_funciones.place(x=240, y=450, width=100, height=30)
 
 # ------------------------------------------------------
 # INICIO
